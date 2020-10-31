@@ -1,3 +1,4 @@
+import 'package:Layout/dailyQuiz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,6 +11,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void takeDailyQuiz(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) {
+      return DailyQuiz();
+    }));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 color: const Color(0xffD91B5F),
-                onPressed: () {},
+                onPressed: () => takeDailyQuiz(context),
                 child: Text(
                   "Take your daily quiz!",
                   style: TextStyle(
