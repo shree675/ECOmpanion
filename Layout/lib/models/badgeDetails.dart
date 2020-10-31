@@ -24,7 +24,8 @@ class BadgeDetailsScreen extends StatelessWidget {
           ),
           Center(
             child: SvgPicture.asset(
-              (data[0]["badge"] as Map)["path"],
+              (data[0]["badge"] as Map)["path"]
+                  [(data[0]["currentLevel"] as int) - 1],
               height: MediaQuery.of(context).size.height * 0.35,
             ),
           ),

@@ -34,7 +34,7 @@ class _FlashcardState extends State<Flashcard> {
         onDoubleTap: () => showDetailsScreen(context),
         child: ExpansionTileCard(
           trailing: SvgPicture.asset(
-            (data[0]["badge"] as Map)["path"],
+            (data[0]["badge"] as Map)["path"][0],
           ),
 
           /*
