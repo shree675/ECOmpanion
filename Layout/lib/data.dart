@@ -1,4 +1,4 @@
-const data = [
+List<Map<String, Object>> data = [
   {
     "title": "Fast Fashion",
     "shortDescription":
@@ -31,6 +31,6 @@ const data = [
       "Yes, sometimes",
       "No, not really",
     ],
-    "hasReminder": false,
+    "hasReminder": true,
   },
 ];

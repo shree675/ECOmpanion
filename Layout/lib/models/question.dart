@@ -6,19 +6,55 @@ class Question extends StatelessWidget {
   Question(this.question, this.options);
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Padding(
+      padding: const EdgeInsets.all(5),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            10,
+          ),
+        ),
+        color: const Color(0xff1F4EB4),
         child: Column(
-      children: [
-        Text(question),
-        ...options.map((e) {
-          return FlatButton(
-            onPressed: () {},
-            child: Text(
-              e,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(7),
+              child: Text(
+                question,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: const Color(0xffFFFFFF),
+                  fontSize: 18,
+                ),
+              ),
             ),
-          );
-        })
-      ],
-    ));
+            SizedBox(
+              height: 10,
+            ),
+            ...options.map(
+              (e) => Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                  ),
+                  color: const Color(0xff1B3671),
+                  onPressed: () {},
+                  child: Text(
+                    e,
+                    style: TextStyle(color: const Color(0xffFFFFFF)),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

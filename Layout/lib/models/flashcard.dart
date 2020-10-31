@@ -1,10 +1,11 @@
 import 'package:Layout/models/details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../data.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 
 class Flashcard extends StatefulWidget {
+  final Map flashcard;
+  Flashcard(this.flashcard);
   @override
   _FlashcardState createState() => _FlashcardState();
 }
@@ -16,7 +17,7 @@ class _FlashcardState extends State<Flashcard> {
 
   void showDetailsScreen(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-      return Details();
+      return Details(widget.flashcard);
     }));
   }
 
@@ -34,7 +35,8 @@ class _FlashcardState extends State<Flashcard> {
         onDoubleTap: () => showDetailsScreen(context),
         child: ExpansionTileCard(
           trailing: SvgPicture.asset(
-            (data[0]["badge"] as Map)["path"][0],
+            (widget.flashcard["badge"] as Map)["path"]
+                [(widget.flashcard["currentLevel"] as int) - 1],
           ),
 
           /*
@@ -49,15 +51,15 @@ class _FlashcardState extends State<Flashcard> {
           */
 
           baseColor: Color(
-            data[0]["color"],
+            widget.flashcard["color"],
           ),
           expandedColor: Color(
-            data[0]["color"],
+            widget.flashcard["color"],
           ),
           title: Row(
             children: [
               Text(
-                data[0]["title"],
+                widget.flashcard["title"],
                 style: TextStyle(
                   color: const Color(
                     0xffFFFFFF,
@@ -70,7 +72,7 @@ class _FlashcardState extends State<Flashcard> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: Text(
-                data[0]["shortDescription"],
+                widget.flashcard["shortDescription"],
                 style: TextStyle(
                   color: const Color(
                     0xffFFFFFF,

@@ -1,9 +1,10 @@
 import 'package:Layout/models/badgeDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../data.dart';
 
 class Details extends StatelessWidget {
+  final Map flashcard;
+  Details(this.flashcard);
   void showBadgeDetails(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
       return BadgeDetailsScreen();
@@ -35,7 +36,7 @@ class Details extends StatelessWidget {
                 Column(
                   children: [
                     Text(
-                      data[0]["title"],
+                      flashcard["title"],
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 24,
@@ -48,7 +49,7 @@ class Details extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      (data[0]["difficulty"] as Map)["text"],
+                      (flashcard["difficulty"] as Map)["text"],
                       style: TextStyle(
                         fontSize: 20,
                         color: const Color(
@@ -65,7 +66,8 @@ class Details extends StatelessWidget {
                   child: GestureDetector(
                     onTap: () => showBadgeDetails(context),
                     child: SvgPicture.asset(
-                      (data[0]["badge"] as Map)["path"],
+                      (flashcard["badge"] as Map)["path"]
+                          [flashcard["currentLevel"] - 1],
                     ),
                   ),
                 ),
@@ -74,7 +76,7 @@ class Details extends StatelessWidget {
                 ),
               ],
             ),
-            ...(data[0]["longDescription"] as List).map((text) {
+            ...(flashcard["longDescription"] as List).map((text) {
               return Container(
                 margin: const EdgeInsets.symmetric(
                   horizontal: 5,
@@ -84,7 +86,7 @@ class Details extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  color: Color(data[0]["color"]),
+                  color: Color(flashcard["color"]),
                   child: Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: 20,
@@ -111,7 +113,7 @@ class Details extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                color: Color(data[0]["color"]),
+                color: Color(flashcard["color"]),
                 child: Center(
                   child: Text(
                     "Visualization",
@@ -135,7 +137,7 @@ class Details extends StatelessWidget {
                     10,
                   ),
                 ),
-                color: Color(data[0]["color"]),
+                color: Color(flashcard["color"]),
                 child: Center(
                   child: Text(
                     "World Economic Forum",
@@ -159,7 +161,7 @@ class Details extends StatelessWidget {
                     10,
                   ),
                 ),
-                color: Color(data[0]["color"]),
+                color: Color(flashcard["color"]),
                 child: Center(
                   child: Text(
                     "Read more about Fast Fashion",

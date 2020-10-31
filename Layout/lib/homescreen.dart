@@ -1,4 +1,6 @@
 import 'package:Layout/dailyQuiz.dart';
+import 'package:Layout/flashcardsScreen.dart';
+import 'package:Layout/models/question.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,6 +16,12 @@ class _HomeScreenState extends State<HomeScreen> {
   void takeDailyQuiz(BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (_) {
       return DailyQuiz();
+    }));
+  }
+
+  void showFlashcards(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) {
+      return FlashcardsScreen();
     }));
   }
 
@@ -34,54 +42,11 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(5),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    10,
-                  ),
-                ),
-                color: const Color(0xff1F4EB4),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(7),
-                      child: Text(
-                        data[0]["question"],
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: const Color(0xffFFFFFF),
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    ...(data[0]["options"] as List).map(
-                      (e) => Container(
-                        width: MediaQuery.of(context).size.width * 0.9,
-                        child: FlatButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              10,
-                            ),
-                          ),
-                          color: const Color(0xff1B3671),
-                          onPressed: () {},
-                          child: Text(
-                            e,
-                            style: TextStyle(color: const Color(0xffFFFFFF)),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                  ],
-                ),
+            InkWell(
+              onTap: () => showFlashcards(context),
+              child: Question(
+                data[0]["question"],
+                data[0]["options"],
               ),
             ),
             Container(
@@ -249,7 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-      ), //flashcard of the day
+      ),
     );
   }
 }
