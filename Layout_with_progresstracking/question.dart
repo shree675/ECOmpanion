@@ -461,10 +461,6 @@ class _QuestionState extends State<Question> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Text('${ndhard},$id'),
           ],
         ),
       ),
