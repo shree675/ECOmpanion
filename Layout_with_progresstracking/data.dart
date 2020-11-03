@@ -4,7 +4,7 @@ List<Map<String, Object>> data = [
     "isDaily": false,
     "id": 2,  // start from 0
     "hasLevel": true,  // must be true for all daily cards and must be true for the 30 non-daily cards
-    "badges: [],
+    "badges": [],
     "shortDescription":
     "Fast fashion can be defined as cheap, trendy clothing that uses rapid production, and low quality materials in order to bring inexpensive styles to the public. Much of today’s production is designed neither for longevity nor recycling, but rather for short life cycles to encourage consumers to buy anew.",
     "badge": {
