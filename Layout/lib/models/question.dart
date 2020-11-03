@@ -6,8 +6,11 @@ class Question extends StatelessWidget {
   Question(this.question, this.options);
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(5),
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 5,
+      ),
+      width: MediaQuery.of(context).size.width - 5,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
