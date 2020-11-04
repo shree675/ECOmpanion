@@ -2,6 +2,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Yes, yes. We both know that LED's are efficient but by how much?",
     "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "LEDs are very efficient! They use less power and save both your electricity and your money!",
@@ -50,6 +51,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Shhh... I consume power even when I'm off!",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "Studies have shown that some models consume more electricity in 20 hours of being off than they do in 4 hours of being on.",
@@ -97,6 +100,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "One little step towards saving energy",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "Lower your screen’s brightness to save your eyes from strain and save a little energy in the process!",
@@ -144,6 +149,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Induction is the new cool!",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Induction stoves are more than 80% efficient. They even cook faster than regular LPG stoves! Save money and environment by switching to induction!",
@@ -191,6 +198,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Cook under pressure",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Pressure cooking reduces cooking times and saves a ton of energy.",
@@ -238,6 +247,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Here are a few tips for your washing machine",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Use washing machines with full loads and use cold water for washing. Hang your clothes out instead of air drying it in the machine.",
@@ -285,6 +296,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Set your refrigerator at the right temperature",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Check if you the refrigerator is at the right temperature.",
@@ -337,6 +350,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Have you heard about BLDC fans?",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "If you’re looking for a new fan, look no further than BLDC fans. These are very efficient and definitely make up for the initial capital in the long run!",
@@ -379,6 +394,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Make your own products",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "You’re out of toothpaste, what do you do!? BUY a new one ! You’re out of deodorant, what do you do!? BUY a new one !We all live in such times where buying a new thing is so common that we don’t even put in a thought as to what it’s effect will be on the environment.",
@@ -443,6 +460,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Flush !",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "If no, you must be thinking that the amount of water used in each flush is the same and that probably there’s nothing we can do about it. But there surely is !",
@@ -485,6 +504,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "WaterFootprint!",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "The water footprint of an individual, community or business is defined as the total volume of fresh water used to produce the goods and services consumed by the individual or community or produced by the business.",
@@ -541,6 +562,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Laundry !",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "By far, after the toilet,  water consumption is the highest while doing laundry. And we all know that we should be extra cautious about the amount of water used here. But, HOW ?",
@@ -582,6 +605,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Dishes !",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "On an average, each household spends about 15-30 minutes doing their dishes, but careless use of water, even for such short periods of time, wastes gallons and gallons of water. Here are some practical suggestions using which you can model your dish washing !",
@@ -624,6 +649,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Virtual water !",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "Everyone knows about the water that we use for our daily chores etc. All that water is visible to us and is direct ! What's virtual water?",
@@ -680,6 +707,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Cooking !",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "We know that probably you’re like “GOSHHH ! Even cooking!?” . Here’s how changing some simple kitchen routines can help a lot in conserving water !",
@@ -729,6 +758,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Leaks !",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "“There’s no harm in not addressing a water leak, right? It’s just one leak and that too a tiny one! “ Well, do we all know the consequences of having such mindset?",
@@ -778,6 +809,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Bath !",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "Most of us love taking a nice half an hour shower whenever we get a chance, or if we have a bathtub, we just love to step in it and probably have a nice nap too ! But all of this at what cost?",
@@ -826,6 +859,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Brushing !",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "We all know that faucets/ taps are our primary source of water usage. Right from our morning brush till the bedtime brush(Do we brush twice? Hmmm), we see faucets all day! But do you actually know how much water we waste everyday through these activities?",
@@ -875,6 +910,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Watch what you Wash!",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "A 6kg average domestic wash has the potential to release as many as 700,000 fibres into the environment. This means, everyday, you add more than thousands of microfibres to the oceans that could end up on your plate of seafood one day.",
@@ -933,6 +970,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Clean up your Cloud!",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Your online presence and cloud space contributes to CO2 emissions. Clear unnecessary data from your cloud and inbox to reduce your carbon footprint.",
@@ -983,6 +1022,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Electronic devices",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "We tend to use smartphones and electronic gadgets for a much shorter amount of time than their actual lifespan. A study shows that an average person in the uS will use about 43 phones in his/her lifetime. And the total weight of electronics used by a person will weigh as much as two adult grizzly bears! That’s around 700 kilograms! And all of this waste is toxic-toxic-toxic!",
@@ -1042,6 +1083,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Minimize packaging by buying in bulk",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Every time you choose to buy 2 small packets instead of 1 big packet, you add a small amount of your trash to the mix that will take the earth upto 1000 years to sort out. Be conscious of every decision you make while purchasing anything that comes in a packet. That packet costs the planet more than you can comprehend!",
@@ -1101,6 +1144,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "A Pair of Jeans",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "It takes 3,781 liters of water to make a pair of jeans, from the production of the cotton to the delivery of the final product to the store. That’s more than enough for one person to drink eight cups per day for 10 years!!! That equates to the emission of around 33.4 kilograms of carbon equivalent!",
@@ -1150,6 +1195,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Fast Fashion!",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Fast fashion can be defined as cheap, trendy clothing that uses rapid production, and low quality materials in order to bring inexpensive styles to the public. Much of today’s production is designed neither for longevity nor recycling, but rather for short life cycles to encourage consumers to buy anew.",
@@ -1199,6 +1246,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Buy correct online",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "How to buy correct online so as to minimize returns and replacements?\nAlthough it is more environment-friendly to buy things online than to go to the store in most cases, the entire purpose is defeated if you return or replace the item.",
@@ -1258,6 +1307,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Retail therapy",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "The dictionary defines retail therapy as the activity of going shopping in order to make yourself feel better when you are unhappy.",
@@ -1316,6 +1367,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Filter your wardrobe",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Filter your wardrobe, keep only sustainably sourced items that add significant value to your life. Take the quiz mentioned below to calculate the impact your wardrobe has on the environment. ",
@@ -1377,6 +1430,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Ethically sourced clothing",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Fast fashion brands tend to rely on transforming runway trends into affordable clothing by outsourcing production to countries with cheap labour, where the only two options for factory workers consist of either losing their contract or keeping up with the speed of manufacturing demanded by the brands. It tends to be riddled with issues related to the exploitation of the rights of workers and substandard working conditions for factory labourers.",
@@ -1441,6 +1496,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Consider Renting Fashion",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Consider renting fashion for special occasions instead of buying.\nThe fashion industry is ridiculously unsustainable - and every purchase that you make without consciously evaluating the sustainability of it, results in perpetuating the crisis further. ",
@@ -1507,6 +1564,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Sustainable furniture",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "The point of adopting a sustainable, eco-friendly lifestyle is to acquire items that are good for the environment in the long run, meaning that they are durable, which helps us cut down on our wastefulness, and when they will be disposed off, they will cause little to no harm to the environment because of their biodegradable and organic properties.",
@@ -1560,6 +1619,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Sustainable Stationery",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "It is estimated that about 2-3 million plastic pens are thrown away each year! They are used everywhere and often misplaced or discarded without being used completely.",
@@ -1614,6 +1675,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Sustainable Gift Choices!",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "We often find ourselves receiving gifts from loved ones that just don’t work for us, maybe the size isn’t right, maybe it’s just not something we have use for but we accept every gift graciously and respectfully place it in storage where it is never valued the way it should be. Remember that the planet paid a price when this item was manufactured and when it eventually makes it to a landfill the planet will have to pay for it again. It is a complete waste if it just isn’t valued enough.",
@@ -1672,6 +1735,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Sustainable personal care products",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Most large beauty brands are using chemical components in their products, whether they claim to be natural or not. This is because chemicals give the products their long shelf life and allow for the various textures and feels you find in traditional cosmetics. The challenge with these chemical components is that they don’t break down and instead accumulate in our ecosystems. Traditional cosmetics and toiletries do the most damage to the environment once they are washed away down our sinks and damage the ecosystem.",
@@ -1720,6 +1785,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Buying clothes online",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Buying clothes online is often more kind to the environment in terms of emissions, than actually visiting stores and picking out what you like. That is, if you buy correctly and avoid returns and replacements as much as possible.",
@@ -1774,6 +1841,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Ride a bicycle-but not for the reason you'd expect",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "If we drive a bike for short distances it will consume more fuel and also release toxins which is bad for the environment and YOU!",
@@ -1816,6 +1885,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Take the bus",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "When you don’t use public transport, it makes it harder to justify funding for improvement of your city’s public transport system.",
@@ -1857,6 +1928,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Stop making it about \"those people\" or \"the other\"",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Treat people who bike and walk, like people. Rather than seeing them as the other, remember that they have families, people they love, and things they contribute to in their lives.\nWe also have to stop centering privileged voices and experiences. Whether it’s out of necessity or a lifestyle choice, seeing and treating those who walk and bike as people is both innovative and simple to do—give it a try.”",
@@ -1899,6 +1972,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Use car sharing",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Carpooling options are available in services like Uber and Ola. If you’re not in a hurry, seriously consider this!",
@@ -1946,6 +2021,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Inculcate the habit of walking",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Walking is the best way to help the environment. One study concluded that walking a mile and a half would release 75% less greenhouse gases than we would produce from driving the same distance. Driving less doesn't just help the environment. It can also make us healthier.",
@@ -1993,6 +2070,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Volunteer to plant trees",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "A typical hardwood tree can absorb as much as 48 pounds of carbon dioxide per year. This means it will sequester approximately 1 ton of carbon dioxide by the time it reaches 40 years old.",
@@ -2042,6 +2121,8 @@ List<Map<String, Object>> data = [
   {
     "title":
         "Regularly check the condition of your vehicle and service it timely",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Filters prevent dust, dirt and debris from being drawn into the engine through the air intake pipe, and they need to be cleaned fairly regularly to maintain the performance and efficiency of the engine,which leads to emits harmful gases",
@@ -2084,6 +2165,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Buy local food products",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Buying local produce makes a difference. When you buy local produce, you save money in shipping costs, get fresher produce, and support local farmers. Same goes for eggs, milk and meat.",
@@ -2130,6 +2213,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Eat organic.. Be energetic",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "If a food product has been through many steps in manufacturing, with lots of ingredients coming from all corners of the world, the carbon footprint is higher for that product, due to traveling, manufacturing, and distribution,”                   “Choose organic ingredients which limit the use of synthetic pesticides and support more sustainable soil practices, such as the use of cover crops, composting and manures,”",
@@ -2178,6 +2263,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "Water footprint in food",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "Wasted food means wasted resources, including water. This is why work is being done at every level – from local to federal – to reduce food waste. Activities like taking a refrigerator inventory before you shop, meal planning, using leftovers and composting can make a huge dent in the amount of food (and water) that is wasted on a daily basis.",
@@ -2224,6 +2311,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "No packed food",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "If you answered yes, you are making more trash and ……..slow poisoning yourself along with the environment",
@@ -2273,6 +2362,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "ZERO WASTE COOKING",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": true,
     "shortDescription":
         "By making zero waste while cooking and in your eating habits, you can be healthier and reduce your daily trash significantly. Read more on how to do this.",
@@ -2325,6 +2416,8 @@ List<Map<String, Object>> data = [
   },
   {
     "title": "No extra food",
+    "id": 2,
+    "hasLevel": true,
     "isDaily": false,
     "shortDescription":
         "If you answered yes,…. You are wasting precious natural resources. Practice cooking just enough for the meal and nothing extra. This reduces the need to consume food which requires microwave heating and conserves energy. ",
@@ -2371,5 +2464,478 @@ List<Map<String, Object>> data = [
       "text": "food",
       "id": 1,
     },
+  },
+];
+
+List<Map<String, Object>> environmentalDays = [
+  {
+    "title": "World Wetlands Day",
+    "date": {
+      "day": 2,
+      "month": 2,
+    },
+    "description": [
+      "Wetlands are land areas that are saturated or flooded with water either permanently or seasonally. Wetlands are rich with biodiversity and are a habitat for a dense variety of plant and animal species.",
+      "But, the latest estimates show a global decline of biodiversity, and wetlands are disappearing three times faster than forests.",
+      "Thus, 2 February of each year is observed as World Wetlands Day to raise global awareness about the vital role of wetlands for people and our planet.",
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link": "https://www.worldwetlandsday.org/about",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Polar Bear Day",
+    "date": {
+      "day": 27,
+      "month": 2,
+    },
+    "description": [
+      "Sea ice loss from human-caused climate warming is the single biggest threat to polar bears. The latest IUCN report estimates there approximately are only 26,000 of them left on the earth and We could see dramatic declines in polar bear numbers by mid-century if we do not greatly reduce the use of fossil fuels for our energy needs, and instead shift to renewables.",
+      "The day encourages people to find ways to reduce their carbon output, such as by turning down their thermostat or driving less. The day has also been used to encourage the installation of energy efficient insulation in houses. Because It’s more than just polar bears being affected.The rapidly changing climate threatens our own future.",
+    ],
+    "links": [
+      {
+        "text": "Want to know more about polar bears?",
+        "link": "https://polarbearsinternational.org/polar-bears",
+      },
+      {
+        "text": "To know more about the plan and take action, click here",
+        "link": "https://polarbearsinternational.org/climate-change",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Wildlife Day",
+    "date": {
+      "day": 3,
+      "month": 3,
+    },
+    "description": [
+      "Earth is home to countless species of fauna and flora – too many to even attempt counting. This rich diversity, and the billions of years during which its myriad elements have interacted, are precisely what has made our planet inhabitable for all living creatures, including humans. However, unsustainable human activities and overexploitation of the species and natural resources that make up the habitats and ecosystems of all wildlife are imperiling the world’s biodiversity. Nearly a quarter of all species are presently at risk of going extinct in the coming decades, and their demise would only speed up the disappearance of countless others, putting us in danger as well.",
+      "Hence, march 3rd is celebrated as the UN World Wildlife Day to raise awareness of the world’s wild animals and plants.",
+    ],
+    "links": [
+      {
+        "text": "Learn more here",
+        "link": "https://www.wildlifeday.org/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "Global Recycling Day",
+    "date": {
+      "day": 8,
+      "month": 3,
+    },
+    "description": [
+      "Global Recycling Day was created in 2018 to help recognize, and celebrate, the importance recycling plays in preserving our precious primary resources and securing the future of our planet. It is a day for the world to come together and put the planet first.",
+      "Every year, the Earth yields billions of tons of natural resources and at some point, in the not too distant future, it will run out.That’s why we must think again about what we throw away – seeing not waste, but opportunity..\nEach year the ‘Seventh Resource’ (recyclables) saves over 700 million tonnes in CO2 emissions and this is projected to increase to 1 billion tons by 2030. There is no doubt recycling is on the front line in the war to save the future of our planet and humanity.",
+    ],
+    "links": [
+      {
+        "text": "To know more about what you can do, click here",
+        "link": "https://www.globalrecyclingday.com/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "Anniversary of the Chipko Andolan",
+    "date": {
+      "day": 26,
+      "month": 3,
+    },
+    "description": [
+      "\t\t\t\tEmbrace the trees and\n\n\t\t\t\tSave them from being felled;\n\n\t\t\t\tThe property of our hills,\n\n\t\t\t\tSave them from being looted.",
+      "The Chipko movement, was a forest conservation movement in India. It began in the 1970s in Uttarakhand, and went on to become a rallying point for many future environmental movements all over the world. It created a precedent for starting nonviolent protest in India, and its success meant that the world immediately took notice of this non-violent movement, which was to inspire in time many similar eco-groups by helping to slow down the rapid deforestation, expose vested interests, increase social awareness and the need to save trees, increase ecological awareness, and demonstrate the viability of people power",
+    ],
+    "links": [
+      {
+        "text": "",
+        "link": "",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day of Forests",
+    "date": {
+      "day": 21,
+      "month": 3,
+    },
+    "description": [
+      "Too precious to lose\nForests cover one third of the Earth's land mass, performing vital functions around the world.Forests, their sustainable management and use of resources, including in fragile ecosystems, are key to combating climate change, and to contributing to the prosperity and well-being of current and future generations..Around 1.6 billion people - including more than 2,000 indigenous cultures - depend on forests for their livelihoods, medicines, fuel, food and shelter.",
+      "Yet despite all of these priceless ecological, economic, social and health benefits, global deforestation continues at an alarming rate.\nThe Day celebrates and raises awareness of the importance of all types of forests. On each International Day of Forests, countries are encouraged to undertake local, national and international efforts to organize activities involving forests and trees, such as tree planting campaigns."
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link": "http://www.fao.org/international-day-of-forests/en/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Water Day",
+    "date": {
+      "day": 22,
+      "month": 3,
+    },
+    "description": [
+      "Climate delay is almost as dangerous as climate denial. Every country in the world must work more quickly.",
+      "And in the current world, extreme weather events are making water more scarce, more unpredictable, more polluted or all three.",
+      "As the global population grows, so does the demand for water, which depletes natural resources and damages the environment in many places.",
+      "Water is our most precious resource – we must use it more responsibly. We must balance all of society’s water needs while ensuring the poorest people don’t get left behind.",
+    ],
+    "links": [
+      {
+        "text": "Visit the official website",
+        "link": "https://www.worldwaterday.org/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "Earth Day",
+    "date": {
+      "day": 22,
+      "month": 4,
+    },
+    "description": [
+      "The fight for a clean environment continues with increasing urgency, as the ravages of climate change become more and more apparent everyday. Every year on April 22, Earth Day marks the anniversary of the birth of the modern environmental movement in 1970. Today, Earth Day is widely recognized as the largest secular observance in the world, marked by more than a billion people every year as a day of action to change human behavior and create global, national and local policy changes.",
+      "Celebrating Earth Day serves as a conscious reminder of how fragile our planet is and how important it is to protect it.",
+    ],
+    "links": [
+      {
+        "text": "Earth day tips",
+        "link": "https://www.earthday.org/earth-day-tips/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day of Light",
+    "date": {
+      "day": 16,
+      "month": 5,
+    },
+    "description": [
+      "The International Day of Light is celebrated on 16 May each year, the anniversary of the first successful operation of the laser in 1960 by physicist and engineer, Theodore Maiman. This day is a call to strengthen scientific cooperation and harness its potential to foster peace and sustainable development.",
+      "The International Day of Light is a global initiative that provides an annual focal point for the continued appreciation of light and the role it plays in science, culture and art, education, and sustainable development, and in fields as diverse as medicine, communications, and energy. The broad theme of light will allow many different sectors of society worldwide to participate in activities that demonstrate how science, technology, art and culture can help achieve the goals of UNESCO – education, equality, and peace.",
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link":
+            "https://photonicsforabetterworld.blogspot.com/2018/04/ten-ways-to-celebrate-first.html",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Bee Day",
+    "date": {
+      "day": 20,
+      "month": 5,
+    },
+    "description": [
+      "We all depend on the survival of bees",
+      "In order to be able to feed the world’s growing population, we need ever more food, which must be diverse, balanced and of good quality to ensure the progress and well-being of humankind. The greatest contribution of bees and other pollinators is the pollination of nearly three quarters of the plants that produce 90% of the world’s food. A third of the world’s food production depends on bees, i.e. every third spoonful of food depends on pollination.Bees also act as indicators of the state of the environment. Their presence, absence or quantity tells us when something is happening with the environment and that appropriate action is needed.",
+      "To raise awareness of the importance of pollinators, the threats they face and their contribution to sustainable development, the UN designated 20 May as World Bee Day.",
+      "The goal is to strengthen measures aimed at protecting bees and other pollinators, which would significantly contribute to solving problems related to the global food supply and eliminate hunger in developing countries.",
+    ],
+    "links": [
+      {
+        "text": "Learn more about what you can do",
+        "link": "https://www.un.org/en/observances/bee-day",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World No-Tobacco Day",
+    "date": {
+      "day": 31,
+      "month": 5,
+    },
+    "description": [
+      "World No Tobacco Day (WNTD) is observed around the world every year on 31 May. This yearly celebration informs the public on the dangers of using tobacco, the business practices of tobacco companies, what the World Health Organization (WHO) is doing to fight against the use of tobacco, and what people around the world can do to claim their right to health and healthy living and to protect future generations.",
+      "For decades, the tobacco industry has deliberately employed strategic, aggressive and well-resourced tactics to attract youth to tobacco and nicotine products. Internal industry documents reveal in-depth research and calculated approaches designed to attract a new generation of tobacco users, from product design to marketing campaigns aimed at replacing the millions of people who die each year from tobacco-attributable diseases with new consumers – youth.",
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link": "https://www.medicoverhospitals.in/world-no-tobacco-day/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Bicycle Day",
+    "date": {
+      "day": 3,
+      "month": 6,
+    },
+    "description": [
+      "Regular physical activity of moderate intensity – such as walking, cycling, or doing sports – has significant benefits for health. Some physical activity is better than none.",
+      "Acknowledging the uniqueness, longevity and versatility of the bicycle, which has been in use for two centuries, and that it is a simple, affordable, reliable, clean and environmentally fit sustainable means of transportation, fostering environmental stewardship and health, the General Assembly decided to declare 3 June World Bicycle Day.",
+      "Accordingly, improved active transport is not only healthy; it is also equitable and cost-effective.",
+      "\t\tThe bicycle is a simple, affordable, reliable, clean and environmentally fit",
+      "\t\tThe bicycle is a symbol of sustainable transportation and conveys a positive message to foster sustainable consumption and production, and has a positive impact on climate.",
+      "This day encourages you to learn and spread knowledge about using sustainable modes of transport. Furthermore, it aims to encourage everyone to use a bicycle more often ! ",
+    ],
+    "links": [
+      {
+        "text": "To know more, click here",
+        "link": "https://www.un.org/en/observances/bicycle-day",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Environment Day",
+    "date": {
+      "day": 5,
+      "month": 6,
+    },
+    "description": [
+      "The foods we eat, the air we breathe, the water we drink and the climate that makes our planet habitable all come from nature. Yet, these are exceptional times in which nature is sending us a message: To care for ourselves we must care for nature. It’s time to wake up. To take notice. To raise our voices. It’s time to build back better for People and Planet. This World Environment Day, it’s Time for Nature.",
+      "For instance, each year, marine plants produce more than a half of our atmosphere's oxygen, and a mature tree cleans our air, absorbing 22 kilos of carbon dioxide, releasing oxygen in exchange. Despite all the benefits that our nature gives us, we still mistreat it.That is why we need to work on that. That is why we need this Observance.",
+      "Since 1974, World Environment day has been celebrated every year on 5 June: engaging governments, businesses, celebrities and citizens to focus their efforts on a pressing environmental issue.",
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link": "https://www.un.org/en/observances/environment-day/take-action",
+      },
+      {
+        "text":
+            "Take this quiz to see just how clued-up you are about biodiversity!",
+        "link": "https://www.worldenvironmentday.global/did-you-know/take-quiz",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day for the Conservation of the Mangrove Ecosystem",
+    "date": {
+      "day": 26,
+      "month": 7,
+    },
+    "description": [
+      "Mangroves are rare, spectacular and prolific ecosystems on the boundary between land and sea. These extraordinary ecosystems contribute to the wellbeing, food security, and protection of coastal communities worldwide. They support a rich biodiversity and provide a valuable nursery habitat for fish and crustaceans. Mangroves also act as a form of natural coastal defense against storm surges, tsunamis, rising sea levels and erosion. Their soils are highly effective carbon sinks, sequestering vast amounts of carbon.",
+      "Yet mangroves are disappearing three to five times faster than overall global forest losses, with serious ecological and socio-economic impacts. Current estimates indicate that mangrove coverage has been divided by two in the past 40 years.",
+      "The International Day for the Conservation of the Mangrove Ecosystem, adopted by the General Conference of UNESCO in 2015 and celebrated each year on 26 July, aims to raise awareness of the importance of mangrove ecosystems as \"a unique, special and vulnerable ecosystem\" and to promote solutions for their sustainable management, conservation and uses.",
+    ],
+    "links": [
+      {
+        "text": "Click here to know more about mangroves and their importance",
+        "link":
+            "https://en.unesco.org/commemorations/mangroveday#:~:text=The%20International%20Day%20for%20the,promote%20solutions%20for%20their%20sustainable",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Tiger Day",
+    "date": {
+      "day": 29,
+      "month": 7,
+    },
+    "description": [
+      "TIGERS: POSSIBLY OUR PLANET'S MOST ICONIC BIG CAT - And there are only around 3,900 tigers in the wild.",
+      "The beautiful, awe-inspiring tiger is one of our planet’s most iconic animals. But here’s the shocking truth. Wild tiger numbers dropped by more than 95% since the beginning of the 20th century. Now, for the first time in conservation history, their numbers are on the increase.Tigers used to roam across most of Asia, but now they’re restricted to just 7% of their original range, in isolated forests and grasslands across 13 countries.",
+      "In recent years, conservation work and the commitment of various governments has halted the decline in global tiger numbers. But there’s a lot more work to do. You, by yourself can contribute to save these endangered species. You can support the missions launched by WWF, you can preach your fellow mates about the need and what not.",
+    ],
+    "links": [
+      {
+        "text": "To know more about what you can do, click here",
+        "link":
+            "https://www.wwf.org.uk/get-involved/schools/calendar/international-tiger-day#action",
+      },
+      {
+        "text": "To know more about these awe-striking big cats, click here",
+        "link": "https://www.wwf.org.uk/learn/wildlife/tigers",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Tiger Day",
+    "date": {
+      "day": 12,
+      "month": 8,
+    },
+    "description": [
+      "Elephant numbers have dropped by 62% over the last decade, and they could be mostly extinct by the end of the next decade. An estimated 100 African elephants are killed each day by poachers seeking ivory, meat and body parts, leaving only 400,000 remaining.",
+      "Thus, on August 12, 2012, the inaugural World Elephant Day was launched to bring attention to the urgent plight of Asian and African elephants. The elephant is loved, revered and respected by people and cultures around the world, yet we balance on the brink of seeing the last of this magnificent creature.",
+      "The escalation of poaching, habitat loss, human-elephant conflict and mistreatment in captivity are just some of the threats to both African and Asian elephants. Working towards better protection for wild elephants, improving enforcement policies to prevent the illegal poaching and trade of ivory, conserving elephant habitats, better treatment for captive elephants and, when appropriate, reintroducing captive elephants into natural, protected sanctuaries are the goals that numerous elephant conservation organizations are focusing on around the world.",
+    ],
+    "links": [
+      {
+        "text": "Why care?",
+        "link": "https://worldelephantday.org/about/elephants",
+      },
+      {
+        "text": "What can you do to save these magnificent creatures?",
+        "link": "https://worldelephantday.org/how-to-help-elephants",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day for the Preservation of the Ozone Layer",
+    "date": {
+      "day": 16,
+      "month": 9,
+    },
+    "description": [
+      "The ozone layer, a fragile shield of gas, protects the Earth from the harmful portion of the rays of the sun, thus helping preserve life on the planet. Life on Earth would not be possible without sunlight. But the energy emanating from the sun would be too much for life on Earth to thrive were it not for the ozone layer. This stratospheric layer shields Earth from most of the sun’s harmful ultraviolet radiation. Sunlight makes life possible, but the ozone layer makes life as we know it possible.",
+      "A number of commonly used chemicals have been found to be extremely damaging to the ozone layer.Halocarbons containing bromine usually have much higher ozone-depleting potential (ODP) than those containing chlorine. The man-made chemicals that have provided most of the chlorine and bromine for ozone depletion are methyl bromide, methyl chloroform, carbon tetrachloride and families of chemicals known as halons, chlorofluorocarbons (CFCs) and hydrochlorofluorocarbons (HCFCs).",
+      "A depletion in the ozone layer could have many devastating outcomes like getting skin cancer, or not proper containment of the gases, change in proportions of the atmospheric gases etc.",
+    ],
+    "links": [
+      {
+        "text": "To know more about the ozone layer, click this",
+        "link": "https://www.un.org/en/observances/ozone-day/science",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "Zero Emission Day",
+    "date": {
+      "day": 16,
+      "month": 9,
+    },
+    "description": [
+      "Atmospheric levels of carbon dioxide—the most dangerous and prevalent greenhouse gas—are at the highest levels ever recorded. Greenhouse gas levels are so high primarily because humans have released them into the air by burning fossil fuels. The gases absorb solar energy and keep heat close to Earth's surface, rather than letting it escape into space.",
+      "Greenhouse gases have far-ranging environmental and health effects. They cause climate change by trapping heat, and they also contribute to respiratory disease from smog and air pollution.",
+      "The typical weather patterns we've grown to expect will change; some species will disappear; others will migrate or grow.",
+      "Hence, the ZeDay or the Zero Emissions day is observed worldwide on 21st september, to spread awareness among us humans and instill an urge of change.",
+      "ZeDay Guidelines are simple:\n\t1. Don’t use or burn oil or gas or coal.\n\t2. Minimize (or eliminate) your use of electricity generated by fossil fuels.\n\t3. Don’t put anyone in harm’s way: All essential and emergency services operate normally\n\t4. Do your best, have fun, enjoy the day!",
+    ],
+    "links": [
+      {
+        "text": "To know more, click this",
+        "link":
+            "https://www.nationalgeographic.com/environment/global-warming/greenhouse-gases/#:~:text=Greenhouse%20gases%20have%20far%2Dranging,change%20caused%20by%20greenhouse%20gases.",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Rhino Day",
+    "date": {
+      "day": 22,
+      "month": 9,
+    },
+    "description": [
+      "World Rhino Day is observed on September 22 every year to raise awareness and build a safe natural habitat for this incredible species.",
+      "The rhinoceros is Africa’s armoured giant – like a tank on legs – and has been on our planet for millions of years. But right now they need our help. Poaching of rhinos for their horns and habitat loss are huge threats to both white and black rhinos.",
+      "Sadly there are no ‘northern’ white rhinos left in the wild, and only a handful in captivity. But the ‘southern’ white rhino is a conservation success story – it’s been helped back from under 100 in 1895 to over 20,000 in the wild today.",
+      "But poaching of rhinos for rhino horn is still a huge threat, and the poachers have got increasingly better equipped. Help us make sure we don’t lose these incredibly precious creatures."
+    ],
+    "links": [
+      {
+        "text": "Here's how you can help the mighty rhinos!",
+        "link": "https://rhinos.org/world-rhino-day/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day of Climate Action",
+    "date": {
+      "day": 19,
+      "month": 11,
+    },
+    "description": [
+      "Despite being appreciative of all Mother Earth has done for us,  the havoc we've wreaked on her atmosphere and natural lands for years now is still continuing.",
+      "Weather extremes and reports of disasters make it clear: Climate change is dramatically picking up speed. At the same time, concern about climate change makes people all over the world join and take the streets. A global climate movement has emerged.",
+      "Also, youths participating in something called a youth climate action day where all the youth come together and protest, show concern about climate change in their own creative ways.",
+      "On Climate Action Day you can come together for action if you feel concerned about climate change and global injustice: Tree planting, upcycling, workshops on a plastic free lifestyle or discussions about e-mobility, whatever is on your mind…"
+    ],
+    "links": [
+      {
+        "text": "Know what you can do on climate action day!",
+        "link": "https://climateactionday.org/en/#!/participate",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Toilet Day",
+    "date": {
+      "day": 19,
+      "month": 11,
+    },
+    "description": [
+      "Climate change is accelerating. Flood, drought, and rising sea levels are threatening sanitation systems – from toilets to septic tanks to treatment plants. Floodwater can contaminate wells used for drinking water or flooding might damage toilets and spread human waste into communities and food crops, causing deadly and chronic diseases.",
+      "World Toilet Day celebrates toilets and raises awareness of the 4.2 billion people living without access to safely managed sanitation. It is about taking action to tackle the global sanitation crisis and achieve Sustainable Development Goal 6: water and sanitation for all by 2030.",
+      "Toilets can help us to fight climate change too! Wastewater and sludge from toilets contain valuable water, nutrients, and energy. Sustainable sanitation systems make productive use of waste to safely boost agriculture and reduce and capture emissions for greener energy.",
+    ],
+    "links": [
+      {
+        "text":
+            "To know more about Sanitation and world toilet day, click here",
+        "link": "https://www.worldtoilet.org/what-we-do/world-toilet-day/",
+      },
+      {
+        "text":
+            "To know more about what you can do and act upon them, click here",
+        "link":
+            "https://www.worldtoiletday.info/world-toilet-day-2020/world-toilet-day-2020-act/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Soil Day",
+    "date": {
+      "day": 5,
+      "month": 12,
+    },
+    "description": [
+      "Stop Soil Erosion, Save Our Future",
+      "Every 5 seconds, the equivalent of one soccer field of soil is eroded. This alarming fact reaffirms the need to raise awareness through World Soil Day of this growing problem, as the Earth's population continues to expand.",
+      "To address this, World Soil Day (WSD) is held annually on 5 December as a means to focus attention on the importance of healthy soil and to advocate for the sustainable management of soil resources.",
+    ],
+    "links": [
+      {
+        "text":
+            "Visit this page to get a complete guide about this day and what you can do!",
+        "link": "https://www.daysoftheyear.com/days/world-soil-day/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Mountain Day",
+    "date": {
+      "day": 5,
+      "month": 12,
+    },
+    "description": [
+      "Towering, majestic, and beautiful. Mountains are some of the most beautiful of nature’s structures, stolid and regal they stand against the sky, of such a size that they can catch entire countryside’s in their shadow, and turn back the ravages of storms against their unflinching sides.",
+      "But unfortunately, even mountains are under threat from climate change and overexploitation. As the global climate continues to warm, mountain people — some of the world’s poorest — face even greater struggles to survive. The rising temperatures also mean that mountain glaciers are melting at unprecedented rates, affecting freshwater supplies downstream for millions of people.",
+      "The increasing attention to the importance of mountains led the UN to declare to 2002 the UN International Year of Mountains. ",
+      "It has been observed every year to create awareness about the importance of mountains to life, to highlight the opportunities and constraints in mountain development and to build alliances that will bring positive change to mountain peoples and environments around the world.."
+    ],
+    "links": [
+      {
+        "text":
+            "Here are a few things that you can do on International Mountain Day",
+        "link":
+            "http://www.fao.org/international-mountain-day/2020-themeen/en/",
+      },
+    ],
+    "image": "",
   },
 ];
