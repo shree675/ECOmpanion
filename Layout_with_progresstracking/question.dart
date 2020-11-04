@@ -1,8 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:github1/dailyQuiz.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Question extends StatefulWidget {
@@ -13,7 +11,8 @@ class Question extends StatefulWidget {
   Question(this.question, this.options, this.data, this.quiz);
 
   @override
-  _QuestionState createState() => _QuestionState(this.question, this.options, this.data, this.quiz);
+  _QuestionState createState() =>
+      _QuestionState(this.question, this.options, this.data, this.quiz);
 }
 
 class _QuestionState extends State<Question> {
@@ -23,7 +22,7 @@ class _QuestionState extends State<Question> {
 
   int id;
   int diff;
-  bool daily,level;
+  bool daily, level;
   int quiz;
 
   _QuestionState(this.question, this.options, this.data, this.quiz);
@@ -42,126 +41,115 @@ class _QuestionState extends State<Question> {
   List<String> dhardstring = new List(3);
 
   // List<SvgPicture> badges;
-  int levelChange=0;
+  int levelChange = 0;
   String badgeName;
-  int curLevel=0;
+  int curLevel = 0;
   int numOfOptions;
 
   @override
-  initState(){
+  initState() {
     super.initState();
-    id=data["id"];
-    id-=1;
+    id = data["id"];
+    id -= 1;
     diff = (this.data["difficulty"] as Map)["scale"];
-    daily=this.data["isDaily"];
-    level=this.data["hasLevel"];
+    daily = this.data["isDaily"];
+    level = this.data["hasLevel"];
     // badges=this.data["badges"];
     badgeName = (this.data["badge"] as Map)["name"];
-    badgeName=badgeName.toUpperCase();
-    numOfOptions=(this.data["options"] as List).length;
+    badgeName = badgeName.toUpperCase();
+    numOfOptions = (this.data["options"] as List).length;
 
-    if(!daily) {
+    if (!daily) {
       if (diff == 1) {
         ndeasy[id] = 1;
         easystring[id] = "easy$id";
-      }
-      else if (diff == 2) {
+      } else if (diff == 2) {
         ndmedium[id] = 1;
         mediumstring[id] = "medium$id";
-      }
-      else if (diff == 3) {
+      } else if (diff == 3) {
         ndhard[id] = 1;
         hardstring[id] = "hard$id";
       }
     }
     // else if(daily && quiz==1){
-    else if(daily){
+    else if (daily) {
       if (diff == 1) {
         deasy[id] = 1;
         deasystring[id] = "deasy$id";
-      }
-      else if (diff == 2) {
+      } else if (diff == 2) {
         dmedium[id] = 1;
         dmediumstring[id] = "dmedium$id";
-      }
-      else if (diff == 3) {
+      } else if (diff == 3) {
         dhard[id] = 1;
         dhardstring[id] = "dhard$id";
       }
     }
-    loadCounter(diff,id);
+    loadCounter(diff, id);
     // resetCounter();
   }
 
-  loadCounter(diff,id) async {
+  loadCounter(diff, id) async {
     SharedPreferences pre = await SharedPreferences.getInstance();
     setState(() {
-      if(!daily) {
+      if (!daily) {
         if (diff == 1) {
           ndeasy[id] = pre.getInt('easy$id') ?? 1;
-          curLevel=ndeasy[id];
-        }
-        else if (diff == 2) {
+          curLevel = ndeasy[id];
+        } else if (diff == 2) {
           ndmedium[id] = pre.getInt('medium$id') ?? 1;
-          curLevel=ndmedium[id];
-        }
-        else if (diff == 3) {
+          curLevel = ndmedium[id];
+        } else if (diff == 3) {
           ndhard[id] = pre.getInt('hard$id') ?? 1;
-          curLevel=ndhard[id];
+          curLevel = ndhard[id];
         }
       }
       // else if(daily && quiz==1){
-      else if(daily){
+      else if (daily) {
         if (diff == 1) {
           deasy[id] = pre.getInt('deasy$id') ?? 1;
-          curLevel=deasy[id];
-        }
-        else if (diff == 2) {
+          curLevel = deasy[id];
+        } else if (diff == 2) {
           dmedium[id] = pre.getInt('dmedium$id') ?? 1;
-          curLevel=dmedium[id];
-        }
-        else if (diff == 3) {
+          curLevel = dmedium[id];
+        } else if (diff == 3) {
           dhard[id] = pre.getInt('dhard$id') ?? 1;
-          curLevel=dhard[id];
+          curLevel = dhard[id];
         }
       }
     });
   }
 
-  validate() async{
+  validate() async {
     SharedPreferences pre = await SharedPreferences.getInstance();
-    if(!daily){
-      if(diff==1){
-        if(ndeasy[id]<1){
+    if (!daily) {
+      if (diff == 1) {
+        if (ndeasy[id] < 1) {
           ndeasy[id] = (pre.getInt('easy$id') ?? 1);
           ndeasy[id] = 1;
           pre.setInt('easy$id', ndeasy[id]);
-        }
-        else if(ndeasy[id]>51){
+        } else if (ndeasy[id] > 51) {
           ndeasy[id] = (pre.getInt('easy$id') ?? 1);
           ndeasy[id] = 51;
           pre.setInt('easy$id', ndeasy[id]);
         }
-      }
-      else if(diff==2){
-        if(ndmedium[id]<1){
+      } else if (diff == 2) {
+        if (ndmedium[id] < 1) {
           ndmedium[id] = (pre.getInt('medium$id') ?? 1);
           ndmedium[id] = 1;
           pre.setInt('medium$id', ndmedium[id]);
         }
-        if(ndmedium[id]>34){
+        if (ndmedium[id] > 34) {
           ndmedium[id] = (pre.getInt('medium$id') ?? 1);
           ndmedium[id] = 34;
           pre.setInt('medium$id', ndmedium[id]);
         }
-      }
-      else if(diff==3){
-        if(ndhard[id]<1){
+      } else if (diff == 3) {
+        if (ndhard[id] < 1) {
           ndhard[id] = (pre.getInt('hard$id') ?? 1);
           ndhard[id] = 1;
           pre.setInt('hard$id', ndhard[id]);
         }
-        if(ndhard[id]>17){
+        if (ndhard[id] > 17) {
           ndhard[id] = (pre.getInt('hard$id') ?? 1);
           ndhard[id] = 17;
           pre.setInt('hard$id', ndhard[id]);
@@ -169,38 +157,33 @@ class _QuestionState extends State<Question> {
       }
     }
     // else if(daily && quiz==1){
-    else if(daily){
-      if(diff==1){
-        if(deasy[id]<1){
+    else if (daily) {
+      if (diff == 1) {
+        if (deasy[id] < 1) {
           deasy[id] = (pre.getInt('deasy$id') ?? 1);
           deasy[id] = 1;
           pre.setInt('deasy$id', deasy[id]);
-        }
-        else if(deasy[id]>377){
+        } else if (deasy[id] > 377) {
           deasy[id] = (pre.getInt('deasy$id') ?? 1);
           deasy[id] = 377;
           pre.setInt('deasy$id', deasy[id]);
         }
-      }
-      else if(diff==2){
-        if(dmedium[id]<1){
+      } else if (diff == 2) {
+        if (dmedium[id] < 1) {
           dmedium[id] = (pre.getInt('dmedium$id') ?? 1);
           dmedium[id] = 1;
           pre.setInt('dmedium$id', dmedium[id]);
-        }
-        else if(dmedium[id]>257){
+        } else if (dmedium[id] > 257) {
           dmedium[id] = (pre.getInt('dmedium$id') ?? 1);
           dmedium[id] = 257;
           pre.setInt('dmedium$id', dmedium[id]);
         }
-      }
-      else if(diff==3){
-        if(dhard[id]<1){
+      } else if (diff == 3) {
+        if (dhard[id] < 1) {
           dhard[id] = (pre.getInt('dhard$id') ?? 1);
           dhard[id] = 1;
           pre.setInt('dhard$id', dhard[id]);
-        }
-        else if(dhard[id]>137){
+        } else if (dhard[id] > 137) {
           dhard[id] = (pre.getInt('dhard$id') ?? 1);
           dhard[id] = 137;
           pre.setInt('dhard$id', dhard[id]);
@@ -212,74 +195,70 @@ class _QuestionState extends State<Question> {
   updateCounter(int i, int points) async {
     SharedPreferences pre = await SharedPreferences.getInstance();
     setState(() {
-      if(!daily) {
+      if (!daily) {
         if (diff == 1) {
           ndeasy[i] = (pre.getInt('easy$i') ?? 1) + points;
           pre.setInt('easy$i', ndeasy[i]);
-          curLevel=ndeasy[id];
-          if(points==1 && (ndeasy[i]/3).toInt()>((ndeasy[i]-1)/3).toInt()){
-            levelChange=1;
+          curLevel = ndeasy[id];
+          if (points == 1 && ndeasy[i] ~/ 3 > (ndeasy[i] - 1) ~/ 3) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
           }
-          else{
-            levelChange=0;
-          }
-        }
-        else if (diff == 2) {
+        } else if (diff == 2) {
           ndmedium[i] = (pre.getInt('medium$i') ?? 1) + points;
           pre.setInt('medium$i', ndmedium[i]);
-          curLevel=ndmedium[id];
-          if(points==1 && (ndmedium[i]/2).toInt()>((ndmedium[i]-1)/2).toInt()){
-            levelChange=1;
+          curLevel = ndmedium[id];
+          if (points == 1 && ndmedium[i] ~/ 2 > (ndmedium[i] - 1) ~/ 2) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
           }
-          else{
-            levelChange=0;
-          }
-        }
-        else if (diff == 3) {
+        } else if (diff == 3) {
           ndhard[i] = (pre.getInt('hard$i') ?? 1) + points;
           pre.setInt('hard$i', ndhard[i]);
-          curLevel=ndhard[id];
-          if(points==1){
-            levelChange=1;
-          }
-          else{
-            levelChange=0;
+          curLevel = ndhard[id];
+          if (points == 1) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
           }
         }
       }
       // else if(daily && quiz==1){
-      else if(daily){
+      else if (daily) {
         if (diff == 1) {
           deasy[i] = (pre.getInt('deasy$i') ?? 1) + points;
           pre.setInt('deasy$i', deasy[i]);
-          curLevel=deasy[id];
-          if(points==1 && getLevel(1, deasy[i], daily)>(getLevel(1, deasy[i]-1,daily))){
-            levelChange=1;
+          curLevel = deasy[id];
+          if (points == 1 &&
+              getLevel(1, deasy[i], daily) >
+                  (getLevel(1, deasy[i] - 1, daily))) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
           }
-          else{
-            levelChange=0;
-          }
-        }
-        else if (diff == 2) {
+        } else if (diff == 2) {
           dmedium[i] = (pre.getInt('dmedium$i') ?? 1) + points;
           pre.setInt('dmedium$i', dmedium[i]);
-          curLevel=dmedium[id];
-          if(points==1 && getLevel(2, dmedium[i],daily)>(getLevel(2, dmedium[i]-1,daily))){
-            levelChange=1;
+          curLevel = dmedium[id];
+          if (points == 1 &&
+              getLevel(2, dmedium[i], daily) >
+                  (getLevel(2, dmedium[i] - 1, daily))) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
           }
-          else{
-            levelChange=0;
-          }
-        }
-        else if (diff == 3) {
+        } else if (diff == 3) {
           dhard[i] = (pre.getInt('dhard$i') ?? 1) + points;
           pre.setInt('dhard$i', dhard[i]);
-          curLevel=dhard[id];
-          if(points==1 && getLevel(3, dhard[i],daily)>(getLevel(3, dhard[i]-1,daily))){
-            levelChange=1;
-          }
-          else{
-            levelChange=0;
+          curLevel = dhard[id];
+          if (points == 1 &&
+              getLevel(3, dhard[i], daily) >
+                  (getLevel(3, dhard[i] - 1, daily))) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
           }
         }
       }
@@ -287,48 +266,43 @@ class _QuestionState extends State<Question> {
     validate();
   }
 
-  resetCounter() async{
+  resetCounter() async {
     SharedPreferences pre = await SharedPreferences.getInstance();
-    for(int i=0;i<8;i++){
+    for (int i = 0; i < 8; i++) {
       pre.setInt('easy$i', 1);
     }
-    for(int i=0;i<19;i++){
+    for (int i = 0; i < 19; i++) {
       pre.setInt('medium$i', 1);
     }
-    for(int i=0;i<12;i++){
+    for (int i = 0; i < 12; i++) {
       pre.setInt('hard$i', 1);
     }
-    for(int i=0;i<2;i++){
+    for (int i = 0; i < 2; i++) {
       pre.setInt('deasy$i', 1);
     }
-    for(int i=0;i<6;i++){
+    for (int i = 0; i < 6; i++) {
       pre.setInt('dmedium$i', 1);
     }
-    for(int i=0;i<3;i++){
+    for (int i = 0; i < 3; i++) {
       pre.setInt('dhard$i', 1);
     }
   }
 
-  int getLevel(int d, int an, bool isdaily){
-    if(isdaily) {
+  int getLevel(int d, int an, bool isdaily) {
+    if (isdaily) {
       if (d == 1) {
         return ((7 + sqrt(24 * an - 23)) / 6).floor().toInt();
-      }
-      else if (d == 2) {
+      } else if (d == 2) {
         return (1 + sqrt(an - 1)).floor().toInt();
-      }
-      else {
+      } else {
         return ((1 + sqrt(8 * an - 7)) / 2).floor().toInt();
       }
-    }
-    else{
-      if(d==1){
-        return (an/3).toInt();
-      }
-      else if(d==2){
-        return (an/2).toInt();
-      }
-      else if(d==3){
+    } else {
+      if (d == 1) {
+        return an ~/ 3;
+      } else if (d == 2) {
+        return an ~/ 2;
+      } else if (d == 3) {
         return (an).toInt();
       }
     }
@@ -336,8 +310,11 @@ class _QuestionState extends State<Question> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(5),
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 5,
+      ),
+      width: MediaQuery.of(context).size.width - 5,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
@@ -362,7 +339,7 @@ class _QuestionState extends State<Question> {
               height: 10,
             ),
             ...widget.options.map(
-                  (e) => Container(
+              (e) => Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: FlatButton(
                   shape: RoundedRectangleBorder(
@@ -372,87 +349,92 @@ class _QuestionState extends State<Question> {
                   ),
                   color: const Color(0xff1B3671),
                   onPressed: () async {
-
-                    if(numOfOptions==2) {
+                    if (numOfOptions == 2) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                      }
-
-                      else if (e == (data["options"] as List)[1] && level) {
+                      } else if (e == (data["options"] as List)[1] && level) {
                         await updateCounter(id, -1);
                       }
-                    }
-
-                    else if(numOfOptions==3){
+                    } else if (numOfOptions == 3) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                      }
-
-                      else if (e == (data["options"] as List)[2] && level) {
+                      } else if (e == (data["options"] as List)[2] && level) {
                         await updateCounter(id, -1);
                       }
-                    }
+                    } else if (numOfOptions == 4) {}
 
-                    else if(numOfOptions==4){
-
+                    if (this.levelChange == 1) {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                              height: 430.0,
+                              color: Color(0xff2c2e36),
+                              child: Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
+                                  children: [
+                                    SizedBox(
+                                      height: 170.0,
+                                    ), // here goes the svg
+                                    Center(
+                                      child: Text(
+                                        'CONGRATULATIONS!\n',
+                                        style: TextStyle(
+                                          fontSize: 22.0,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Center(
+                                      child: Text(
+                                        'You earned',
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Center(
+                                      child: Text(
+                                        '$badgeName!',
+                                        style: TextStyle(
+                                          fontSize: 22.0,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                    Center(
+                                      child: Text(
+                                        'LEVEL ${getLevel(diff, curLevel, daily)}',
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          });
                     }
-                    
-                    if(this.levelChange==1){
-                      showModalBottomSheet(context: context, builder: (BuildContext context){
-                        return Container(
-                          height: 430.0,
-                          color: Color(0xff2c2e36),
-                          child: Padding(
-                            padding: EdgeInsets.all(10.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                SizedBox(height: 170.0,),       // here goes the svg
-                                Center(
-                                  child: Text('CONGRATULATIONS!\n',
-                                    style: TextStyle(
-                                      fontSize: 22.0,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: 10.0,),
-                                Center(
-                                  child: Text('You earned',
-                                    style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: 10.0,),
-                                Center(
-                                  child: Text('$badgeName!',
-                                    style: TextStyle(
-                                      fontSize: 22.0,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: 10.0,),
-                                Center(
-                                  child: Text('LEVEL ${getLevel(diff, curLevel , daily)}',
-                                    style: TextStyle(
-                                      fontSize: 20.0,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: 10.0,),
-                              ],
-                            ),
-                          ),
-                        );
-                      });
-                    }
-
                   },
                   child: Text(
                     e,
