@@ -1,6 +1,6 @@
 List<Map<String, Object>> data = [
   {
-    "title": "Yes, yes. We both know that LED's are efficient but by how much?",
+    "title": "Because LED is worth it!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -50,7 +50,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Shhh... I consume power even when I'm off!",
+    "title": "Phantom POWER!",
     "id": 2,
     "hasLevel": true,
     "isDaily": true,
@@ -99,7 +99,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "One little step towards saving energy",
+    "title": "Reduce your brightness",
     "id": 2,
     "hasLevel": true,
     "isDaily": true,
@@ -246,7 +246,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Here are a few tips for your washing machine",
+    "title": "Load it up!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -295,7 +295,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Set your refrigerator at the right temperature",
+    "title": "Refrigerate right!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -349,7 +349,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Have you heard about BLDC fans?",
+    "title": "BLDC fans! Um, what?",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -1082,7 +1082,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Minimize packaging by buying in bulk",
+    "title": "Buy in bulk!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -1734,7 +1734,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Sustainable personal care products",
+    "title": "Sustainable personal care",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -1840,7 +1840,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Ride a bicycle-but not for the reason you'd expect",
+    "title": "Take the bicycle!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -1927,7 +1927,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Stop making it about \"those people\" or \"the other\"",
+    "title": "\"Those people\"",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -2020,7 +2020,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Inculcate the habit of walking",
+    "title": "Walk more!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -2119,8 +2119,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title":
-        "Regularly check the condition of your vehicle and service it timely",
+    "title": "Check your vehicle",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
