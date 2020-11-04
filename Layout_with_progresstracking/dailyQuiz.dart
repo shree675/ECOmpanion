@@ -19,21 +19,18 @@ class DailyQuiz extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      body: Column(
-        children: data.map((e) {
-          if (e["hasReminder"]) {
-            return Question(
-              e["question"],
-              e["options"],
-              e,
-              1
+      body: SingleChildScrollView(
+        child: Column(
+          children: data.map((e) {
+            if (e["hasReminder"]) {
+              return Question(e["question"], e["options"], e, 1);
+            }
+            return SizedBox(
+              height: 0,
+              width: 0,
             );
-          }
-          return SizedBox(
-            height: 0,
-            width: 0,
-          );
-        }).toList(),
+          }).toList(),
+        ),
       ),
     );
   }
