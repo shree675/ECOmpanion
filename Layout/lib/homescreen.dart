@@ -1,6 +1,8 @@
-import 'package:Layout/dailyQuiz.dart';
-import 'package:Layout/flashcardsScreen.dart';
-import 'package:Layout/models/question.dart';
+import 'dailyQuiz.dart';
+import 'flashcardsScreen.dart';
+// import 'package:Layout/flashcardsScreen.dart';
+import 'question.dart';
+// import 'package:Layout/models/question.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -44,10 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () => showFlashcards(context),
-              child: Question(
-                data[0]["question"],
-                data[0]["options"],
-              ),
+              child:
+                  Question(data[0]["question"], data[0]["options"], data[0], 0),
             ),
             Container(
               width: MediaQuery.of(context).size.width - 25,
@@ -92,8 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        height: 195,
-                        width: 195,
+                        height: MediaQuery.of(context).size.height * 0.29,
+                        width: MediaQuery.of(context).size.height * 0.29,
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
@@ -119,8 +119,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Container(
-                        height: 195,
-                        width: 195,
+                        height: MediaQuery.of(context).size.height * 0.29,
+                        width: MediaQuery.of(context).size.height * 0.29,
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
@@ -154,8 +154,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        height: 195,
-                        width: 195,
+                        height: MediaQuery.of(context).size.height * 0.29,
+                        width: MediaQuery.of(context).size.height * 0.29,
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
@@ -181,8 +181,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Container(
-                        height: 195,
-                        width: 195,
+                        height: MediaQuery.of(context).size.height * 0.29,
+                        width: MediaQuery.of(context).size.height * 0.29,
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
