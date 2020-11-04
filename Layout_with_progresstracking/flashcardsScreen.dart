@@ -18,8 +18,10 @@ class FlashcardsScreen extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      body: Column(
-        children: data.map((e) => Flashcard(e)).toList(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: data.map((e) => Flashcard(e)).toList(),
+        ),
       ),
     );
   }
