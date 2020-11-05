@@ -19,56 +19,79 @@ class Details extends StatelessWidget {
         0xff2C2E36,
       ),
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+          ),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: Text("ECO"),
         centerTitle: true,
         backgroundColor: const Color(
           0xff2C2E36,
         ),
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.account_circle_outlined,
+            ),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Row(
               children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.1,
+                FittedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    child: Column(
+                      children: [
+                        Text(
+                          flashcard["title"],
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            color: const Color(
+                              0xffFFFFFF,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          (flashcard["difficulty"] as Map)["text"],
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: const Color(
+                              0xffFFFFFF,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Text(
-                      flashcard["title"],
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                        color: const Color(
-                          0xffFFFFFF,
+                Expanded(
+                  child: SizedBox(
+                    width: 5,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  child: Flexible(
+                    child: Container(
+                      child: GestureDetector(
+                        onTap: () => showBadgeDetails(context),
+                        child: SvgPicture.asset(
+                          (flashcard["badge"] as Map)["path"]
+                              [flashcard["currentLevel"] - 1],
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      (flashcard["difficulty"] as Map)["text"],
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: const Color(
-                          0xffFFFFFF,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.34,
-                ),
-                Container(
-                  child: GestureDetector(
-                    onTap: () => showBadgeDetails(context),
-                    child: SvgPicture.asset(
-                      (flashcard["badge"] as Map)["path"]
-                      [flashcard["currentLevel"] - 1],
                     ),
                   ),
                 ),
@@ -105,76 +128,6 @@ class Details extends StatelessWidget {
                 ),
               );
             }).toList(),
-            Container(
-              margin: EdgeInsets.symmetric(
-                horizontal: 5,
-              ),
-              height: MediaQuery.of(context).size.height * 0.2,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                color: Color(flashcard["color"]),
-                child: Center(
-                  child: Text(
-                    "Visualization",
-                    style: TextStyle(
-                      color: const Color(
-                        0xffFFFFFF,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.2,
-              margin: EdgeInsets.symmetric(
-                horizontal: 5,
-              ),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    10,
-                  ),
-                ),
-                color: Color(flashcard["color"]),
-                child: Center(
-                  child: Text(
-                    "World Economic Forum",
-                    style: TextStyle(
-                      color: const Color(
-                        0xffFFFFFF,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.2,
-              margin: EdgeInsets.symmetric(
-                horizontal: 5,
-              ),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    10,
-                  ),
-                ),
-                color: Color(flashcard["color"]),
-                child: Center(
-                  child: Text(
-                    "Read more about Fast Fashion",
-                    style: TextStyle(
-                      color: const Color(
-                        0xffFFFFFF,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),

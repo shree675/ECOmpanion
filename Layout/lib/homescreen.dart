@@ -1,3 +1,4 @@
+import 'package:Layout/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,6 +7,7 @@ import 'data.dart';
 import 'dailyQuiz.dart';
 import 'flashcardsScreen.dart';
 import 'question.dart';
+import './appBar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -38,6 +40,14 @@ class _HomeScreenState extends State<HomeScreen> {
           0xff2C2E36,
         ),
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.account_circle_outlined,
+            ),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(

@@ -1,6 +1,6 @@
 List<Map<String, Object>> data = [
   {
-    "title": "Yes, yes. We both know that LED's are efficient but by how much?",
+    "title": "Because LED is worth it!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -50,7 +50,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Shhh... I consume power even when I'm off!",
+    "title": "Phantom POWER!",
     "id": 2,
     "hasLevel": true,
     "isDaily": true,
@@ -99,7 +99,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "One little step towards saving energy",
+    "title": "Reduce your brightness",
     "id": 2,
     "hasLevel": true,
     "isDaily": true,
@@ -246,7 +246,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Here are a few tips for your washing machine",
+    "title": "Load it up!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -295,7 +295,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Set your refrigerator at the right temperature",
+    "title": "Refrigerate right!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -349,7 +349,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Have you heard about BLDC fans?",
+    "title": "BLDC fans! Um, what?",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -1082,7 +1082,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Minimize packaging by buying in bulk",
+    "title": "Buy in bulk!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -1734,7 +1734,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Sustainable personal care products",
+    "title": "Sustainable personal care",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -1840,7 +1840,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Ride a bicycle-but not for the reason you'd expect",
+    "title": "Take the bicycle!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -1927,7 +1927,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Stop making it about \"those people\" or \"the other\"",
+    "title": "\"Those people\"",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -2020,7 +2020,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title": "Inculcate the habit of walking",
+    "title": "Walk more!",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -2119,8 +2119,7 @@ List<Map<String, Object>> data = [
     },
   },
   {
-    "title":
-        "Regularly check the condition of your vehicle and service it timely",
+    "title": "Check your vehicle",
     "id": 2,
     "hasLevel": true,
     "isDaily": false,
@@ -2464,5 +2463,478 @@ List<Map<String, Object>> data = [
       "text": "food",
       "id": 1,
     },
+  },
+];
+
+List<Map<String, Object>> environmentalDays = [
+  {
+    "title": "World Wetlands Day",
+    "date": {
+      "day": 2,
+      "month": 2,
+    },
+    "description": [
+      "Wetlands are land areas that are saturated or flooded with water either permanently or seasonally. Wetlands are rich with biodiversity and are a habitat for a dense variety of plant and animal species.",
+      "But, the latest estimates show a global decline of biodiversity, and wetlands are disappearing three times faster than forests.",
+      "Thus, 2 February of each year is observed as World Wetlands Day to raise global awareness about the vital role of wetlands for people and our planet.",
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link": "https://www.worldwetlandsday.org/about",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Polar Bear Day",
+    "date": {
+      "day": 27,
+      "month": 2,
+    },
+    "description": [
+      "Sea ice loss from human-caused climate warming is the single biggest threat to polar bears. The latest IUCN report estimates there approximately are only 26,000 of them left on the earth and We could see dramatic declines in polar bear numbers by mid-century if we do not greatly reduce the use of fossil fuels for our energy needs, and instead shift to renewables.",
+      "The day encourages people to find ways to reduce their carbon output, such as by turning down their thermostat or driving less. The day has also been used to encourage the installation of energy efficient insulation in houses. Because It’s more than just polar bears being affected.The rapidly changing climate threatens our own future.",
+    ],
+    "links": [
+      {
+        "text": "Want to know more about polar bears?",
+        "link": "https://polarbearsinternational.org/polar-bears",
+      },
+      {
+        "text": "To know more about the plan and take action, click here",
+        "link": "https://polarbearsinternational.org/climate-change",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Wildlife Day",
+    "date": {
+      "day": 3,
+      "month": 3,
+    },
+    "description": [
+      "Earth is home to countless species of fauna and flora – too many to even attempt counting. This rich diversity, and the billions of years during which its myriad elements have interacted, are precisely what has made our planet inhabitable for all living creatures, including humans. However, unsustainable human activities and overexploitation of the species and natural resources that make up the habitats and ecosystems of all wildlife are imperiling the world’s biodiversity. Nearly a quarter of all species are presently at risk of going extinct in the coming decades, and their demise would only speed up the disappearance of countless others, putting us in danger as well.",
+      "Hence, march 3rd is celebrated as the UN World Wildlife Day to raise awareness of the world’s wild animals and plants.",
+    ],
+    "links": [
+      {
+        "text": "Learn more here",
+        "link": "https://www.wildlifeday.org/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "Global Recycling Day",
+    "date": {
+      "day": 8,
+      "month": 3,
+    },
+    "description": [
+      "Global Recycling Day was created in 2018 to help recognize, and celebrate, the importance recycling plays in preserving our precious primary resources and securing the future of our planet. It is a day for the world to come together and put the planet first.",
+      "Every year, the Earth yields billions of tons of natural resources and at some point, in the not too distant future, it will run out.That’s why we must think again about what we throw away – seeing not waste, but opportunity..\nEach year the ‘Seventh Resource’ (recyclables) saves over 700 million tonnes in CO2 emissions and this is projected to increase to 1 billion tons by 2030. There is no doubt recycling is on the front line in the war to save the future of our planet and humanity.",
+    ],
+    "links": [
+      {
+        "text": "To know more about what you can do, click here",
+        "link": "https://www.globalrecyclingday.com/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "Anniversary of the Chipko Andolan",
+    "date": {
+      "day": 26,
+      "month": 3,
+    },
+    "description": [
+      "\t\t\t\tEmbrace the trees and\n\n\t\t\t\tSave them from being felled;\n\n\t\t\t\tThe property of our hills,\n\n\t\t\t\tSave them from being looted.",
+      "The Chipko movement, was a forest conservation movement in India. It began in the 1970s in Uttarakhand, and went on to become a rallying point for many future environmental movements all over the world. It created a precedent for starting nonviolent protest in India, and its success meant that the world immediately took notice of this non-violent movement, which was to inspire in time many similar eco-groups by helping to slow down the rapid deforestation, expose vested interests, increase social awareness and the need to save trees, increase ecological awareness, and demonstrate the viability of people power",
+    ],
+    "links": [
+      {
+        "text": "",
+        "link": "",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day of Forests",
+    "date": {
+      "day": 21,
+      "month": 3,
+    },
+    "description": [
+      "Too precious to lose\nForests cover one third of the Earth's land mass, performing vital functions around the world.Forests, their sustainable management and use of resources, including in fragile ecosystems, are key to combating climate change, and to contributing to the prosperity and well-being of current and future generations..Around 1.6 billion people - including more than 2,000 indigenous cultures - depend on forests for their livelihoods, medicines, fuel, food and shelter.",
+      "Yet despite all of these priceless ecological, economic, social and health benefits, global deforestation continues at an alarming rate.\nThe Day celebrates and raises awareness of the importance of all types of forests. On each International Day of Forests, countries are encouraged to undertake local, national and international efforts to organize activities involving forests and trees, such as tree planting campaigns."
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link": "http://www.fao.org/international-day-of-forests/en/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Water Day",
+    "date": {
+      "day": 22,
+      "month": 3,
+    },
+    "description": [
+      "Climate delay is almost as dangerous as climate denial. Every country in the world must work more quickly.",
+      "And in the current world, extreme weather events are making water more scarce, more unpredictable, more polluted or all three.",
+      "As the global population grows, so does the demand for water, which depletes natural resources and damages the environment in many places.",
+      "Water is our most precious resource – we must use it more responsibly. We must balance all of society’s water needs while ensuring the poorest people don’t get left behind.",
+    ],
+    "links": [
+      {
+        "text": "Visit the official website",
+        "link": "https://www.worldwaterday.org/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "Earth Day",
+    "date": {
+      "day": 22,
+      "month": 4,
+    },
+    "description": [
+      "The fight for a clean environment continues with increasing urgency, as the ravages of climate change become more and more apparent everyday. Every year on April 22, Earth Day marks the anniversary of the birth of the modern environmental movement in 1970. Today, Earth Day is widely recognized as the largest secular observance in the world, marked by more than a billion people every year as a day of action to change human behavior and create global, national and local policy changes.",
+      "Celebrating Earth Day serves as a conscious reminder of how fragile our planet is and how important it is to protect it.",
+    ],
+    "links": [
+      {
+        "text": "Earth day tips",
+        "link": "https://www.earthday.org/earth-day-tips/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day of Light",
+    "date": {
+      "day": 16,
+      "month": 5,
+    },
+    "description": [
+      "The International Day of Light is celebrated on 16 May each year, the anniversary of the first successful operation of the laser in 1960 by physicist and engineer, Theodore Maiman. This day is a call to strengthen scientific cooperation and harness its potential to foster peace and sustainable development.",
+      "The International Day of Light is a global initiative that provides an annual focal point for the continued appreciation of light and the role it plays in science, culture and art, education, and sustainable development, and in fields as diverse as medicine, communications, and energy. The broad theme of light will allow many different sectors of society worldwide to participate in activities that demonstrate how science, technology, art and culture can help achieve the goals of UNESCO – education, equality, and peace.",
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link":
+            "https://photonicsforabetterworld.blogspot.com/2018/04/ten-ways-to-celebrate-first.html",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Bee Day",
+    "date": {
+      "day": 20,
+      "month": 5,
+    },
+    "description": [
+      "We all depend on the survival of bees",
+      "In order to be able to feed the world’s growing population, we need ever more food, which must be diverse, balanced and of good quality to ensure the progress and well-being of humankind. The greatest contribution of bees and other pollinators is the pollination of nearly three quarters of the plants that produce 90% of the world’s food. A third of the world’s food production depends on bees, i.e. every third spoonful of food depends on pollination.Bees also act as indicators of the state of the environment. Their presence, absence or quantity tells us when something is happening with the environment and that appropriate action is needed.",
+      "To raise awareness of the importance of pollinators, the threats they face and their contribution to sustainable development, the UN designated 20 May as World Bee Day.",
+      "The goal is to strengthen measures aimed at protecting bees and other pollinators, which would significantly contribute to solving problems related to the global food supply and eliminate hunger in developing countries.",
+    ],
+    "links": [
+      {
+        "text": "Learn more about what you can do",
+        "link": "https://www.un.org/en/observances/bee-day",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World No-Tobacco Day",
+    "date": {
+      "day": 31,
+      "month": 5,
+    },
+    "description": [
+      "World No Tobacco Day (WNTD) is observed around the world every year on 31 May. This yearly celebration informs the public on the dangers of using tobacco, the business practices of tobacco companies, what the World Health Organization (WHO) is doing to fight against the use of tobacco, and what people around the world can do to claim their right to health and healthy living and to protect future generations.",
+      "For decades, the tobacco industry has deliberately employed strategic, aggressive and well-resourced tactics to attract youth to tobacco and nicotine products. Internal industry documents reveal in-depth research and calculated approaches designed to attract a new generation of tobacco users, from product design to marketing campaigns aimed at replacing the millions of people who die each year from tobacco-attributable diseases with new consumers – youth.",
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link": "https://www.medicoverhospitals.in/world-no-tobacco-day/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Bicycle Day",
+    "date": {
+      "day": 3,
+      "month": 6,
+    },
+    "description": [
+      "Regular physical activity of moderate intensity – such as walking, cycling, or doing sports – has significant benefits for health. Some physical activity is better than none.",
+      "Acknowledging the uniqueness, longevity and versatility of the bicycle, which has been in use for two centuries, and that it is a simple, affordable, reliable, clean and environmentally fit sustainable means of transportation, fostering environmental stewardship and health, the General Assembly decided to declare 3 June World Bicycle Day.",
+      "Accordingly, improved active transport is not only healthy; it is also equitable and cost-effective.",
+      "\t\tThe bicycle is a simple, affordable, reliable, clean and environmentally fit",
+      "\t\tThe bicycle is a symbol of sustainable transportation and conveys a positive message to foster sustainable consumption and production, and has a positive impact on climate.",
+      "This day encourages you to learn and spread knowledge about using sustainable modes of transport. Furthermore, it aims to encourage everyone to use a bicycle more often ! ",
+    ],
+    "links": [
+      {
+        "text": "To know more, click here",
+        "link": "https://www.un.org/en/observances/bicycle-day",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Environment Day",
+    "date": {
+      "day": 5,
+      "month": 6,
+    },
+    "description": [
+      "The foods we eat, the air we breathe, the water we drink and the climate that makes our planet habitable all come from nature. Yet, these are exceptional times in which nature is sending us a message: To care for ourselves we must care for nature. It’s time to wake up. To take notice. To raise our voices. It’s time to build back better for People and Planet. This World Environment Day, it’s Time for Nature.",
+      "For instance, each year, marine plants produce more than a half of our atmosphere's oxygen, and a mature tree cleans our air, absorbing 22 kilos of carbon dioxide, releasing oxygen in exchange. Despite all the benefits that our nature gives us, we still mistreat it.That is why we need to work on that. That is why we need this Observance.",
+      "Since 1974, World Environment day has been celebrated every year on 5 June: engaging governments, businesses, celebrities and citizens to focus their efforts on a pressing environmental issue.",
+    ],
+    "links": [
+      {
+        "text": "What can you do?",
+        "link": "https://www.un.org/en/observances/environment-day/take-action",
+      },
+      {
+        "text":
+            "Take this quiz to see just how clued-up you are about biodiversity!",
+        "link": "https://www.worldenvironmentday.global/did-you-know/take-quiz",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day for the Conservation of the Mangrove Ecosystem",
+    "date": {
+      "day": 26,
+      "month": 7,
+    },
+    "description": [
+      "Mangroves are rare, spectacular and prolific ecosystems on the boundary between land and sea. These extraordinary ecosystems contribute to the wellbeing, food security, and protection of coastal communities worldwide. They support a rich biodiversity and provide a valuable nursery habitat for fish and crustaceans. Mangroves also act as a form of natural coastal defense against storm surges, tsunamis, rising sea levels and erosion. Their soils are highly effective carbon sinks, sequestering vast amounts of carbon.",
+      "Yet mangroves are disappearing three to five times faster than overall global forest losses, with serious ecological and socio-economic impacts. Current estimates indicate that mangrove coverage has been divided by two in the past 40 years.",
+      "The International Day for the Conservation of the Mangrove Ecosystem, adopted by the General Conference of UNESCO in 2015 and celebrated each year on 26 July, aims to raise awareness of the importance of mangrove ecosystems as \"a unique, special and vulnerable ecosystem\" and to promote solutions for their sustainable management, conservation and uses.",
+    ],
+    "links": [
+      {
+        "text": "Click here to know more about mangroves and their importance",
+        "link":
+            "https://en.unesco.org/commemorations/mangroveday#:~:text=The%20International%20Day%20for%20the,promote%20solutions%20for%20their%20sustainable",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Tiger Day",
+    "date": {
+      "day": 29,
+      "month": 7,
+    },
+    "description": [
+      "TIGERS: POSSIBLY OUR PLANET'S MOST ICONIC BIG CAT - And there are only around 3,900 tigers in the wild.",
+      "The beautiful, awe-inspiring tiger is one of our planet’s most iconic animals. But here’s the shocking truth. Wild tiger numbers dropped by more than 95% since the beginning of the 20th century. Now, for the first time in conservation history, their numbers are on the increase.Tigers used to roam across most of Asia, but now they’re restricted to just 7% of their original range, in isolated forests and grasslands across 13 countries.",
+      "In recent years, conservation work and the commitment of various governments has halted the decline in global tiger numbers. But there’s a lot more work to do. You, by yourself can contribute to save these endangered species. You can support the missions launched by WWF, you can preach your fellow mates about the need and what not.",
+    ],
+    "links": [
+      {
+        "text": "To know more about what you can do, click here",
+        "link":
+            "https://www.wwf.org.uk/get-involved/schools/calendar/international-tiger-day#action",
+      },
+      {
+        "text": "To know more about these awe-striking big cats, click here",
+        "link": "https://www.wwf.org.uk/learn/wildlife/tigers",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Tiger Day",
+    "date": {
+      "day": 12,
+      "month": 8,
+    },
+    "description": [
+      "Elephant numbers have dropped by 62% over the last decade, and they could be mostly extinct by the end of the next decade. An estimated 100 African elephants are killed each day by poachers seeking ivory, meat and body parts, leaving only 400,000 remaining.",
+      "Thus, on August 12, 2012, the inaugural World Elephant Day was launched to bring attention to the urgent plight of Asian and African elephants. The elephant is loved, revered and respected by people and cultures around the world, yet we balance on the brink of seeing the last of this magnificent creature.",
+      "The escalation of poaching, habitat loss, human-elephant conflict and mistreatment in captivity are just some of the threats to both African and Asian elephants. Working towards better protection for wild elephants, improving enforcement policies to prevent the illegal poaching and trade of ivory, conserving elephant habitats, better treatment for captive elephants and, when appropriate, reintroducing captive elephants into natural, protected sanctuaries are the goals that numerous elephant conservation organizations are focusing on around the world.",
+    ],
+    "links": [
+      {
+        "text": "Why care?",
+        "link": "https://worldelephantday.org/about/elephants",
+      },
+      {
+        "text": "What can you do to save these magnificent creatures?",
+        "link": "https://worldelephantday.org/how-to-help-elephants",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day for the Preservation of the Ozone Layer",
+    "date": {
+      "day": 16,
+      "month": 9,
+    },
+    "description": [
+      "The ozone layer, a fragile shield of gas, protects the Earth from the harmful portion of the rays of the sun, thus helping preserve life on the planet. Life on Earth would not be possible without sunlight. But the energy emanating from the sun would be too much for life on Earth to thrive were it not for the ozone layer. This stratospheric layer shields Earth from most of the sun’s harmful ultraviolet radiation. Sunlight makes life possible, but the ozone layer makes life as we know it possible.",
+      "A number of commonly used chemicals have been found to be extremely damaging to the ozone layer.Halocarbons containing bromine usually have much higher ozone-depleting potential (ODP) than those containing chlorine. The man-made chemicals that have provided most of the chlorine and bromine for ozone depletion are methyl bromide, methyl chloroform, carbon tetrachloride and families of chemicals known as halons, chlorofluorocarbons (CFCs) and hydrochlorofluorocarbons (HCFCs).",
+      "A depletion in the ozone layer could have many devastating outcomes like getting skin cancer, or not proper containment of the gases, change in proportions of the atmospheric gases etc.",
+    ],
+    "links": [
+      {
+        "text": "To know more about the ozone layer, click this",
+        "link": "https://www.un.org/en/observances/ozone-day/science",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "Zero Emission Day",
+    "date": {
+      "day": 16,
+      "month": 9,
+    },
+    "description": [
+      "Atmospheric levels of carbon dioxide—the most dangerous and prevalent greenhouse gas—are at the highest levels ever recorded. Greenhouse gas levels are so high primarily because humans have released them into the air by burning fossil fuels. The gases absorb solar energy and keep heat close to Earth's surface, rather than letting it escape into space.",
+      "Greenhouse gases have far-ranging environmental and health effects. They cause climate change by trapping heat, and they also contribute to respiratory disease from smog and air pollution.",
+      "The typical weather patterns we've grown to expect will change; some species will disappear; others will migrate or grow.",
+      "Hence, the ZeDay or the Zero Emissions day is observed worldwide on 21st september, to spread awareness among us humans and instill an urge of change.",
+      "ZeDay Guidelines are simple:\n\t1. Don’t use or burn oil or gas or coal.\n\t2. Minimize (or eliminate) your use of electricity generated by fossil fuels.\n\t3. Don’t put anyone in harm’s way: All essential and emergency services operate normally\n\t4. Do your best, have fun, enjoy the day!",
+    ],
+    "links": [
+      {
+        "text": "To know more, click this",
+        "link":
+            "https://www.nationalgeographic.com/environment/global-warming/greenhouse-gases/#:~:text=Greenhouse%20gases%20have%20far%2Dranging,change%20caused%20by%20greenhouse%20gases.",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Rhino Day",
+    "date": {
+      "day": 22,
+      "month": 9,
+    },
+    "description": [
+      "World Rhino Day is observed on September 22 every year to raise awareness and build a safe natural habitat for this incredible species.",
+      "The rhinoceros is Africa’s armoured giant – like a tank on legs – and has been on our planet for millions of years. But right now they need our help. Poaching of rhinos for their horns and habitat loss are huge threats to both white and black rhinos.",
+      "Sadly there are no ‘northern’ white rhinos left in the wild, and only a handful in captivity. But the ‘southern’ white rhino is a conservation success story – it’s been helped back from under 100 in 1895 to over 20,000 in the wild today.",
+      "But poaching of rhinos for rhino horn is still a huge threat, and the poachers have got increasingly better equipped. Help us make sure we don’t lose these incredibly precious creatures."
+    ],
+    "links": [
+      {
+        "text": "Here's how you can help the mighty rhinos!",
+        "link": "https://rhinos.org/world-rhino-day/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Day of Climate Action",
+    "date": {
+      "day": 19,
+      "month": 11,
+    },
+    "description": [
+      "Despite being appreciative of all Mother Earth has done for us,  the havoc we've wreaked on her atmosphere and natural lands for years now is still continuing.",
+      "Weather extremes and reports of disasters make it clear: Climate change is dramatically picking up speed. At the same time, concern about climate change makes people all over the world join and take the streets. A global climate movement has emerged.",
+      "Also, youths participating in something called a youth climate action day where all the youth come together and protest, show concern about climate change in their own creative ways.",
+      "On Climate Action Day you can come together for action if you feel concerned about climate change and global injustice: Tree planting, upcycling, workshops on a plastic free lifestyle or discussions about e-mobility, whatever is on your mind…"
+    ],
+    "links": [
+      {
+        "text": "Know what you can do on climate action day!",
+        "link": "https://climateactionday.org/en/#!/participate",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Toilet Day",
+    "date": {
+      "day": 19,
+      "month": 11,
+    },
+    "description": [
+      "Climate change is accelerating. Flood, drought, and rising sea levels are threatening sanitation systems – from toilets to septic tanks to treatment plants. Floodwater can contaminate wells used for drinking water or flooding might damage toilets and spread human waste into communities and food crops, causing deadly and chronic diseases.",
+      "World Toilet Day celebrates toilets and raises awareness of the 4.2 billion people living without access to safely managed sanitation. It is about taking action to tackle the global sanitation crisis and achieve Sustainable Development Goal 6: water and sanitation for all by 2030.",
+      "Toilets can help us to fight climate change too! Wastewater and sludge from toilets contain valuable water, nutrients, and energy. Sustainable sanitation systems make productive use of waste to safely boost agriculture and reduce and capture emissions for greener energy.",
+    ],
+    "links": [
+      {
+        "text":
+            "To know more about Sanitation and world toilet day, click here",
+        "link": "https://www.worldtoilet.org/what-we-do/world-toilet-day/",
+      },
+      {
+        "text":
+            "To know more about what you can do and act upon them, click here",
+        "link":
+            "https://www.worldtoiletday.info/world-toilet-day-2020/world-toilet-day-2020-act/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "World Soil Day",
+    "date": {
+      "day": 5,
+      "month": 12,
+    },
+    "description": [
+      "Stop Soil Erosion, Save Our Future",
+      "Every 5 seconds, the equivalent of one soccer field of soil is eroded. This alarming fact reaffirms the need to raise awareness through World Soil Day of this growing problem, as the Earth's population continues to expand.",
+      "To address this, World Soil Day (WSD) is held annually on 5 December as a means to focus attention on the importance of healthy soil and to advocate for the sustainable management of soil resources.",
+    ],
+    "links": [
+      {
+        "text":
+            "Visit this page to get a complete guide about this day and what you can do!",
+        "link": "https://www.daysoftheyear.com/days/world-soil-day/",
+      },
+    ],
+    "image": "",
+  },
+  {
+    "title": "International Mountain Day",
+    "date": {
+      "day": 5,
+      "month": 12,
+    },
+    "description": [
+      "Towering, majestic, and beautiful. Mountains are some of the most beautiful of nature’s structures, stolid and regal they stand against the sky, of such a size that they can catch entire countryside’s in their shadow, and turn back the ravages of storms against their unflinching sides.",
+      "But unfortunately, even mountains are under threat from climate change and overexploitation. As the global climate continues to warm, mountain people — some of the world’s poorest — face even greater struggles to survive. The rising temperatures also mean that mountain glaciers are melting at unprecedented rates, affecting freshwater supplies downstream for millions of people.",
+      "The increasing attention to the importance of mountains led the UN to declare to 2002 the UN International Year of Mountains. ",
+      "It has been observed every year to create awareness about the importance of mountains to life, to highlight the opportunities and constraints in mountain development and to build alliances that will bring positive change to mountain peoples and environments around the world.."
+    ],
+    "links": [
+      {
+        "text":
+            "Here are a few things that you can do on International Mountain Day",
+        "link":
+            "http://www.fao.org/international-mountain-day/2020-themeen/en/",
+      },
+    ],
+    "image": "",
   },
 ];

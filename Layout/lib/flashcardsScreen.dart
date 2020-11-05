@@ -11,12 +11,26 @@ class FlashcardsScreen extends StatelessWidget {
         0xff2C2E36,
       ),
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+          ),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: Text("ECO"),
         centerTitle: true,
         backgroundColor: const Color(
           0xff2C2E36,
         ),
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.account_circle_outlined,
+            ),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
