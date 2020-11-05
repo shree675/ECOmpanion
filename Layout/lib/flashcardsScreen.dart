@@ -1,6 +1,7 @@
 import './data.dart';
-import './models/flashcard.dart';
+// import './models/flashcard.dart';
 import 'package:flutter/material.dart';
+import 'flashcard.dart';
 
 class FlashcardsScreen extends StatelessWidget {
   @override

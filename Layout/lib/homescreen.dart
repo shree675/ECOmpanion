@@ -1,13 +1,11 @@
-import 'dailyQuiz.dart';
-import 'flashcardsScreen.dart';
-// import 'package:Layout/flashcardsScreen.dart';
-import 'question.dart';
-// import 'package:Layout/models/question.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'data.dart';
+import 'dailyQuiz.dart';
+import 'flashcardsScreen.dart';
+import 'question.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

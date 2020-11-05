@@ -1,7 +1,8 @@
-import 'package:Layout/data.dart';
+// import 'package:Layout/data.dart';
 import 'package:flutter/material.dart';
-
-import './models/question.dart';
+import 'data.dart';
+// import './models/question.dart';
+import 'question.dart';
 
 class DailyQuiz extends StatelessWidget {
   @override
@@ -22,10 +23,7 @@ class DailyQuiz extends StatelessWidget {
         child: Column(
           children: data.map((e) {
             if (e["hasReminder"]) {
-              return Question(
-                e["question"],
-                e["options"],
-              );
+              return Question(e["question"], e["options"], e, 1);
             }
             return SizedBox(
               height: 0,
