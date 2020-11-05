@@ -89,8 +89,8 @@ List<Map<String, Object>> data = [
     "question":
         "Have you unplugged (not switching off)  the devices which you are not using?",
     "options": [
-      "No, just switching off should be enough right?",
       "Yes, I unplug everything when not in use",
+      "No, just switching off should be enough right?",
     ],
     "hasReminder": true,
     "category": {
@@ -138,8 +138,8 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Have you reduced your brightness?",
     "options": [
-      "No, I do it only when it is dark in the room",
       "Yes, I maintain the lowest comfortable brightness",
+      "No, I do it only when it is dark in the room",
     ],
     "hasReminder": true,
     "category": {
@@ -285,8 +285,8 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Have you been washing your clothes on full load?",
     "options": [
-      "No, I run the machine whenever I can",
       "Yes, I wait till it I have enough laundry for a full-load",
+      "No, I run the machine whenever I can",
     ],
     "hasReminder": true,
     "category": {
@@ -383,7 +383,7 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Are you changing over to BLDC fans?",
     "options": [
-      "Yes, it is at the required temperature and nothing extra",
+      "Yes, of course",
       "No, I have no idea how to do that. Do I even need to do that?",
     ],
     "hasReminder": true,
@@ -798,8 +798,9 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Do you have any water leaks in your house right now?",
     "options": [
-      "Yes",
       "No",
+      "Yes",
+      "I Don't know",
     ],
     "hasReminder": true,
     "category": {
@@ -848,8 +849,8 @@ List<Map<String, Object>> data = [
     "question": "How do you take a bath daily?",
     "options": [
       "Bucket bath",
-      "Shower",
       "Bathtub",
+      "Shower",
     ],
     "hasReminder": true,
     "category": {
@@ -959,8 +960,8 @@ List<Map<String, Object>> data = [
     "question":
         "Do you pop your clothes in the washing machine irrespective of whether they really need to be washed?",
     "options": [
-      "Yes of course! How can you wear them more than once! Gross!",
       "No, I decide based on how dirty they are and the type of fabric",
+       "Yes of course! How can you wear them more than once! Gross!",
     ],
     "hasReminder": true,
     "category": {
@@ -1011,8 +1012,8 @@ List<Map<String, Object>> data = [
         "Do you regularly remove unnecessary things from your cloud, drive and inbox?",
     "options": [
       "Yes, I regularly delete everything that I don’t need and unsubscribe from unnecessary  mailing lists",
-      "Yes, I delete some things that I don’t need",
       "No, I just let everything stay, what if I need it later?!",
+      "Yes, I delete some things that I don’t need",
     ],
     "hasReminder": true,
     "category": {
@@ -1133,8 +1134,8 @@ List<Map<String, Object>> data = [
         "How often do you buy commodities in bulk instead of conveniently sized small packets?",
     "options": [
       "Almost always",
-      "Sometimes",
       "Small and cute packets for me always please!",
+      "Sometimes",
     ],
     "hasReminder": true,
     "category": {
@@ -1184,8 +1185,8 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Do you own a pair of jeans?",
     "options": [
-      "Yes",
       "No",
+      "Yes",
     ],
     "hasReminder": true,
     "category": {
@@ -1234,9 +1235,9 @@ List<Map<String, Object>> data = [
     "question":
         "Have you ever bought clothes you hardly wear, or thrown them away soon because they don’t last or go out of fashion?",
     "options": [
+      "No, not really",
       "Yes, quite often actually",
       "Yes, sometimes",
-      "No, not really",
     ],
     "hasReminder": true,
     "category": {
@@ -1294,10 +1295,9 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "How often do you return or replace what you bought online?",
     "options": [
-      "Always, I ordered it just to see if it looked good on me",
+      "Never, I make do with whatever I get",
       "Very often, it just doesn’t work for me",
       "Rarely, sometimes the size or quality isn’t right",
-      "Never, I make do with whatever I get",
     ],
     "hasReminder": true,
     "category": {
@@ -1355,9 +1355,9 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "How often do you find yourself indulging in retail therapy?",
     "options": [
+      "Once or twice a year",
       "More than once a fortnight",
       "More than once in 2 months",
-      "Once or twice a year",
     ],
     "hasReminder": true,
     "category": {
@@ -1417,10 +1417,9 @@ List<Map<String, Object>> data = [
     "question":
         "Do you know the annual carbon footprint of maintaining your wardrobe?",
     "options": [
-      "No, not yet",
-      "Yes, approximately 50% less than the average human",
-      "Yes, approximately same as the average human",
+      "Yes, atleast 40% less than the average human",
       "Yes, at least 20% more than the average human",
+      "No, not yet",
     ],
     "hasReminder": true,
     "category": {
@@ -1485,8 +1484,8 @@ List<Map<String, Object>> data = [
     "question":
         "Do you know where what you’re wearing today was made? Do you know who made it?",
     "options": [
-      "No",
       "Yes",
+      "No",
     ],
     "hasReminder": true,
     "category": {
@@ -1664,8 +1663,8 @@ List<Map<String, Object>> data = [
     "question":
         "Do you often find yourself using (and losing) cheap use and throw pens and other single use stationery?",
     "options": [
-      "Yes, I use whatever is easily available and cheap",
       "No, I generally use long lasting stationery such as refillable pens",
+      "Yes, I use whatever is easily available and cheap",
     ],
     "hasReminder": true,
     "category": {
@@ -1828,10 +1827,9 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "How do you generally buy clothes?",
     "options": [
-      "I walk to the nearby store",
-      "I drive or take public transport to the store",
-      "I drive to a couple of stores at before deciding what to buy",
       "I order them online",
+      "I drive to a couple of store/stores before deciding what to buy",
+      "I walk to the nearby store",
     ],
     "hasReminder": true,
     "category": {
@@ -1875,7 +1873,7 @@ List<Map<String, Object>> data = [
         "Do you know what will happen if you drive even for short distances?",
     "options": [
       "Yes, I do know",
-      "No, i want to know",
+      "No, I don't",
     ],
     "hasReminder": true,
     "category": {
@@ -1961,8 +1959,8 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Do you think going with the bandwagon is OKAY ?",
     "options": [
-      "Certainly! I see no harm",
       "No it is not and I am against it",
+      "Certainly! I see no harm",
     ],
     "hasReminder": true,
     "category": {
@@ -2010,7 +2008,7 @@ List<Map<String, Object>> data = [
     "question": "Did you carpool or share a ride today?",
     "options": [
       "Yes, I often go out by carpooling.",
-      "No, I prefer travelling alone.",
+      "No, I prefer traveling alone.",
       "Didn’t travel today",
     ],
     "hasReminder": true,
@@ -2060,7 +2058,7 @@ List<Map<String, Object>> data = [
     "question": "Do you walk instead of taking a vehicle whenever you can?",
     "options": [
       "Yes, I do",
-      "No, I prefer vehicles because I don’t want to get tired.",
+      "No, I prefer vehicles",
     ],
     "hasReminder": true,
     "category": {
@@ -2151,7 +2149,7 @@ List<Map<String, Object>> data = [
     },
     "currentLevel": 1,
     "question":
-        "Do you know the advantages of checking your vehicle condition?",
+        "Do you know the advantages of checking your vehicle's condition every now and then ?",
     "options": [
       "Yes, I do !",
       "No idea ",
@@ -2201,8 +2199,8 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Do you generally buy locally produced food?",
     "options": [
-      "No, I don’t know, I buy whatevers at the supermarket",
       "Yes, I visit the local market for fresh produce",
+      "No, I don’t know, I buy whatevers at the supermarket",
     ],
     "hasReminder": true,
     "category": {
@@ -2300,8 +2298,11 @@ List<Map<String, Object>> data = [
       "text": "EASY",
     },
     "currentLevel": 1,
-    "question": "Do you how much Water in use from scratch to make your food?",
-    "options": ["980 kiloliters (average)", "No"],
+    "question": "Do you know how much Water is in use from scratch to make your food?",
+    "options": [
+      "Yes! I do!", 
+      "No",
+    ],
     "hasReminder": true,
     "category": {
       "text": "food",
@@ -2350,8 +2351,8 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Did you consume and packed/processed food today ?",
     "options": [
-      "Yes",
       "No",
+      "Yes",
     ],
     "hasReminder": true,
     "category": {
@@ -2401,11 +2402,10 @@ List<Map<String, Object>> data = [
     },
     "currentLevel": 1,
     "question":
-        "Did you follow zero-waste cooking practices while cooking today?",
+        "Do you practie zero-waste cooking?",
     "options": [
       "Yes",
       "No",
-      "Didn’t cook today.",
     ],
     "hasReminder": true,
     "category": {
@@ -2455,8 +2455,8 @@ List<Map<String, Object>> data = [
     "question":
         "Do you cook extra food ? Do u think this doesn’t affect the environment ?",
     "options": [
-      "Yes, just in case I need it",
       "No, extra food gets stale and is often wasted",
+      "Yes, just in case I need it",
     ],
     "hasReminder": true,
     "category": {
