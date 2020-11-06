@@ -42,7 +42,8 @@ class _notifyState extends State<notify>
 
   Future onSelectNotification(String payload)  {
     debugPrint("payload : $payload");
-    var x=0;
+    var x=1;
+    // x = no of daily notifications selected 
     showDialog(
       context: context,
       builder: (_) => new AlertDialog(
@@ -50,11 +51,12 @@ class _notifyState extends State<notify>
         content: new Text('$payload'),
       ),
     );
-    if(x==0) {
+    if(x!=0) {
       print('Notification clicked');
       Navigator.push(
         context,
         MaterialPageRoute<void>(builder: (context) => quiz()),
+        // directed to quiz portal
       );
     }
     else
@@ -63,6 +65,7 @@ class _notifyState extends State<notify>
       Navigator.push(
         context,
         MaterialPageRoute<void>(builder: (context) => quiz()),
+        // directed to homescreen to home screen
       );
     }
   }
@@ -101,9 +104,8 @@ class _notifyState extends State<notify>
           new RaisedButton(
 
             onPressed:showNotification,
-            //() {showNotificationDaily(0, 'hi', 'hello', h, m);},
 
-            child: Text("notify"),
+            child: Text("notify me on above fixed time"),
 
           ),
         ],
@@ -121,6 +123,7 @@ class _notifyState extends State<notify>
     var platform = new NotificationDetails(android: android, iOS: iOS);
     //await flutterLocalNotificationsPlugin.show(0, 'New Tutorial', 'Local Notification', platform,payload: 'AndroidCoding.in');
     // ignore: deprecated_member_use
-    await flutterLocalNotificationsPlugin.showDailyAtTime(0, 'Омск Транспорт', 'Your balance is:', time, platform,payload: 'AndroidCoding.in');
+    await flutterLocalNotificationsPlugin.showDailyAtTime(0, 'data1.title', 'data1.body', time, platform,payload: 'welcome');
+    // data1. is data to be printed on notification
   }
 }

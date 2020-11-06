@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute<void>(builder: (context) => notify()),
                 );},
 
-            child: Text("to notify"),
+            child: Text("set notification time"),
 
           ),
         ],
