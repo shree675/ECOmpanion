@@ -1,4 +1,4 @@
-#Thu Nov 05 09:46:10 IST 2020
-base.0=E\:\\Classwork\\Ecology Project\\Companion\\Layout\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Fri Nov 06 12:58:28 IST 2020
+base.0=E\:\\Classwork\\Ecology Project\\Companion-App\\Layout\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Classwork\\Ecology Project\\Companion\\Layout\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
+            "outputFile": "E:\\Classwork\\Ecology Project\\Companion-App\\Layout\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Kranthi Sedamaki\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\values-eu\\values-eu.xml",
