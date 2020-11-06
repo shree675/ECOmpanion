@@ -1,16 +1,25 @@
 // import 'package:Layout/models/badgeDetails.dart';
+import 'package:Layout/flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'badgeDetails.dart';
 
-class Details extends StatelessWidget {
-  final Map flashcard;
-  Details(this.flashcard);
+class Details extends StatefulWidget {
+  final FlashcardModel flashcardModel;
+  Details(this.flashcardModel);
+
+  @override
+  _DetailsState createState() => _DetailsState();
+}
+
+class _DetailsState extends State<Details> {
   void showBadgeDetails(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
       return BadgeDetailsScreen();
     }));
   }
+
+  Color iconColor = Colors.pink;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +60,7 @@ class Details extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          flashcard["title"],
+                          widget.flashcardModel.title,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
@@ -64,7 +73,7 @@ class Details extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          (flashcard["difficulty"] as Map)["text"],
+                          widget.flashcardModel.difficulty["text"],
                           style: TextStyle(
                             fontSize: 20,
                             color: const Color(
@@ -75,6 +84,21 @@ class Details extends StatelessWidget {
                       ],
                     ),
                   ),
+                ),
+                IconButton(
+                  icon: Icon(Icons.notifications),
+                  onPressed: () {
+                    setState(() {
+                      if (iconColor == Colors.pink) {
+                        iconColor = Colors.yellow;
+                        widget.flashcardModel.hasReminder = true;
+                      } else {
+                        iconColor = Colors.pink;
+                        widget.flashcardModel.hasLevel = false;
+                      }
+                    });
+                  },
+                  color: iconColor,
                 ),
                 Expanded(
                   child: SizedBox(
@@ -88,8 +112,8 @@ class Details extends StatelessWidget {
                       child: GestureDetector(
                         onTap: () => showBadgeDetails(context),
                         child: SvgPicture.asset(
-                          (flashcard["badge"] as Map)["path"]
-                              [flashcard["currentLevel"] - 1],
+                          (widget.flashcardModel.badge)["path"]
+                              [widget.flashcardModel.currentLevel - 1],
                         ),
                       ),
                     ),
@@ -100,7 +124,7 @@ class Details extends StatelessWidget {
                 ),
               ],
             ),
-            ...(flashcard["longDescription"] as List).map((text) {
+            ...widget.flashcardModel.longDescription.map((text) {
               return Container(
                 margin: const EdgeInsets.symmetric(
                   horizontal: 5,
@@ -110,7 +134,7 @@ class Details extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  color: Color(flashcard["color"]),
+                  color: widget.flashcardModel.color,
                   child: Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: 20,

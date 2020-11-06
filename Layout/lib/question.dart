@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:Layout/flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -7,25 +8,29 @@ class Question extends StatefulWidget {
   final String question;
   final List<String> options;
   Map<String, Object> data;
+  final FlashcardModel flashcardModel;
   int quiz;
-  Question(this.question, this.options, this.data, this.quiz);
+  Question(
+      this.question, this.options, this.data, this.quiz, this.flashcardModel);
 
   @override
-  _QuestionState createState() =>
-      _QuestionState(this.question, this.options, this.data, this.quiz);
+  _QuestionState createState() => _QuestionState(
+      this.question, this.options, this.data, this.quiz, this.flashcardModel);
 }
 
 class _QuestionState extends State<Question> {
   final String question;
   final List<String> options;
   Map<String, Object> data;
+  final FlashcardModel flashcardModel;
 
   int id;
   int diff;
   bool daily, level;
   int quiz;
 
-  _QuestionState(this.question, this.options, this.data, this.quiz);
+  _QuestionState(
+      this.question, this.options, this.data, this.quiz, this.flashcardModel);
   List<int> ndeasy = new List(8);
   List<String> easystring = new List(8);
   List<int> ndmedium = new List(19);
@@ -54,7 +59,7 @@ class _QuestionState extends State<Question> {
     diff = (this.data["difficulty"] as Map)["scale"];
     daily = this.data["isDaily"];
     level = this.data["hasLevel"];
-    badges=((this.data["badge"] as Map)["path"] as List)[0];
+    badges = ((this.data["badge"] as Map)["path"] as List)[0];
     badgeName = (this.data["badge"] as Map)["name"];
     badgeName = badgeName.toUpperCase();
     numOfOptions = (this.data["options"] as List).length;
@@ -70,9 +75,8 @@ class _QuestionState extends State<Question> {
         ndhard[id] = 0;
         hardstring[id] = "hard$id";
       }
-    }
-    else if(daily && quiz==1){
-    // else if (daily) {
+    } else if (daily && quiz == 1) {
+      // else if (daily) {
       if (diff == 1) {
         deasy[id] = 0;
         deasystring[id] = "deasy$id";
@@ -102,9 +106,8 @@ class _QuestionState extends State<Question> {
           ndhard[id] = pre.getInt('hard$id') ?? 0;
           curLevel = ndhard[id];
         }
-      }
-      else if(daily && quiz==1){
-      // else if (daily) {
+      } else if (daily && quiz == 1) {
+        // else if (daily) {
         if (diff == 1) {
           deasy[id] = pre.getInt('deasy$id') ?? 0;
           curLevel = deasy[id];
@@ -155,9 +158,8 @@ class _QuestionState extends State<Question> {
           pre.setInt('hard$id', ndhard[id]);
         }
       }
-    }
-    else if(daily && quiz==1){
-    // else if (daily) {
+    } else if (daily && quiz == 1) {
+      // else if (daily) {
       if (diff == 1) {
         if (deasy[id] < 0) {
           deasy[id] = (pre.getInt('deasy$id') ?? 0);
@@ -201,56 +203,56 @@ class _QuestionState extends State<Question> {
           validate();
           pre.setInt('easy$i', ndeasy[i]);
           curLevel = ndeasy[id];
-          if (points == 1 && ndeasy[i] ~/ 3 > (ndeasy[i] - 1) ~/ 3 && ndeasy[i]<=51) {
+          if (points == 1 &&
+              ndeasy[i] ~/ 3 > (ndeasy[i] - 1) ~/ 3 &&
+              ndeasy[i] <= 51) {
             levelChange = 1;
-          }
-          else if (points == -1 && ndeasy[i] ~/ 3 < (ndeasy[i] + 1) ~/ 3 && ndeasy[i]>=0) {
+          } else if (points == -1 &&
+              ndeasy[i] ~/ 3 < (ndeasy[i] + 1) ~/ 3 &&
+              ndeasy[i] >= 0) {
             levelChange = -1;
-          }
-          else {
+          } else {
             levelChange = 0;
           }
-
         } else if (diff == 2) {
           ndmedium[i] = (pre.getInt('medium$i') ?? 0) + points;
           validate();
           pre.setInt('medium$i', ndmedium[i]);
           curLevel = ndmedium[id];
-          if (points == 1 && (ndmedium[i] ~/ 2 > (ndmedium[i] - 1) ~/ 2) && ndmedium[i]<=34) {
+          if (points == 1 &&
+              (ndmedium[i] ~/ 2 > (ndmedium[i] - 1) ~/ 2) &&
+              ndmedium[i] <= 34) {
             levelChange = 1;
-          }
-          else if (points == -1 && (ndmedium[i] ~/ 2 < (ndmedium[i] + 1) ~/ 2) && ndmedium[i]>=0) {
+          } else if (points == -1 &&
+              (ndmedium[i] ~/ 2 < (ndmedium[i] + 1) ~/ 2) &&
+              ndmedium[i] >= 0) {
             levelChange = -1;
-          }
-          else {
+          } else {
             levelChange = 0;
           }
-
         } else if (diff == 3) {
           ndhard[i] = (pre.getInt('hard$i') ?? 0) + points;
           validate();
           pre.setInt('hard$i', ndhard[i]);
           curLevel = ndhard[id];
-          if (points == 1 && ndhard[i]<=17) {
+          if (points == 1 && ndhard[i] <= 17) {
             levelChange = 1;
-          }
-          else if(points==-1 && ndhard[i]>=0){
-            levelChange=-1;
-          }
-          else {
+          } else if (points == -1 && ndhard[i] >= 0) {
+            levelChange = -1;
+          } else {
             levelChange = 0;
           }
         }
-      }
-      else if(daily && quiz==1){
-      // else if (daily) {
+      } else if (daily && quiz == 1) {
+        // else if (daily) {
         if (diff == 1) {
           deasy[i] = (pre.getInt('deasy$i') ?? 0) + points;
           pre.setInt('deasy$i', deasy[i]);
           curLevel = deasy[id];
           if (points == 1 &&
               getLevel(1, deasy[i], daily) >
-                  (getLevel(1, deasy[i] - 1, daily)) && deasy[i]<=377) {
+                  (getLevel(1, deasy[i] - 1, daily)) &&
+              deasy[i] <= 377) {
             levelChange = 1;
           } else {
             levelChange = 0;
@@ -261,7 +263,8 @@ class _QuestionState extends State<Question> {
           curLevel = dmedium[id];
           if (points == 1 &&
               getLevel(2, dmedium[i], daily) >
-                  (getLevel(2, dmedium[i] - 1, daily)) && dmedium[i]<=257) {
+                  (getLevel(2, dmedium[i] - 1, daily)) &&
+              dmedium[i] <= 257) {
             levelChange = 1;
           } else {
             levelChange = 0;
@@ -272,7 +275,8 @@ class _QuestionState extends State<Question> {
           curLevel = dhard[id];
           if (points == 1 &&
               getLevel(3, dhard[i], daily) >
-                  (getLevel(3, dhard[i] - 1, daily)) && dhard[i]<=137) {
+                  (getLevel(3, dhard[i] - 1, daily)) &&
+              dhard[i] <= 137) {
             levelChange = 1;
           } else {
             levelChange = 0;
@@ -306,10 +310,9 @@ class _QuestionState extends State<Question> {
   }
 
   int getLevel(int d, int an, bool isdaily) {
-    if(an<=0){
+    if (an <= 0) {
       return 0;
-    }
-    else if (isdaily) {
+    } else if (isdaily) {
       if (d == 1) {
         return ((7 + sqrt(24 * an - 23)) / 6).floor().toInt();
       } else if (d == 2) {
@@ -359,7 +362,7 @@ class _QuestionState extends State<Question> {
               height: 10,
             ),
             ...widget.options.map(
-                  (e) => Container(
+              (e) => Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: FlatButton(
                   shape: RoundedRectangleBorder(
@@ -372,102 +375,110 @@ class _QuestionState extends State<Question> {
                     if (numOfOptions == 2) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                      } else if (e == (data["options"] as List)[1] && level && !daily) {
+                      } else if (e == (data["options"] as List)[1] &&
+                          level &&
+                          !daily) {
                         await updateCounter(id, -1);
-                      }
-                      else if (e == (data["options"] as List)[1] && level && daily){
-                        this.levelChange=0;
+                      } else if (e == (data["options"] as List)[1] &&
+                          level &&
+                          daily) {
+                        this.levelChange = 0;
                       }
                     } else if (numOfOptions == 3) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                      } else if (e == (data["options"] as List)[2] && level && !daily) {
+                      } else if (e == (data["options"] as List)[2] &&
+                          level &&
+                          !daily) {
                         await updateCounter(id, -1);
-                      }
-                      else if (e == (data["options"] as List)[2] && level && daily){
-                        this.levelChange=0;
+                      } else if (e == (data["options"] as List)[2] &&
+                          level &&
+                          daily) {
+                        this.levelChange = 0;
                       }
                     } else if (numOfOptions == 4) {}
 
-                    if(this.levelChange==-1){
-                      showModalBottomSheet(context: context,
-                          builder: (BuildContext context){
-                          return Container(
-                            height: 400.0,
-                            color: Color(0xffe5e5e5),
-                            child: Padding(
-                              padding: EdgeInsets.all(10.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children: [
-                                  SizedBox(
-                                    height: 20.0,
-                                  ),
-                                  Center(
-                                    child: SvgPicture.asset('$badges', height: 140, width: 140,),
-                                  ),
-                                  SizedBox(
-                                    height: 20.0,
-                                  ),
-                                  Center(
-                                    child: Text(
-                                      'OOPS!',
-                                      style: TextStyle(
-                                        fontSize: 22.0,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                    if (this.levelChange == -1) {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                                height: 400.0,
+                                color: Color(0xffe5e5e5),
+                                child: Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: [
+                                      SizedBox(
+                                        height: 20.0,
                                       ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-                                  Center(
-                                    child: Text(
-                                      'You are back to',
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        color: Colors.black,
+                                      Center(
+                                        child: SvgPicture.asset(
+                                          '$badges',
+                                          height: 140,
+                                          width: 140,
+                                        ),
                                       ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-                                  Center(
-                                    child: Text(
-                                      '$badgeName!',
-                                      style: TextStyle(
-                                        fontSize: 22.0,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
+                                      SizedBox(
+                                        height: 20.0,
                                       ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-                                  Center(
-                                    child: Text(
-                                      'LEVEL ${getLevel(diff, curLevel, daily)}',
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        color: Colors.black,
+                                      Center(
+                                        child: Text(
+                                          'OOPS!',
+                                          style: TextStyle(
+                                            fontSize: 22.0,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
                                       ),
-                                    ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          'You are back to',
+                                          style: TextStyle(
+                                            fontSize: 20.0,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          '$badgeName!',
+                                          style: TextStyle(
+                                            fontSize: 22.0,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          'LEVEL ${getLevel(diff, curLevel, daily)}',
+                                          style: TextStyle(
+                                            fontSize: 20.0,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                    ],
                                   ),
-                                  SizedBox(
-                                    height: 10.0,
-                                  ),
-                                ],
-                              ),
-                            )
-                          );
-                        }
-                      );
-                    }
-
-                    else if (this.levelChange == 1) {
+                                ));
+                          });
+                    } else if (this.levelChange == 1) {
                       showModalBottomSheet(
                           context: context,
                           builder: (BuildContext context) {
@@ -478,13 +489,17 @@ class _QuestionState extends State<Question> {
                                 padding: EdgeInsets.all(10.0),
                                 child: Column(
                                   crossAxisAlignment:
-                                  CrossAxisAlignment.stretch,
+                                      CrossAxisAlignment.stretch,
                                   children: [
                                     SizedBox(
                                       height: 20.0,
                                     ),
                                     Center(
-                                      child: SvgPicture.asset('$badges', height: 140, width: 140,),
+                                      child: SvgPicture.asset(
+                                        '$badges',
+                                        height: 140,
+                                        width: 140,
+                                      ),
                                     ),
                                     SizedBox(
                                       height: 20.0,
@@ -544,8 +559,7 @@ class _QuestionState extends State<Question> {
                               ),
                             );
                           });
-                        }
-
+                    }
                   },
                   child: Text(
                     e,

@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'details.dart';
+import 'flashcard_model.dart';
 
 class Flashcard extends StatefulWidget {
-  final Map flashcard;
-  Flashcard(this.flashcard);
+  final FlashcardModel flashcardModel;
+  Flashcard(this.flashcardModel);
   @override
   _FlashcardState createState() => _FlashcardState();
 }
@@ -18,7 +19,7 @@ class _FlashcardState extends State<Flashcard> {
 
   void showDetailsScreen(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-      return Details(widget.flashcard);
+      return Details(widget.flashcardModel);
     }));
   }
 
@@ -36,8 +37,8 @@ class _FlashcardState extends State<Flashcard> {
         onDoubleTap: () => showDetailsScreen(context),
         child: ExpansionTileCard(
           trailing: SvgPicture.asset(
-            (widget.flashcard["badge"] as Map)["path"]
-            [(widget.flashcard["currentLevel"] as int) - 1],
+            widget.flashcardModel.badge["path"]
+                [widget.flashcardModel.currentLevel - 1],
           ),
 
           /*
@@ -51,16 +52,12 @@ class _FlashcardState extends State<Flashcard> {
           },
           */
 
-          baseColor: Color(
-            widget.flashcard["color"],
-          ),
-          expandedColor: Color(
-            widget.flashcard["color"],
-          ),
+          baseColor: widget.flashcardModel.color,
+          expandedColor: widget.flashcardModel.color,
           title: Row(
             children: [
               Text(
-                widget.flashcard["title"],
+                widget.flashcardModel.title,
                 style: TextStyle(
                   color: const Color(
                     0xffFFFFFF,
@@ -73,7 +70,7 @@ class _FlashcardState extends State<Flashcard> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: Text(
-                widget.flashcard["shortDescription"],
+                widget.flashcardModel.shortDescription,
                 style: TextStyle(
                   color: const Color(
                     0xffFFFFFF,

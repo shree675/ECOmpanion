@@ -1,13 +1,16 @@
-import 'package:Layout/appBar.dart';
+import 'dart:math';
+
+import 'package:Layout/environmentalDays_model.dart';
+import 'package:Layout/flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'data.dart';
 import 'dailyQuiz.dart';
+import 'flashcard.dart';
 import 'flashcardsScreen.dart';
 import 'question.dart';
-import './appBar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,7 +20,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   void takeDailyQuiz(BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (_) {
-      return DailyQuiz();
+      return FlashcardsScreen();
     }));
   }
 
@@ -25,6 +28,16 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(context, MaterialPageRoute(builder: (_) {
       return FlashcardsScreen();
     }));
+  }
+
+  Widget flashcardOfTheDay() {
+    int randomIndex = Random().nextInt(flashcardModels.length);
+    while (!flashcardModels[randomIndex].lastShown.isBefore(DateTime.now()
+        .subtract(Duration(days: flashcardModels[randomIndex].frequency)))) {
+      randomIndex = Random().nextInt(flashcardModels.length);
+    }
+    flashcardModels[randomIndex].lastShown = DateTime.now();
+    return Flashcard(flashcardModels[randomIndex]);
   }
 
   @override
@@ -54,8 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () => showFlashcards(context),
-              child:
-                  Question(data[0]["question"], data[0]["options"], data[0], 0),
+              child: flashcardOfTheDay(),
             ),
             Container(
               width: MediaQuery.of(context).size.width - 25,
