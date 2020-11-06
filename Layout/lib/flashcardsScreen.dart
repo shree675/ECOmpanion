@@ -1,4 +1,4 @@
-import './data.dart';
+import 'data.dart';
 // import './models/flashcard.dart';
 import 'package:flutter/material.dart';
 import 'flashcard.dart';

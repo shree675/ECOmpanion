@@ -1,13 +1,15 @@
-import 'package:Layout/appBar.dart';
+import 'dart:math';
+
+import 'package:Layout/flashcardOfTheDay.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'data.dart';
 import 'dailyQuiz.dart';
+import 'data.dart';
+import 'flashcard.dart';
 import 'flashcardsScreen.dart';
 import 'question.dart';
-import './appBar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -25,6 +27,32 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(context, MaterialPageRoute(builder: (_) {
       return FlashcardsScreen();
     }));
+  }
+
+  Widget showFlashcardOfTheDay() {
+    final int randomIndex = new Random().nextInt(data.length);
+    setState(() {
+      if ((data[randomIndex]["lastShown"] as DateTime)
+          .isBefore(DateTime.now().subtract(new Duration(
+        days: data[randomIndex]["frequency"],
+      )))) {
+        data[randomIndex]["lastShown"] = DateTime.now();
+        if ((data[randomIndex]["timeAnswered"] as DateTime)
+            .isBefore(DateTime.now().subtract(const Duration(days: 1))))
+          return Question(
+            data[randomIndex]["question"],
+            data[randomIndex]["options"],
+            data[randomIndex],
+            1,
+          );
+        return Flashcard(data[randomIndex]);
+      }
+    });
+    print("Hello");
+    return Container(
+      height: 0,
+      width: 0,
+    );
   }
 
   @override
@@ -54,8 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () => showFlashcards(context),
-              child:
-                  Question(data[0]["question"], data[0]["options"], data[0], 0),
+              child: FlashcardOfTheDay(),
             ),
             Container(
               width: MediaQuery.of(context).size.width - 25,

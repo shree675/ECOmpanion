@@ -2,6 +2,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Because LED is worth it!",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -52,6 +53,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Phantom POWER!",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -101,6 +103,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Reduce your brightness",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -150,6 +153,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Induction is the new cool!",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -199,6 +203,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Cook under pressure",
     "id": 2,
+    "frequency": 14,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -248,6 +253,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Load it up!",
     "id": 2,
+    "frequency": 7,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -297,6 +303,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Refrigerate right!",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -351,6 +358,7 @@ List<Map<String, Object>> data = [
   {
     "title": "BLDC fans! Um, what?",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -395,6 +403,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Make your own products",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -461,6 +470,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Flush !",
     "id": 2,
+    "frequency": 14,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -505,6 +515,7 @@ List<Map<String, Object>> data = [
   {
     "title": "WaterFootprint!",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -563,6 +574,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Laundry !",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -606,6 +618,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Dishes !",
     "id": 2,
+    "frequency": 14,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -650,6 +663,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Virtual water !",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -708,6 +722,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Cooking !",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -757,8 +772,62 @@ List<Map<String, Object>> data = [
     },
   },
   {
+    "title": "Gardening !",
+    "id": 2,
+    "frequency": 60,
+    "hasLevel": true,
+    "isDaily": false,
+    "shortDescription":
+        "We all care for the plants we grow and it’s our duty to water these plants so that they grow up healthily. But reckless use of water has very serious consequences ! Here’s what we can do to conserve water in this field !",
+    "longDescription": [
+      "Water your plants at a specific time each day. The optimal time to water your lawn is early morning. This strategy prevents rapid evaporation from midday heat, which means less water is required to sufficiently cover the grass. Avoid rogue sprinklers wasting water by spraying the sidewalk or side of the house, instead positioning them to face the grass and landscaping appropriately.",
+      "If your garden area is considerably large and you want to water one plant at a time, try installing a drip irrigation system instead of using sprinklers.\nYou could use a bucket and a mug or a hose too ! But you’ve to make sure you use a minimal amount of water, and be strict with it !\nAlso, keep a check on the water requirements of each plant and water them accordingly. Otherwise, overwatering can harm your plants too!",
+      "Drip vs Sprinklers!\nSprinklers use enormous amounts of water as compared to drip irrigation systems ! Studies have shown that up to 80% of the water you apply to your garden using a sprinkler will be wasted due to evaporation ! And drip systems use between 1/4 to 1/2 the water that a sprinkler system uses. So you see the difference right away!"
+    ],
+    "badge": {
+      "path": [
+        "assets/SHOWSTOPPER.svg",
+      ],
+      "name": "Showstopper",
+      "details": {
+        "title": "YOU, ARE A SHOWSTOPPER!",
+        "subtitle":
+            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+      },
+    },
+    "visualizations": {
+      "links": [
+        {
+          "link":
+              "https://en.wikipedia.org/wiki/Virtual_water#Virtual_water_content_of_selected_products",
+          "text":
+              "Here’s the data about the virtual water content for different products ",
+        },
+      ],
+      "images": [],
+    },
+    "color": 0xff8E7CC3,
+    "difficulty": {
+      "scale": 2,
+      "text": "MEDIUM",
+    },
+    "currentLevel": 1,
+    "question":
+        "Do you keep in mind the water wastage while you water your plants?",
+    "options": [
+      "Yes",
+      "No",
+    ],
+    "hasReminder": true,
+    "category": {
+      "text": "miscellaneous",
+      "id": 1,
+    },
+  },
+  {
     "title": "Leaks !",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -811,6 +880,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Bath !",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -861,6 +931,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Brushing !",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -912,6 +983,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Watch what you Wash!",
     "id": 2,
+    "frequency": 7,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -961,7 +1033,7 @@ List<Map<String, Object>> data = [
         "Do you pop your clothes in the washing machine irrespective of whether they really need to be washed?",
     "options": [
       "No, I decide based on how dirty they are and the type of fabric",
-       "Yes of course! How can you wear them more than once! Gross!",
+      "Yes of course! How can you wear them more than once! Gross!",
     ],
     "hasReminder": true,
     "category": {
@@ -972,6 +1044,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Clean up your Cloud!",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1022,8 +1095,61 @@ List<Map<String, Object>> data = [
     },
   },
   {
+    "title": "Global Goals!",
+    "id": 2,
+    "frequency": 30,
+    "hasLevel": true,
+    "isDaily": false,
+    "shortDescription":
+        "The Sustainable Development Goals are the blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including poverty, inequality, climate change, environmental degradation, peace and justice. Learn more and take action.",
+    "longDescription": [
+      "It’s so easy to either get overwhelmed by the millions of problems the world faces today, or to get detached from reality and hide in our little bubbles. What we need is a constant reminder that the world is need of everything that we can do to help. But this reminder must come with a spoonful of “Hope-syrup”. \nRealistic and radical hope, backed by facts and Science.",
+      "Nelson Mandela said ‘It always seems impossible, until it is done’. As a global citizen, find out whatever you can about the Global Goals and pitch it wherever you can. Along with the lifestyle changes that you are inculcating in companionship with this app, remember that everything you do is in alignment with these Global Goals and there are million of yours brothers and sisters fighting for the same. Download the apps that work for you, made in partnership with UN SDG where you can directly contribute to the causes by just having the app. They will keep your informed about all the progress that is being made towards the 17 Global Goals. Remember, your awareness is your responsibility.",
+    ],
+    "badge": {
+      "path": [
+        "assets/SHOWSTOPPER.svg",
+      ],
+      "name": "Showstopper",
+      "details": {
+        "title": "YOU, ARE A SHOWSTOPPER!",
+        "subtitle":
+            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+      },
+    },
+    "visualizations": {
+      "links": [
+        {
+          "link":
+              "https://medium.com/@parthgarg19/what-if-deleting-emails-could-save-our-planet-8667584367ee",
+          "text": "What if deleting emails could save our planet?",
+        },
+      ],
+      "images": [],
+    },
+    "color": 0xff8E7CC3,
+    "difficulty": {
+      "scale": 1,
+      "text": "EASY",
+    },
+    "currentLevel": 1,
+    "question":
+        "Do you know about the 17 Sustainable Development Goals that the United Nations has developed?",
+    "options": [
+      "Yes",
+      "No",
+      "Umm...I might have heard about it",
+    ],
+    "hasReminder": true,
+    "category": {
+      "text": "miscellaneous",
+      "id": 1,
+    },
+  },
+  {
     "title": "Electronic devices",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1085,6 +1211,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Buy in bulk!",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1146,6 +1273,7 @@ List<Map<String, Object>> data = [
   {
     "title": "A Pair of Jeans",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1197,6 +1325,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Fast Fashion!",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1248,6 +1377,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Buy correct online",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1308,6 +1438,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Retail therapy",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1368,6 +1499,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Filter your wardrobe",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1430,6 +1562,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Ethically sourced clothing",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1496,6 +1629,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Consider Renting Fashion",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1564,6 +1698,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Sustainable furniture",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1619,6 +1754,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Sustainable Stationery",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1675,6 +1811,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Sustainable Gift Choices!",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1735,6 +1872,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Sustainable personal care",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1785,6 +1923,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Buying clothes online",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1838,8 +1977,60 @@ List<Map<String, Object>> data = [
     },
   },
   {
+    "title": "Sustainable Sanitary Products",
+    "id": 2,
+    "frequency": 60,
+    "hasLevel": true,
+    "isDaily": false,
+    "shortDescription":
+        "Every year India produces 9000 tonnes of sanitary waste, which is about 90% as heavy as the Eiffel Tower.",
+    "longDescription": [
+      "Disposable sanitary hygiene products are classified as medical waste and hence are not required to be tracked and end up in landfills without any other measures to manage the waste. Sanitary products often consist of nearly 90% plastic and other harmful chemicals that take 500 to 800 years to degrade. Their harmful components remain in the ground forever.",
+      "If you use disposable sanitary products, you might be responsible for 74,200 kgs of CO2 equivalents of emissions throughout your lifetime. This also means upto 300 pounds of  landfill that does not decompose for centuries. If possible consider more sustainable options than traditional disposable sanitary hygiene products. Explore the options in the links provided.",
+    ],
+    "badge": {
+      "path": [
+        "assets/SHOWSTOPPER.svg",
+      ],
+      "name": "Showstopper",
+      "details": {
+        "title": "YOU, ARE A SHOWSTOPPER!",
+        "subtitle":
+            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+      },
+    },
+    "visualizations": {
+      "links": [
+        {
+          "link": "https://www.greenthered.in/",
+          "text": "Sustainable Sanitary Hygiene - India",
+        },
+      ],
+      "images": [],
+    },
+    "color": 0xffE69138,
+    "difficulty": {
+      "scale": 2,
+      "text": "MEDIUM",
+    },
+    "currentLevel": 1,
+    "question": "How do you generally buy clothes?",
+    "options": [
+      "I walk to the nearby store",
+      "I drive or take public transport to the store",
+      "I drive to a couple of stores at before deciding what to buy",
+      "I order them online",
+    ],
+    "hasReminder": true,
+    "category": {
+      "text": "shopping choices",
+      "id": 1,
+    },
+  },
+  {
     "title": "Take the bicycle!",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1884,6 +2075,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Take the bus",
     "id": 2,
+    "frequency": 7,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -1927,6 +2119,7 @@ List<Map<String, Object>> data = [
   {
     "title": "\"Those people\"",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1971,6 +2164,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Use car sharing",
     "id": 2,
+    "frequency": 14,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -2020,6 +2214,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Walk more!",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -2069,6 +2264,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Volunteer to plant trees",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -2119,6 +2315,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Check your vehicle",
     "id": 2,
+    "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -2163,6 +2360,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Buy local food products",
     "id": 2,
+    "frequency": 7,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -2209,8 +2407,60 @@ List<Map<String, Object>> data = [
     },
   },
   {
+    "title": "Cook slow",
+    "id": 2,
+    "frequency": 30,
+    "hasLevel": true,
+    "isDaily": false,
+    "shortDescription":
+        "Techniques like dum cooking, live grills and steaming preserve the natural flavours and nutritional value of the produce. Some of the meats and ingredients are marinated for 24 to 48 hours using natural tenderising methods. This allows the use of less fat in cooking the food and maintains the texture and nutrients in the food. Using traditional methods like stone grinding, earthen pot cooking and steam cooking are also more sustainable, healthy and retains the natural textures and flavours",
+    "longDescription": [
+      "Because slow cooking involves low temperatures some believe that it may better preserve the vitamin and mineral content of foods. But what we do know, is that as a sealed cooker, a crock pot can trap nutrients and ensure that they stay in the pot. So do make sure you utilize your sauce or broth as any escaped nutrients will end up there.",
+      "What’s healthy for you is also healthy for the environment. Crock pots have been said to use just a little more energy than a traditional light bulb",
+      "Crock pots love meat. And meat loves a crockpot!\nCooking meat slowly over a long period of time allows it to become exceptionally tender. This is not only a delicious asset, but it allows the meat to be more easily digested as the body doesn’t need to work as hard.",
+      "Cooking meat quickly over high temperatures, like charring or grilling, can create harmful compounds, known as AGEs (advanced glycation end products). Compounds that have been linked to chronic diseases.2 Slow cooking is, therefore, one of the safest ways to cook meats. Making nutritious bone broth is another easy way to use meat in a slow cooker.",
+      "When dinner is cooked for you it makes healthy eating so much easier. Set your slow cooker before you leave for work and when you arrive home starving and ready to eat anything, you’ll have a healthy meal waiting for you. As well as some great leftovers for lunch tomorrow.",
+      "Using a slow cooker for warming winter favorites like soups, stews, and roast dinners means that you can control the sodium, fat, and calories that are usually found in the processed versions of these foods. Say goodbye to unhealthy take-out and have your meals already waiting for you when you get home.",
+    ],
+    "badge": {
+      "path": [
+        "assets/SHOWSTOPPER.svg",
+      ],
+      "name": "Showstopper",
+      "details": {
+        "title": "YOU, ARE A SHOWSTOPPER!",
+        "subtitle":
+            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+      },
+    },
+    "visualizations": {
+      "links": [
+        {
+          "text": "Crockpots! Cook with the energy of a lightbulb!",
+          "link":
+              "https://www.uswitch.com/energy-saving/guides/energy-efficient-cooking/?ref=affilinet~689729&utm_source=Affilinet&utm_medium=Affiliate&utm_campaign=689729",
+        },
+      ],
+      "images": [],
+    },
+    "color": 0xffE06666,
+    "difficulty": {
+      "scale": 3,
+      "text": "HARD",
+    },
+    "currentLevel": 1,
+    "question": "Did you follow slow cooking practices while cooking today ?",
+    "options": ["Yes", "No", "Didn't cook today"],
+    "hasReminder": true,
+    "category": {
+      "text": "food",
+      "id": 1,
+    },
+  },
+  {
     "title": "Eat organic.. Be energetic",
     "id": 2,
+    "frequency": 14,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -2232,13 +2482,7 @@ List<Map<String, Object>> data = [
       },
     },
     "visualizations": {
-      "links": [
-        {
-          "link":
-              "https://www.uswitch.com/energy-saving/guides/energy-efficient-cooking/?ref=affilinet~689729&utm_source=Affilinet&utm_medium=Affiliate&utm_campaign=689729",
-          "text": "Crockpots! Cook with the energy of a lightbulb!",
-        },
-      ],
+      "links": [],
       "images": [],
     },
     "color": 0xffE06666,
@@ -2261,6 +2505,7 @@ List<Map<String, Object>> data = [
   {
     "title": "Water footprint in food",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -2298,9 +2543,10 @@ List<Map<String, Object>> data = [
       "text": "EASY",
     },
     "currentLevel": 1,
-    "question": "Do you know how much Water is in use from scratch to make your food?",
+    "question":
+        "Do you know how much Water is in use from scratch to make your food?",
     "options": [
-      "Yes! I do!", 
+      "Yes! I do!",
       "No",
     ],
     "hasReminder": true,
@@ -2312,6 +2558,7 @@ List<Map<String, Object>> data = [
   {
     "title": "No packed food",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -2363,6 +2610,7 @@ List<Map<String, Object>> data = [
   {
     "title": "ZERO WASTE COOKING",
     "id": 2,
+    "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
     "shortDescription":
@@ -2401,8 +2649,7 @@ List<Map<String, Object>> data = [
       "text": "HARD",
     },
     "currentLevel": 1,
-    "question":
-        "Do you practie zero-waste cooking?",
+    "question": "Do you practie zero-waste cooking?",
     "options": [
       "Yes",
       "No",
@@ -2416,6 +2663,7 @@ List<Map<String, Object>> data = [
   {
     "title": "No extra food",
     "id": 2,
+    "frequency": 7,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
