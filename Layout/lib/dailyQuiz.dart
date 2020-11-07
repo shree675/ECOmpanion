@@ -1,3 +1,4 @@
+import 'package:Layout/flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'data.dart';
 import 'question.dart';
@@ -33,9 +34,10 @@ class DailyQuiz extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: data.map((e) {
-            if (e["hasReminder"]) {
-              return Question(e["question"], e["options"], e, 1);
+          children: flashcardModels.map((e) {
+            if (e.hasReminder) {
+              return Question(e.question, e.options,
+                  data[flashcardModels.indexOf(e)], 1, e);
             }
             return SizedBox(
               height: 0,

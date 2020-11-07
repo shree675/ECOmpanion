@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:Layout/flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -7,25 +8,29 @@ class Question extends StatefulWidget {
   final String question;
   final List<String> options;
   Map<String, Object> data;
+  final FlashcardModel flashcardModel;
   int quiz;
-  Question(this.question, this.options, this.data, this.quiz);
+  Question(
+      this.question, this.options, this.data, this.quiz, this.flashcardModel);
 
   @override
-  _QuestionState createState() =>
-      _QuestionState(this.question, this.options, this.data, this.quiz);
+  _QuestionState createState() => _QuestionState(
+      this.question, this.options, this.data, this.quiz, this.flashcardModel);
 }
 
 class _QuestionState extends State<Question> {
   final String question;
   final List<String> options;
   Map<String, Object> data;
+  final FlashcardModel flashcardModel;
 
   int id;
   int diff;
   bool daily, level;
   int quiz;
 
-  _QuestionState(this.question, this.options, this.data, this.quiz);
+  _QuestionState(
+      this.question, this.options, this.data, this.quiz, this.flashcardModel);
   List<int> ndeasy = new List(8);
   List<String> easystring = new List(8);
   List<int> ndmedium = new List(19);

@@ -46,7 +46,7 @@ List<Map<String, Object>> data = [
       "Yes, I have!",
       "No, I haven't",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -98,7 +98,7 @@ List<Map<String, Object>> data = [
       "Yes, I unplug everything when not in use",
       "No, just switching off should be enough right?",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -150,7 +150,7 @@ List<Map<String, Object>> data = [
       "Yes, I maintain the lowest comfortable brightness",
       "No, I do it only when it is dark in the room",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -202,7 +202,7 @@ List<Map<String, Object>> data = [
       "Yes, of course",
       "Nah, can’t really cook without fire, sorry",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -220,7 +220,6 @@ List<Map<String, Object>> data = [
         "Pressure cooking reduces cooking times and saves a ton of energy.",
     "longDescription": [
       "No, we don't mean to say cook while giving an exam or anything 😂. Using a pressure cooker has a lot of advantages which are less commonly known.\n\nModern cookers can save around 70%! That's saying, if you spend 1000 watts to cook something, it can be done in 300!\nCooking times are significantly faster, reducing your wait time for those hungry appetites! Typically around 30% faster.\nStudies have also shown that pressure cooking retains the natural flavour of the food!\nNot to mention, it's helping you reduce your carbon footprint.",
-      "Other benefits\n\nBy changing to an induction, cooking times will reduce.\nThey're way easier to maintain and clean than a regular gas stove.\nYou'll save both money and energy. (Also, looking at the bigger picture, there's no need to physically deliver the LPG which also contributes to reducing your carbon footprint! I don't see what's not to love!).",
     ],
     "badge": {
       "path": [
@@ -254,7 +253,7 @@ List<Map<String, Object>> data = [
       "Yes, of course",
       "Nope, I'm too lazy for it",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -306,7 +305,7 @@ List<Map<String, Object>> data = [
       "Yes, I wait till it I have enough laundry for a full-load",
       "No, I run the machine whenever I can",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -363,7 +362,7 @@ List<Map<String, Object>> data = [
       "Yes, it is at the required temperature and nothing extra",
       "No, I have no idea how to do that. Do I even need to do that?",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -410,7 +409,7 @@ List<Map<String, Object>> data = [
       "Yes, of course",
       "No, I have no idea how to do that. Do I even need to do that?",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -479,7 +478,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "electricity",
       "id": 1,
@@ -526,7 +525,7 @@ List<Map<String, Object>> data = [
       "Yes (Then do you actually try reduce the times you use flush ?)",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -587,7 +586,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -633,7 +632,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -680,7 +679,7 @@ List<Map<String, Object>> data = [
       "Hand washing (Either you or your household help)",
       "Dishwasher",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -741,7 +740,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -795,7 +794,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -850,7 +849,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -905,7 +904,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "I Don't know",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -958,7 +957,7 @@ List<Map<String, Object>> data = [
       "Bathtub",
       "Shower",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -1012,7 +1011,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -1075,7 +1074,7 @@ List<Map<String, Object>> data = [
       "No, I decide based on how dirty they are and the type of fabric",
       "Yes of course! How can you wear them more than once! Gross!",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -1130,7 +1129,7 @@ List<Map<String, Object>> data = [
       "No, I just let everything stay, what if I need it later?!",
       "Yes, I delete some things that I don’t need",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -1184,7 +1183,7 @@ List<Map<String, Object>> data = [
       "No",
       "Umm...I might have heard about it",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "miscellaneous",
       "id": 1,
@@ -1248,7 +1247,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1312,7 +1311,7 @@ List<Map<String, Object>> data = [
       "Small and cute packets for me always please!",
       "Sometimes",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1366,7 +1365,7 @@ List<Map<String, Object>> data = [
       "No",
       "Yes",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1420,7 +1419,7 @@ List<Map<String, Object>> data = [
       "Yes, quite often actually",
       "Yes, sometimes",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1483,7 +1482,7 @@ List<Map<String, Object>> data = [
       "Very often, it just doesn’t work for me",
       "Rarely, sometimes the size or quality isn’t right",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1546,7 +1545,7 @@ List<Map<String, Object>> data = [
       "More than once a fortnight",
       "More than once in 2 months",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1611,7 +1610,7 @@ List<Map<String, Object>> data = [
       "Yes, at least 20% more than the average human",
       "No, not yet",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1680,7 +1679,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1751,7 +1750,7 @@ List<Map<String, Object>> data = [
       "Nah, I rock my confidence",
       "Yes, what DO I WEAR!??!",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1809,7 +1808,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "Nope",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1868,7 +1867,7 @@ List<Map<String, Object>> data = [
       "No, I generally use long lasting stationery such as refillable pens",
       "Yes, I use whatever is easily available and cheap",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1931,7 +1930,7 @@ List<Map<String, Object>> data = [
       "Yes, I only gift thoughtful or environment-friendly gifts that I know for sure are going to be used well",
       "No, I don’t really have that much time or thought to spare",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -1984,7 +1983,7 @@ List<Map<String, Object>> data = [
       "Yes, I use try to use natural products",
       "No, really?!",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -2042,7 +2041,7 @@ List<Map<String, Object>> data = [
       "I drive to a couple of store/stores before deciding what to buy",
       "I walk to the nearby store",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -2095,7 +2094,7 @@ List<Map<String, Object>> data = [
       "I drive to a couple of stores at before deciding what to buy",
       "I order them online",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "shopping choices",
       "id": 1,
@@ -2142,7 +2141,7 @@ List<Map<String, Object>> data = [
       "Yes, I do know",
       "No, I don't",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "transportation",
       "id": 1,
@@ -2188,7 +2187,7 @@ List<Map<String, Object>> data = [
       "Yes, I use public transportation often",
       "No, I don’t generally use public transportation",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "transportation",
       "id": 1,
@@ -2235,7 +2234,7 @@ List<Map<String, Object>> data = [
       "No it is not and I am against it",
       "Certainly! I see no harm",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "transportation",
       "id": 1,
@@ -2287,7 +2286,7 @@ List<Map<String, Object>> data = [
       "No, I prefer traveling alone.",
       "Didn’t travel today",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "transportation",
       "id": 1,
@@ -2339,7 +2338,7 @@ List<Map<String, Object>> data = [
       "Yes, I do",
       "No, I prefer vehicles",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "transportation",
       "id": 1,
@@ -2392,7 +2391,7 @@ List<Map<String, Object>> data = [
       "Yes, trees absorb carbon-dioxide and release oxygen",
       "No,it’s very time consuming to plant a tree",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "transportation",
       "id": 1,
@@ -2439,7 +2438,7 @@ List<Map<String, Object>> data = [
       "Yes, I do !",
       "No idea ",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "transportation",
       "id": 1,
@@ -2490,7 +2489,7 @@ List<Map<String, Object>> data = [
       "Yes, I visit the local market for fresh produce",
       "No, I don’t know, I buy whatevers at the supermarket",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "food",
       "id": 1,
@@ -2543,7 +2542,7 @@ List<Map<String, Object>> data = [
     "currentLevel": 1,
     "question": "Did you follow slow cooking practices while cooking today ?",
     "options": ["Yes", "No", "Didn't cook today"],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "food",
       "id": 1,
@@ -2590,7 +2589,7 @@ List<Map<String, Object>> data = [
       "Yes, I buy organic products as far as possible",
       "No, I don’t generally check for Organic, it’s probably just a scam anyway",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "food",
       "id": 1,
@@ -2645,7 +2644,7 @@ List<Map<String, Object>> data = [
       "Yes! I do!",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "food",
       "id": 1,
@@ -2699,7 +2698,7 @@ List<Map<String, Object>> data = [
       "No",
       "Yes",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "food",
       "id": 1,
@@ -2754,7 +2753,7 @@ List<Map<String, Object>> data = [
       "Yes",
       "No",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "food",
       "id": 1,
@@ -2808,7 +2807,7 @@ List<Map<String, Object>> data = [
       "No, extra food gets stale and is often wasted",
       "Yes, just in case I need it",
     ],
-    "hasReminder": true,
+    "hasReminder": false,
     "category": {
       "text": "food",
       "id": 1,

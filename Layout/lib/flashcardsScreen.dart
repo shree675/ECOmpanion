@@ -1,5 +1,4 @@
-import 'data.dart';
-// import './models/flashcard.dart';
+import 'package:Layout/flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'flashcard.dart';
 
@@ -34,7 +33,7 @@ class FlashcardsScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: data.map((e) => Flashcard(e)).toList(),
+          children: flashcardModels.map((e) => Flashcard(e)).toList(),
         ),
       ),
     );

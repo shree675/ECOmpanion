@@ -1,15 +1,16 @@
 import 'dart:math';
 
-import 'package:Layout/flashcardOfTheDay.dart';
+import 'package:Layout/dailyQuiz.dart';
+import 'package:Layout/data.dart';
+import 'package:Layout/environmentalDays_model.dart';
+import 'package:Layout/flashcard_model.dart';
+import 'package:Layout/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'dailyQuiz.dart';
-import 'data.dart';
 import 'flashcard.dart';
 import 'flashcardsScreen.dart';
-import 'question.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -29,30 +30,22 @@ class _HomeScreenState extends State<HomeScreen> {
     }));
   }
 
-  Widget showFlashcardOfTheDay() {
-    final int randomIndex = new Random().nextInt(data.length);
-    setState(() {
-      if ((data[randomIndex]["lastShown"] as DateTime)
-          .isBefore(DateTime.now().subtract(new Duration(
-        days: data[randomIndex]["frequency"],
-      )))) {
-        data[randomIndex]["lastShown"] = DateTime.now();
-        if ((data[randomIndex]["timeAnswered"] as DateTime)
-            .isBefore(DateTime.now().subtract(const Duration(days: 1))))
-          return Question(
-            data[randomIndex]["question"],
-            data[randomIndex]["options"],
-            data[randomIndex],
-            1,
-          );
-        return Flashcard(data[randomIndex]);
+  Widget flashcardOfTheDay() {
+    DateTime today = DateTime.now();
+    for (var environmentalDay in environmentalDays) {
+      if ((environmentalDay["date"] as Map)["month"] == today.month) {
+        if ((environmentalDay["date"] as Map)["day"] == today.day) {
+          return EnvironmentalDayCard(environmentalDay);
+        }
       }
-    });
-    print("Hello");
-    return Container(
-      height: 0,
-      width: 0,
-    );
+    }
+    int randomIndex = Random().nextInt(flashcardModels.length);
+    while (!flashcardModels[randomIndex].lastShown.isBefore(DateTime.now()
+        .subtract(Duration(days: flashcardModels[randomIndex].frequency)))) {
+      randomIndex = Random().nextInt(flashcardModels.length);
+    }
+    flashcardModels[randomIndex].lastShown = DateTime.now();
+    return Flashcard(flashcardModels[randomIndex]);
   }
 
   @override
@@ -73,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(
               Icons.account_circle_outlined,
             ),
-            onPressed: () {},
+            onPressed: () => showFlashcards(context),
           ),
         ],
       ),
@@ -82,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () => showFlashcards(context),
-              child: FlashcardOfTheDay(),
+              child: flashcardOfTheDay(),
             ),
             Container(
               width: MediaQuery.of(context).size.width - 25,
