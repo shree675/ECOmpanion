@@ -1,8 +1,10 @@
 import 'dart:math';
-import 'package:Layout/flashcard_model.dart';
+// import 'package:Layout/flashcard_model.dart';
+import 'flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'flashcard.dart';
 
 class Question extends StatefulWidget {
   final String question;
@@ -45,7 +47,7 @@ class _QuestionState extends State<Question> {
   List<int> dhard = new List(3);
   List<String> dhardstring = new List(3);
 
-  String badges;
+  List<String> badges;
   int levelChange = 0;
   String badgeName;
   int curLevel = 0;
@@ -54,12 +56,12 @@ class _QuestionState extends State<Question> {
   @override
   initState() {
     super.initState();
-    id = data["id"];
+    id = this.data["id"];
     id -= 1;
     diff = (this.data["difficulty"] as Map)["scale"];
     daily = this.data["isDaily"];
     level = this.data["hasLevel"];
-    badges = ((this.data["badge"] as Map)["path"] as List)[0];
+    badges = ((this.data["badge"] as Map)["path"] as List);
     badgeName = (this.data["badge"] as Map)["name"];
     badgeName = badgeName.toUpperCase();
     numOfOptions = (this.data["options"] as List).length;
@@ -98,24 +100,30 @@ class _QuestionState extends State<Question> {
       if (!daily) {
         if (diff == 1) {
           ndeasy[id] = pre.getInt('easy$id') ?? 0;
+          this.data["currentLevel"]=ndeasy[id];
           curLevel = ndeasy[id];
         } else if (diff == 2) {
           ndmedium[id] = pre.getInt('medium$id') ?? 0;
+          this.data["currentLevel"]=ndmedium[id];
           curLevel = ndmedium[id];
         } else if (diff == 3) {
           ndhard[id] = pre.getInt('hard$id') ?? 0;
+          this.data["currentLevel"]=ndhard[id];
           curLevel = ndhard[id];
         }
       } else if (daily && quiz == 1) {
         // else if (daily) {
         if (diff == 1) {
           deasy[id] = pre.getInt('deasy$id') ?? 0;
+          this.data["currentLevel"]=deasy[id];
           curLevel = deasy[id];
         } else if (diff == 2) {
           dmedium[id] = pre.getInt('dmedium$id') ?? 0;
+          this.data["currentLevel"]=dmedium[id];
           curLevel = dmedium[id];
         } else if (diff == 3) {
           dhard[id] = pre.getInt('dhard$id') ?? 0;
+          this.data["currentLevel"]=dhard[id];
           curLevel = dhard[id];
         }
       }
@@ -201,6 +209,9 @@ class _QuestionState extends State<Question> {
         if (diff == 1) {
           ndeasy[i] = (pre.getInt('easy$i') ?? 0) + points;
           validate();
+          // Flashcard f = new Flashcard(flashcardModel);
+          // f.loadCounter(diff,id);
+          // this.data["currentLevel"]=ndeasy[i];
           pre.setInt('easy$i', ndeasy[i]);
           curLevel = ndeasy[id];
           if (points == 1 &&
@@ -217,6 +228,9 @@ class _QuestionState extends State<Question> {
         } else if (diff == 2) {
           ndmedium[i] = (pre.getInt('medium$i') ?? 0) + points;
           validate();
+          // Flashcard f = new Flashcard(flashcardModel);
+          // f.loadCounter(diff,id);
+          // this.data["currentLevel"]=ndmedium[i];
           pre.setInt('medium$i', ndmedium[i]);
           curLevel = ndmedium[id];
           if (points == 1 &&
@@ -232,7 +246,10 @@ class _QuestionState extends State<Question> {
           }
         } else if (diff == 3) {
           ndhard[i] = (pre.getInt('hard$i') ?? 0) + points;
+          // this.data["currentLevel"]=ndhard[i];
           validate();
+          // Flashcard f = new Flashcard(flashcardModel);
+          // f.loadCounter(diff,id);
           pre.setInt('hard$i', ndhard[i]);
           curLevel = ndhard[id];
           if (points == 1 && ndhard[i] <= 17) {
@@ -247,6 +264,10 @@ class _QuestionState extends State<Question> {
         // else if (daily) {
         if (diff == 1) {
           deasy[i] = (pre.getInt('deasy$i') ?? 0) + points;
+          validate();
+          // Flashcard f = new Flashcard(flashcardModel);
+          // f.loadCounter(diff,id);
+          // this.data["currentLevel"]=deasy[i];
           pre.setInt('deasy$i', deasy[i]);
           curLevel = deasy[id];
           if (points == 1 &&
@@ -259,6 +280,10 @@ class _QuestionState extends State<Question> {
           }
         } else if (diff == 2) {
           dmedium[i] = (pre.getInt('dmedium$i') ?? 0) + points;
+          validate();
+          // Flashcard f = new Flashcard(flashcardModel);
+          // f.loadCounter(diff,id);
+          // this.data["currentLevel"]=dmedium[i];
           pre.setInt('dmedium$i', dmedium[i]);
           curLevel = dmedium[id];
           if (points == 1 &&
@@ -271,6 +296,10 @@ class _QuestionState extends State<Question> {
           }
         } else if (diff == 3) {
           dhard[i] = (pre.getInt('dhard$i') ?? 0) + points;
+          validate();
+          // Flashcard f = new Flashcard(flashcardModel);
+          // f.loadCounter(diff,id);
+          // this.data["currentLevel"]=dhard[i];
           pre.setInt('dhard$i', dhard[i]);
           curLevel = dhard[id];
           if (points == 1 &&
@@ -362,7 +391,7 @@ class _QuestionState extends State<Question> {
               height: 10,
             ),
             ...widget.options.map(
-              (e) => Container(
+                  (e) => Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: FlatButton(
                   shape: RoundedRectangleBorder(
@@ -409,14 +438,14 @@ class _QuestionState extends State<Question> {
                                   padding: EdgeInsets.all(10.0),
                                   child: Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.stretch,
+                                    CrossAxisAlignment.stretch,
                                     children: [
                                       SizedBox(
                                         height: 20.0,
                                       ),
                                       Center(
                                         child: SvgPicture.asset(
-                                          '$badges',
+                                          '${badges[getLevel(diff, curLevel, daily)]}',
                                           height: 140,
                                           width: 140,
                                         ),
@@ -489,14 +518,14 @@ class _QuestionState extends State<Question> {
                                 padding: EdgeInsets.all(10.0),
                                 child: Column(
                                   crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
+                                  CrossAxisAlignment.stretch,
                                   children: [
                                     SizedBox(
                                       height: 20.0,
                                     ),
                                     Center(
                                       child: SvgPicture.asset(
-                                        '$badges',
+                                        '${badges[getLevel(diff, curLevel, daily)]}',
                                         height: 140,
                                         width: 140,
                                       ),
