@@ -1,142 +1,3 @@
-// // import 'package:Layout/models/badgeDetails.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
-// import 'badgeDetails.dart';
-//
-// class Details extends StatelessWidget {
-//   final Map flashcard;
-//   Details(this.flashcard);
-//   void showBadgeDetails(BuildContext context) {
-//     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-//       return BadgeDetailsScreen();
-//     }));
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: const Color(
-//         0xff2C2E36,
-//       ),
-//       appBar: AppBar(
-//         leading: IconButton(
-//           icon: Icon(
-//             Icons.arrow_back_ios,
-//           ),
-//           onPressed: () => Navigator.of(context).pop(),
-//         ),
-//         title: Text("ECO"),
-//         centerTitle: true,
-//         backgroundColor: const Color(
-//           0xff2C2E36,
-//         ),
-//         elevation: 0,
-//         actions: [
-//           IconButton(
-//             icon: Icon(
-//               Icons.account_circle,
-//             ),
-//             onPressed: () {},
-//           ),
-//         ],
-//       ),
-//       body: SingleChildScrollView(
-//         child: Column(
-//           children: [
-//             Row(
-//               children: [
-//                 FittedBox(
-//                   child: Padding(
-//                     padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-//                     child: Column(
-//                       children: [
-//                         Text(
-//                           flashcard["title"],
-//                           style: TextStyle(
-//                             fontWeight: FontWeight.bold,
-//                             fontSize: 20,
-//                             color: const Color(
-//                               0xffFFFFFF,
-//                             ),
-//                           ),
-//                         ),
-//                         SizedBox(
-//                           height: 10,
-//                         ),
-//                         Text(
-//                           (flashcard["difficulty"] as Map)["text"],
-//                           style: TextStyle(
-//                             fontSize: 20,
-//                             color: const Color(
-//                               0xffFFFFFF,
-//                             ),
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                   ),
-//                 ),
-//                 Expanded(
-//                   child: SizedBox(
-//                     width: 5,
-//                   ),
-//                 ),
-//                 Padding(
-//                   padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-//                   child: Flexible(
-//                     child: Container(
-//                       child: GestureDetector(
-//                         onTap: () => showBadgeDetails(context),
-//                         child: SvgPicture.asset(
-//                           (flashcard["badge"] as Map)["path"]
-//                           [flashcard["currentLevel"] - 1],
-//                         ),
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   width: 5,
-//                 ),
-//               ],
-//             ),
-//             ...(flashcard["longDescription"] as List).map((text) {
-//               return Container(
-//                 margin: const EdgeInsets.symmetric(
-//                   horizontal: 5,
-//                   vertical: 2,
-//                 ),
-//                 child: Card(
-//                   shape: RoundedRectangleBorder(
-//                     borderRadius: BorderRadius.circular(10),
-//                   ),
-//                   color: Color(flashcard["color"]),
-//                   child: Padding(
-//                     padding: EdgeInsets.symmetric(
-//                       horizontal: 20,
-//                       vertical: 25,
-//                     ),
-//                     child: Text(
-//                       text,
-//                       style: TextStyle(
-//                         color: const Color(
-//                           0xffFFFFFF,
-//                         ),
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//               );
-//             }).toList(),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-// import 'package:Layout/models/badgeDetails.dart';
-// import 'package:Layout/flashcard_model.dart';
 import 'flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -161,6 +22,7 @@ class _DetailsState extends State<Details> {
   }
   int index;
   FlashcardModel flashcardModel;
+
   _DetailsState(this.flashcardModel,this.index);
 
   Color iconColor;
@@ -226,6 +88,7 @@ class _DetailsState extends State<Details> {
           if (diff == 1) {
             ndeasyrem[id] = pre.getBool('easyrem$id') ?? false;
             // this.data["currentLevel"]=ndeasy[id];
+            r=ndeasyrem[id];
             if(ndeasyrem[id]==false) {
               iconColor = Colors.pink;
             }
@@ -235,6 +98,7 @@ class _DetailsState extends State<Details> {
           } else if (diff == 2) {
             ndmediumrem[id] = pre.getBool('mediumrem$id') ?? false;
             // this.data["currentLevel"]=ndmedium[id];
+            r=ndmediumrem[id];
             if(ndmediumrem[id]==false) {
               iconColor = Colors.pink;
             }
@@ -244,6 +108,7 @@ class _DetailsState extends State<Details> {
           } else if (diff == 3) {
             ndhardrem[id] = pre.getBool('hardrem$id') ?? false;
             // this.data["currentLevel"]=ndhard[id];
+            r=ndhardrem[id];
             if(ndhardrem[id]==false) {
               iconColor = Colors.pink;
             }
@@ -257,6 +122,7 @@ class _DetailsState extends State<Details> {
           if (diff == 1) {
             deasyrem[id] = pre.getBool('deasyrem$id') ?? false;
             // this.data["currentLevel"]=deasy[id];
+            r=deasyrem[id];
             if(deasyrem[id]==false) {
               iconColor = Colors.pink;
             }
@@ -265,6 +131,7 @@ class _DetailsState extends State<Details> {
             }
           } else if (diff == 2) {
             dmediumrem[id] = pre.getBool('dmediumrem$id') ?? false;
+            r=dmediumrem[id];
             // this.data["currentLevel"]=dmedium[id];
             if(dmediumrem[id]==false) {
               iconColor = Colors.pink;
@@ -274,6 +141,7 @@ class _DetailsState extends State<Details> {
             }
           } else if (diff == 3) {
             dhardrem[id] = pre.getBool('dhardrem$id') ?? false;
+            r=dhardrem[id];
             // this.data["currentLevel"]=dhard[id];
             if(dhardrem[id]==false) {
               iconColor = Colors.pink;
@@ -285,6 +153,8 @@ class _DetailsState extends State<Details> {
         }
       });
     }
+
+    bool r;
 
     updateCounter() async{
       SharedPreferences pre = await SharedPreferences.getInstance();
@@ -428,17 +298,20 @@ class _DetailsState extends State<Details> {
                 ),
                 IconButton(
                   icon: Icon(Icons.notifications),
-                  onPressed: () {
-                    setState(() {
-                      if (iconColor == Colors.pink) {
-                        iconColor = Colors.yellow;
-                        updateCounter();
-                        widget.flashcardModel.hasReminder = true;
-                      } else {
-                        iconColor = Colors.pink;
-                        updateCounter();
-                        widget.flashcardModel.hasLevel = false;
-                      }
+                  onPressed: () async {
+                    setState(() async {
+                      // if (iconColor == Colors.pink) {
+                      //   // iconColor = Colors.yellow;
+                      //   await updateCounter();
+                      //   widget.flashcardModel.hasReminder = true;
+                      // } else {
+                      //   // iconColor = Colors.pink;
+                      //   await updateCounter();
+                      //   widget.flashcardModel.hasLevel = false;
+                      // }
+
+                      await updateCounter();
+
                     });
                   },
                   color: iconColor,
@@ -497,6 +370,10 @@ class _DetailsState extends State<Details> {
                 ),
               );
             }).toList(),
+            Text('$r',
+            style: TextStyle(
+              color: Colors.white,
+            ),),
           ],
         ),
       ),
