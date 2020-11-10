@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import 'data.dart';
 import 'environmentalDays_model.dart';
-import 'flashcard.dart';
 import 'flashcard_model.dart';
 
 class FOTD extends StatefulWidget {

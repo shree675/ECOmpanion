@@ -4,7 +4,6 @@ import 'flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flashcard.dart';
 
 class Question extends StatefulWidget {
   final String question;
@@ -100,30 +99,30 @@ class _QuestionState extends State<Question> {
       if (!daily) {
         if (diff == 1) {
           ndeasy[id] = pre.getInt('easy$id') ?? 0;
-          this.data["currentLevel"]=ndeasy[id];
+          this.data["currentLevel"] = ndeasy[id];
           curLevel = ndeasy[id];
         } else if (diff == 2) {
           ndmedium[id] = pre.getInt('medium$id') ?? 0;
-          this.data["currentLevel"]=ndmedium[id];
+          this.data["currentLevel"] = ndmedium[id];
           curLevel = ndmedium[id];
         } else if (diff == 3) {
           ndhard[id] = pre.getInt('hard$id') ?? 0;
-          this.data["currentLevel"]=ndhard[id];
+          this.data["currentLevel"] = ndhard[id];
           curLevel = ndhard[id];
         }
       } else if (daily && quiz == 1) {
         // else if (daily) {
         if (diff == 1) {
           deasy[id] = pre.getInt('deasy$id') ?? 0;
-          this.data["currentLevel"]=deasy[id];
+          this.data["currentLevel"] = deasy[id];
           curLevel = deasy[id];
         } else if (diff == 2) {
           dmedium[id] = pre.getInt('dmedium$id') ?? 0;
-          this.data["currentLevel"]=dmedium[id];
+          this.data["currentLevel"] = dmedium[id];
           curLevel = dmedium[id];
         } else if (diff == 3) {
           dhard[id] = pre.getInt('dhard$id') ?? 0;
-          this.data["currentLevel"]=dhard[id];
+          this.data["currentLevel"] = dhard[id];
           curLevel = dhard[id];
         }
       }
@@ -391,7 +390,7 @@ class _QuestionState extends State<Question> {
               height: 10,
             ),
             ...widget.options.map(
-                  (e) => Container(
+              (e) => Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: FlatButton(
                   shape: RoundedRectangleBorder(
@@ -438,7 +437,7 @@ class _QuestionState extends State<Question> {
                                   padding: EdgeInsets.all(10.0),
                                   child: Column(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.stretch,
+                                        CrossAxisAlignment.stretch,
                                     children: [
                                       SizedBox(
                                         height: 20.0,
@@ -518,7 +517,7 @@ class _QuestionState extends State<Question> {
                                 padding: EdgeInsets.all(10.0),
                                 child: Column(
                                   crossAxisAlignment:
-                                  CrossAxisAlignment.stretch,
+                                      CrossAxisAlignment.stretch,
                                   children: [
                                     SizedBox(
                                       height: 20.0,
