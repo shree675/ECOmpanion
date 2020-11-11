@@ -127,7 +127,7 @@ class _FlashcardState extends State<Flashcard> {
 
   loadCounter1(diff, id) async {
     SharedPreferences pre = await SharedPreferences.getInstance();
-    // setState(() {
+    setState(() {
       if (!daily) {
         if (diff == 1) {
           ndeasy[id] = pre.getInt('easy$id') ?? 0;
@@ -159,7 +159,7 @@ class _FlashcardState extends State<Flashcard> {
           curLevel = dhard[id];
         }
       }
-    // });
+    });
     // build(context);
   //   HomeScreen h=new HomeScreen();
   //       h.run();
