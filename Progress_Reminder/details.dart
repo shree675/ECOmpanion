@@ -27,8 +27,8 @@ class _DetailsState extends State<Details> {
 
   Color iconColor;
 
-  List<bool> ndeasyrem = new List(8);
-  List<String> easystringrem = new List(8);
+  List<bool> ndeasyrem = new List(9);
+  List<String> easystringrem = new List(9);
   List<bool> ndmediumrem = new List(19);
   List<String> mediumstringrem = new List(19);
   List<bool> ndhardrem = new List(12);
