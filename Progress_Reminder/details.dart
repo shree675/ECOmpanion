@@ -1,3 +1,5 @@
+import 'package:github1/homescreen.dart';
+
 import 'flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -64,6 +66,7 @@ class _DetailsState extends State<Details> {
         ndhardrem[id] = false;
         hardstringrem[id] = "hardrem$id";
       }
+    }
       // } else if (daily && quiz == 1) {
       else if (daily) {
         if (diff == 1) {
@@ -79,7 +82,7 @@ class _DetailsState extends State<Details> {
       }
       loadCounter(diff, id);
     }
-  }
+
 
     loadCounter(diff, id) async {
       SharedPreferences pre = await SharedPreferences.getInstance();
@@ -243,7 +246,9 @@ class _DetailsState extends State<Details> {
           icon: Icon(
             Icons.arrow_back_ios,
           ),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
         ),
         title: Text("ECO"),
         centerTitle: true,
