@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'data.dart';
 import 'question.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'homescreen.dart';
 
 class DailyQuiz extends StatefulWidget {
 
@@ -29,6 +30,32 @@ class _DailyQuizState extends State<DailyQuiz> {
   loadCounter() async {
     SharedPreferences pre = await SharedPreferences.getInstance();
     setState(() {
+      // if (!daily) {
+      //   if (diff == 1) {
+      //     this.rem = pre.getBool('easyrem$id') ?? false;
+      //     // return pre.getBool('easyrem$id') ?? false;
+      //   } else if (diff == 2) {
+      //     this.rem = pre.getBool('mediumrem$id') ?? false;
+      //     // return pre.getBool('mediumrem$id') ?? false;
+      //
+      //   } else if (diff == 3) {
+      //     this.rem = pre.getBool('hardrem$id') ?? false;
+      //
+      //   }
+      // }
+      // // } else if (daily && quiz == 1) {
+      // else if (daily) {
+      //   if (diff == 1) {
+      //     this.rem = pre.getBool('deasyrem$id') ?? false;
+      //
+      //   } else if (diff == 2) {
+      //     this.rem = pre.getBool('dmediumrem$id') ?? false;
+      //
+      //   } else if (diff == 3) {
+      //     this.rem = pre.getBool('dhardrem$id') ?? false;
+      //
+      //   }
+      // }
       for(int i=0;i<9;i++){
         ndeasyrem[i]=pre.getBool('easyrem$id') ?? false;
       }
@@ -68,7 +95,12 @@ class _DailyQuizState extends State<DailyQuiz> {
           icon: Icon(
             Icons.arrow_back_ios,
           ),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () {
+            Navigator.of(context).pop();
+            // Navigator.push(context, MaterialPageRoute(
+            //   builder: (context) => HomeScreen(),
+            // ));
+          },
         ),
         title: Text("ECO"),
         centerTitle: true,
