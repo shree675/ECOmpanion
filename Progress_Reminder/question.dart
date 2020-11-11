@@ -472,7 +472,7 @@ class _QuestionState extends State<Question> {
                     ),
                   ),
                   color: const Color(0xff1B3671),
-                  onPressed: () async {
+                  onPressed: () async {                                           // need to include hasLevel
                     if (numOfOptions == 2) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
