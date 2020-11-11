@@ -18,7 +18,7 @@ class _DailyQuizState extends State<DailyQuiz> {
   int index,diff,id;
   bool daily;
 
-  List<bool> ndeasyrem = new List(8);
+  List<bool> ndeasyrem = new List(9);
   List<bool> ndmediumrem = new List(19);
   List<bool> ndhardrem = new List(12);
 
@@ -29,33 +29,7 @@ class _DailyQuizState extends State<DailyQuiz> {
   loadCounter() async {
     SharedPreferences pre = await SharedPreferences.getInstance();
     setState(() {
-      // if (!daily) {
-      //   if (diff == 1) {
-      //     this.rem = pre.getBool('easyrem$id') ?? false;
-      //     // return pre.getBool('easyrem$id') ?? false;
-      //   } else if (diff == 2) {
-      //     this.rem = pre.getBool('mediumrem$id') ?? false;
-      //     // return pre.getBool('mediumrem$id') ?? false;
-      //
-      //   } else if (diff == 3) {
-      //     this.rem = pre.getBool('hardrem$id') ?? false;
-      //
-      //   }
-      // }
-      // // } else if (daily && quiz == 1) {
-      // else if (daily) {
-      //   if (diff == 1) {
-      //     this.rem = pre.getBool('deasyrem$id') ?? false;
-      //
-      //   } else if (diff == 2) {
-      //     this.rem = pre.getBool('dmediumrem$id') ?? false;
-      //
-      //   } else if (diff == 3) {
-      //     this.rem = pre.getBool('dhardrem$id') ?? false;
-      //
-      //   }
-      // }
-      for(int i=0;i<8;i++){
+      for(int i=0;i<9;i++){
         ndeasyrem[i]=pre.getBool('easyrem$id') ?? false;
       }
       for(int i=0;i<19;i++){
