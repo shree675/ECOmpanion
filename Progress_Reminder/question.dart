@@ -37,8 +37,8 @@ class _QuestionState extends State<Question> {
 
   _QuestionState(
       this.question, this.options, this.data, this.quiz, this.flashcardModel,this.index);
-  List<int> ndeasy = new List(8);
-  List<String> easystring = new List(8);
+  List<int> ndeasy = new List(9);
+  List<String> easystring = new List(9);
   List<int> ndmedium = new List(19);
   List<String> mediumstring = new List(19);
   List<int> ndhard = new List(12);
@@ -390,7 +390,7 @@ class _QuestionState extends State<Question> {
 
   resetCounter() async {
     SharedPreferences pre = await SharedPreferences.getInstance();
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 9; i++) {
       pre.setInt('easy$i', 0);
     }
     for (int i = 0; i < 19; i++) {
