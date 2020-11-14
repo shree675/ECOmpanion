@@ -1,15 +1,14 @@
 import 'dart:math';
 
 import 'package:Layout/dailyQuiz.dart';
-import 'package:Layout/data.dart';
-import 'package:Layout/environmentalDays_model.dart';
+import 'package:Layout/flashcard.dart';
+
 import 'package:Layout/flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'flashcard.dart';
 import 'flashcardsScreen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,10 +32,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _getLastOpenedTime() async {
     final prefs = await SharedPreferences.getInstance();
-    final lastOpenedTimeString = prefs.getString("lastOpenedTime");
-    if (lastOpenedTimeString == null) {
-      return DateTime(2000);
-    }
+    final lastOpenedTimeString =
+        prefs.getString("lastOpenedTime") ?? DateTime(2000).toIso8601String();
+    // if (lastOpenedTimeString == null) {
+    //   return DateTime(2000);
+    // }
     return DateTime.parse(lastOpenedTimeString);
   }
 
@@ -47,24 +47,35 @@ class _HomeScreenState extends State<HomeScreen> {
     print("$randomIndex");
     if (lastOpenedTime
         .isBefore(DateTime.now().subtract(const Duration(days: 1)))) {
+      print('a');
       int randomIndex = Random().nextInt(10);
       String lastCardShownDateString =
-          prefs.getString("lastShown" + randomIndex.toString());
+          prefs.getString("lastShown" + randomIndex.toString()) ?? "";
       DateTime lastCardShownDate;
-      if (lastCardShownDateString == null) {
+      if (lastCardShownDateString == "") {
+        print('1');
         prefs.setString("lastShown" + randomIndex.toString(),
             DateTime.now().toIso8601String());
         lastCardShownDate = DateTime.parse(
             prefs.getString("lastShown" + randomIndex.toString()));
       } else {
+        print('2');
         lastCardShownDate = DateTime.parse(lastCardShownDateString);
       }
       while (!lastCardShownDate.isBefore(DateTime.now()
           .subtract(Duration(days: flashcardModels[randomIndex].frequency)))) {
         randomIndex = Random().nextInt(flashcardModels.length);
+        // break;
+        lastCardShownDate = DateTime.parse(
+            prefs.getString("lastShown" + randomIndex.toString()) ??
+                DateTime(2000).toIso8601String());
+        print('b');
       }
+      print('c');
+      int temp = prefs.getInt("randomIndex") ?? 0;
       await prefs.setInt("randomIndex", randomIndex);
-      int temp = prefs.getInt("randomIndex");
+      temp = randomIndex;
+      // int temp = prefs.getInt("randomIndex") ?? 0;
       if (temp != null) {
         setState(() {
           this.randomIndex = temp;
@@ -72,7 +83,8 @@ class _HomeScreenState extends State<HomeScreen> {
       }
       print("random index generated successfully!");
     } else {
-      int temp = prefs.getInt("randomIndex");
+      int temp = prefs.getInt("randomIndex") ?? 0;
+      print(temp);
       if (temp != null) {
         setState(() {
           this.randomIndex = temp;
@@ -123,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             icon: Icon(
-              Icons.account_circle_outlined,
+              Icons.account_circle,
             ),
             onPressed: () => showFlashcards(context),
           ),
@@ -134,9 +146,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () => showFlashcards(context),
-              child: Container(
-                height: 0,
-                width: 0,
+              child: Flashcard(
+                flashcardModels[randomIndex],
               ),
             ),
             Container(
