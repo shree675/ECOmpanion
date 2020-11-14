@@ -5,14 +5,8 @@ import 'question.dart';
 import 'data.dart';
 
 List<Question> selectedQuestions = flashcardModels.map((e) {
-  if (e.hasReminder) {
-    return Question(
-      e.question,
-      e.options,
-      data[flashcardModels.indexOf(e)],
-      0,
-      e,
-        flashcardModels.indexOf(e)
-    );
+  if (e.isDaily) {
+    return Question(e.question, e.options, data[flashcardModels.indexOf(e)], 0,
+        e, flashcardModels.indexOf(e));
   }
 }).toList();

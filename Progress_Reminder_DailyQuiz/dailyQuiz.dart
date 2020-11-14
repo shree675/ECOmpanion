@@ -79,7 +79,6 @@ class _DailyQuizState extends State<DailyQuiz> {
 
   @override
   void initState(){
-    // TODO: implement initState
     super.initState();
     loadCounter();
   }
@@ -173,23 +172,16 @@ class _DailyQuizState extends State<DailyQuiz> {
   }
 }*/
 
-
-
-
-
-
-import 'flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'data.dart';
-import 'question.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import 'homescreen.dart';
 import 'question2.dart';
 import 'options.dart';
 
 class DailyQuiz extends StatefulWidget {
-
-  int curIndex;
+  final int curIndex;
   DailyQuiz(this.curIndex);
 
   @override
@@ -197,22 +189,24 @@ class DailyQuiz extends StatefulWidget {
 }
 
 class _DailyQuizState extends State<DailyQuiz> {
-
   bool rem;
-  int index,diff,id;
+  int index, diff, id;
   bool daily;
-  int curIndex=-1;
+  int curIndex = -1;
 
-  void answer() {                                                                 // need to change this later
+  void answer() {
+    // need to change this later
     setState(() {
-      curIndex+=1;
-      if(curIndex>=50){
+      curIndex += 1;
+      if (curIndex >= 50) {
         Navigator.pop(context);
-        Navigator.push(context, MaterialPageRoute(
-          builder: (context) => HomeScreen(),
-        ));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HomeScreen(),
+            ));
       }
-      if(!data[curIndex]["isDaily"]) {
+      if (!data[curIndex]["isDaily"]) {
         answer();
       }
     });
@@ -231,30 +225,29 @@ class _DailyQuizState extends State<DailyQuiz> {
   loadCounter() async {
     SharedPreferences pre = await SharedPreferences.getInstance();
     setState(() {
-      for(int i=0;i<9;i++){
-        ndeasyrem[i]=pre.getBool('easyrem$id') ?? false;
+      for (int i = 0; i < 9; i++) {
+        ndeasyrem[i] = pre.getBool('easyrem$id') ?? false;
       }
-      for(int i=0;i<19;i++){
-        ndmediumrem[i]=pre.getBool('mediumrem$id') ?? false;
+      for (int i = 0; i < 19; i++) {
+        ndmediumrem[i] = pre.getBool('mediumrem$id') ?? false;
       }
-      for(int i=0;i<12;i++){
-        ndhardrem[i]=pre.getBool('hardrem$id') ?? false;
+      for (int i = 0; i < 12; i++) {
+        ndhardrem[i] = pre.getBool('hardrem$id') ?? false;
       }
-      for(int i=0;i<2;i++){
-        deasyrem[i]=pre.getBool('deasyrem$id') ?? false;
+      for (int i = 0; i < 2; i++) {
+        deasyrem[i] = pre.getBool('deasyrem$id') ?? false;
       }
-      for(int i=0;i<6;i++){
-        dmediumrem[i]=pre.getBool('dmediumrem$id') ?? false;
+      for (int i = 0; i < 6; i++) {
+        dmediumrem[i] = pre.getBool('dmediumrem$id') ?? false;
       }
-      for(int i=0;i<3;i++){
-        dhardrem[i]=pre.getBool('dhardrem$id') ?? false;
+      for (int i = 0; i < 3; i++) {
+        dhardrem[i] = pre.getBool('dhardrem$id') ?? false;
       }
     });
   }
 
   @override
-  void initState(){
-    // TODO: implement initState
+  void initState() {
     super.initState();
     loadCounter();
     answer();
@@ -294,77 +287,85 @@ class _DailyQuizState extends State<DailyQuiz> {
         ],
       ),
       // body: curIndex<data.length ? Column(
-        // children: flashcardModels.map((e) {
-        //   print('$curIndex');
-          // this.index=flashcardModels.indexOf(e);
-          // this.diff=(data[index]["difficulty"] as Map)["scale"];
-          // this.id=data[index]["id"];
-          // this.id-=1;
-          // // bool rem;
-          // this.daily=data[index]["isDaily"];
-          //
-          // // List<bool> ndeasyrem = new List(8);
-          // // List<bool> ndmediumrem = new List(19);
-          // // List<bool> ndhardrem = new List(12);
-          // //
-          // // List<bool> deasyrem = new List(2);
-          // // List<bool> dmediumrem = new List(6);
-          // // List<bool> dhardrem = new List(3);
-          // // loadCounter(diff, id);
-          // if(!daily){
-          //   if(diff==1){
-          //     this.rem=ndeasyrem[id];
-          //   }
-          //   else if(diff==2){
-          //     this.rem=ndmediumrem[id];
-          //   }
-          //   else if(diff==3){
-          //     this.rem=ndhardrem[id];
-          //   }
-          // }
-          // else {
-          //   if(diff==1){
-          //     this.rem=deasyrem[id];
-          //   }
-          //   else if(diff==2){
-          //     this.rem=dmediumrem[id];
-          //   }
-          //   else if(diff==3){
-          //     this.rem=dhardrem[id];
-          //   }
-          // }
-          // print('${data[curIndex]["isDaily"]}');
+      // children: flashcardModels.map((e) {
+      //   print('$curIndex');
+      // this.index=flashcardModels.indexOf(e);
+      // this.diff=(data[index]["difficulty"] as Map)["scale"];
+      // this.id=data[index]["id"];
+      // this.id-=1;
+      // // bool rem;
+      // this.daily=data[index]["isDaily"];
+      //
+      // // List<bool> ndeasyrem = new List(8);
+      // // List<bool> ndmediumrem = new List(19);
+      // // List<bool> ndhardrem = new List(12);
+      // //
+      // // List<bool> deasyrem = new List(2);
+      // // List<bool> dmediumrem = new List(6);
+      // // List<bool> dhardrem = new List(3);
+      // // loadCounter(diff, id);
+      // if(!daily){
+      //   if(diff==1){
+      //     this.rem=ndeasyrem[id];
+      //   }
+      //   else if(diff==2){
+      //     this.rem=ndmediumrem[id];
+      //   }
+      //   else if(diff==3){
+      //     this.rem=ndhardrem[id];
+      //   }
+      // }
+      // else {
+      //   if(diff==1){
+      //     this.rem=deasyrem[id];
+      //   }
+      //   else if(diff==2){
+      //     this.rem=dmediumrem[id];
+      //   }
+      //   else if(diff==3){
+      //     this.rem=dhardrem[id];
+      //   }
+      // }
+      // print('${data[curIndex]["isDaily"]}');
 
-          // if(data[curIndex]["isDaily"]){
-          //   // answer();
-          //   return Question(data[curIndex]["question"], data[curIndex]["options"],
-          //       data[curIndex], 1, e,curIndex);
-          // }
-          //
-          // // answer();
-          // curIndex+=1;
+      // if(data[curIndex]["isDaily"]){
+      //   // answer();
+      //   return Question(data[curIndex]["question"], data[curIndex]["options"],
+      //       data[curIndex], 1, e,curIndex);
+      // }
+      //
+      // // answer();
+      // curIndex+=1;
 
-    //       return SizedBox(
-    //         height: 0,
-    //         width: 0,
-    //       );
-    //     }).toList(),
-    //   )
-    //   :HomeScreen(),
-    // );
-    body: curIndex<data.length ? Column(
-    children: [Question2(data[curIndex]["question"]), ...(data[curIndex]["options"] as List).map((e) => Option(answer, e, curIndex)),],
-    ): Center(
-      child: RaisedButton(
-        onPressed: () {
-          Navigator.pop(context);
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) => HomeScreen(),
-          ));
-        },
-        child: Text("Reset"),
-      ),
-    ),
+      //       return SizedBox(
+      //         height: 0,
+      //         width: 0,
+      //       );
+      //     }).toList(),
+      //   )
+      //   :HomeScreen(),
+      // );
+      body: curIndex < data.length
+          ? Column(
+              children: [
+                Question2(data[curIndex]["question"]),
+                ...(data[curIndex]["options"] as List)
+                    .map((e) => Option(answer, e, curIndex)),
+              ],
+            )
+          : Center(
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ));
+                },
+                child: Text("Reset"),
+              ),
+            ),
     );
   }
 }

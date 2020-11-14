@@ -1,13 +1,9 @@
 import 'dart:math';
 // import 'package:Layout/flashcard_model.dart';
-import 'package:github1/dailyQuiz.dart';
-import 'package:github1/homescreen.dart';
-import 'details.dart';
 import 'flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flashcard.dart';
 
 class Question extends StatefulWidget {
   final String question;
@@ -16,14 +12,14 @@ class Question extends StatefulWidget {
   final FlashcardModel flashcardModel;
   int quiz;
   int index;
-  Question(
-      this.question, this.options, this.data, this.quiz, this.flashcardModel,this.index);
+  Question(this.question, this.options, this.data, this.quiz,
+      this.flashcardModel, this.index);
 
-  int curIndex=0;
+  int curIndex = 0;
 
   @override
-  _QuestionState createState() => _QuestionState(
-      this.question, this.options, this.data, this.quiz, this.flashcardModel,this.index);
+  _QuestionState createState() => _QuestionState(this.question, this.options,
+      this.data, this.quiz, this.flashcardModel, this.index);
 }
 
 class _QuestionState extends State<Question> {
@@ -38,8 +34,8 @@ class _QuestionState extends State<Question> {
   int quiz;
   int index;
 
-  _QuestionState(
-      this.question, this.options, this.data, this.quiz, this.flashcardModel,this.index);
+  _QuestionState(this.question, this.options, this.data, this.quiz,
+      this.flashcardModel, this.index);
   List<int> ndeasy = new List(9);
   List<String> easystring = new List(9);
   List<int> ndmedium = new List(19);
@@ -59,8 +55,6 @@ class _QuestionState extends State<Question> {
   String badgeName;
   int curLevel = 0;
   int numOfOptions;
-
-
 
   @override
   initState() {
@@ -88,7 +82,7 @@ class _QuestionState extends State<Question> {
       }
     }
     // } else if (daily && quiz == 1) {
-      else if (daily) {
+    else if (daily) {
       if (diff == 1) {
         deasy[id] = 0;
         deasystring[id] = "deasy$id";
@@ -107,29 +101,24 @@ class _QuestionState extends State<Question> {
 
   bool rem;
 
-  loadCounter2(diff,id) async {
+  loadCounter2(diff, id) async {
     SharedPreferences pre = await SharedPreferences.getInstance();
     setState(() {
-      if(!daily){
-        if(diff==1){
-          this.rem=pre.getBool('easyrem$id') ?? false;
+      if (!daily) {
+        if (diff == 1) {
+          this.rem = pre.getBool('easyrem$id') ?? false;
+        } else if (diff == 2) {
+          this.rem = pre.getBool('mediumrem$id') ?? false;
+        } else if (diff == 3) {
+          this.rem = pre.getBool('hardrem$id') ?? false;
         }
-        else if(diff==2){
-          this.rem=pre.getBool('mediumrem$id') ?? false;
-        }
-        else if(diff==3){
-          this.rem=pre.getBool('hardrem$id') ?? false;
-        }
-      }
-      else {
-        if(diff==1){
-          this.rem=pre.getBool('deasyrem$id') ?? false;
-        }
-        else if(diff==2){
-          this.rem=pre.getBool('dmediumrem$id') ?? false;
-        }
-        else if(diff==3){
-          this.rem=pre.getBool('dhardrem$id') ?? false;
+      } else {
+        if (diff == 1) {
+          this.rem = pre.getBool('deasyrem$id') ?? false;
+        } else if (diff == 2) {
+          this.rem = pre.getBool('dmediumrem$id') ?? false;
+        } else if (diff == 3) {
+          this.rem = pre.getBool('dhardrem$id') ?? false;
         }
       }
     });
@@ -141,30 +130,30 @@ class _QuestionState extends State<Question> {
       if (!daily) {
         if (diff == 1) {
           ndeasy[id] = pre.getInt('easy$id') ?? 0;
-          this.data["currentLevel"]=ndeasy[id];
+          this.data["currentLevel"] = ndeasy[id];
           curLevel = ndeasy[id];
         } else if (diff == 2) {
           ndmedium[id] = pre.getInt('medium$id') ?? 0;
-          this.data["currentLevel"]=ndmedium[id];
+          this.data["currentLevel"] = ndmedium[id];
           curLevel = ndmedium[id];
         } else if (diff == 3) {
           ndhard[id] = pre.getInt('hard$id') ?? 0;
-          this.data["currentLevel"]=ndhard[id];
+          this.data["currentLevel"] = ndhard[id];
           curLevel = ndhard[id];
         }
       } else if (daily && quiz == 1) {
         // else if (daily) {
         if (diff == 1) {
           deasy[id] = pre.getInt('deasy$id') ?? 0;
-          this.data["currentLevel"]=deasy[id];
+          this.data["currentLevel"] = deasy[id];
           curLevel = deasy[id];
         } else if (diff == 2) {
           dmedium[id] = pre.getInt('dmedium$id') ?? 0;
-          this.data["currentLevel"]=dmedium[id];
+          this.data["currentLevel"] = dmedium[id];
           curLevel = dmedium[id];
         } else if (diff == 3) {
           dhard[id] = pre.getInt('dhard$id') ?? 0;
-          this.data["currentLevel"]=dhard[id];
+          this.data["currentLevel"] = dhard[id];
           curLevel = dhard[id];
         }
       }
@@ -469,7 +458,7 @@ class _QuestionState extends State<Question> {
               height: 10,
             ),
             ...widget.options.map(
-                  (e) => Container(
+              (e) => Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: FlatButton(
                   shape: RoundedRectangleBorder(
@@ -479,16 +468,16 @@ class _QuestionState extends State<Question> {
                   ),
                   color: const Color(0xff1B3671),
                   onPressed: () async {
-                    int a=0;
+                    int a = 0;
                     if (numOfOptions == 2) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                        a=1;
+                        a = 1;
                       } else if (e == (data["options"] as List)[1] &&
                           level &&
                           !daily) {
                         await updateCounter(id, -1);
-                        a=1;
+                        a = 1;
                       } else if (e == (data["options"] as List)[1] &&
                           level &&
                           daily) {
@@ -497,12 +486,12 @@ class _QuestionState extends State<Question> {
                     } else if (numOfOptions == 3) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                        a=1;
+                        a = 1;
                       } else if (e == (data["options"] as List)[1] &&
                           level &&
                           !daily) {
                         await updateCounter(id, -1);
-                        a=1;
+                        a = 1;
                       } else if (e == (data["options"] as List)[2] &&
                           level &&
                           daily) {
@@ -521,7 +510,7 @@ class _QuestionState extends State<Question> {
                                   padding: EdgeInsets.all(10.0),
                                   child: Column(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.stretch,
+                                        CrossAxisAlignment.stretch,
                                     children: [
                                       SizedBox(
                                         height: 20.0,
@@ -613,7 +602,7 @@ class _QuestionState extends State<Question> {
                                 padding: EdgeInsets.all(10.0),
                                 child: Column(
                                   crossAxisAlignment:
-                                  CrossAxisAlignment.stretch,
+                                      CrossAxisAlignment.stretch,
                                   children: [
                                     SizedBox(
                                       height: 20.0,
@@ -708,7 +697,8 @@ class _QuestionState extends State<Question> {
                 ),
               ),
             ),
-            Text('${getLevel(diff, curLevel, daily)},$diff,$id,$daily,$index,$rem,$level'),
+            Text(
+                '${getLevel(diff, curLevel, daily)},$diff,$id,$daily,$index,$rem,$level'),
           ],
         ),
       ),

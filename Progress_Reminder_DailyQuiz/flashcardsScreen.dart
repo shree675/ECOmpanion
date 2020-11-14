@@ -3,8 +3,7 @@ import 'flashcard_model.dart';
 import 'flashcard.dart';
 
 class FlashcardsScreen extends StatelessWidget {
-
-  int index;
+  final int index;
   FlashcardsScreen(this.index);
 
   @override
@@ -37,7 +36,7 @@ class FlashcardsScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: flashcardModels.map((e) => Flashcard(e,index)).toList(),
+          children: flashcardModels.map((e) => Flashcard(e, index)).toList(),
         ),
       ),
     );

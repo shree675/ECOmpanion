@@ -9,6 +9,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'data.dart';
+import 'environmentalDays_model.dart';
 import 'flashcardsScreen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -107,17 +109,17 @@ class _HomeScreenState extends State<HomeScreen> {
     }));
   }
 
-  // Widget flashcardOfTheDay() {
-  //   DateTime today = DateTime.now();
-  //   for (var environmentalDay in environmentalDays) {
-  //     if ((environmentalDay["date"] as Map)["month"] == today.month) {
-  //       if ((environmentalDay["date"] as Map)["day"] == today.day) {
-  //         return EnvironmentalDayCard(environmentalDay);
-  //       }
-  //     }
-  //   }
-
-  // }
+  Widget flashcardOfTheDay() {
+    DateTime today = DateTime.now();
+    for (var environmentalDay in environmentalDays) {
+      if ((environmentalDay["date"] as Map)["month"] == today.month) {
+        if ((environmentalDay["date"] as Map)["day"] == today.day) {
+          return EnvironmentalDayCard(environmentalDay);
+        }
+      }
+    }
+    return Flashcard(flashcardModels[randomIndex]);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -146,9 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () => showFlashcards(context),
-              child: Flashcard(
-                flashcardModels[randomIndex],
-              ),
+              child: flashcardOfTheDay(),
             ),
             Container(
               width: MediaQuery.of(context).size.width - 25,

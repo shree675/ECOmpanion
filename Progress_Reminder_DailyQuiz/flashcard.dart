@@ -98,16 +98,14 @@ import 'flashcard_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'data.dart';
 
-
 class Flashcard extends StatefulWidget {
   final FlashcardModel flashcardModel;
-  int index;
-  Flashcard(this.flashcardModel,this.index);
+  final int index;
+  Flashcard(this.flashcardModel, this.index);
 
-  loadCounter(int diff, int id){
+  loadCounter(int diff, int id) {
     _FlashcardState f = new _FlashcardState(this.index);
-    f.loadCounter1(diff,id);
-
+    f.loadCounter1(diff, id);
   }
 
   @override
@@ -121,7 +119,7 @@ class _FlashcardState extends State<Flashcard> {
 
   void showDetailsScreen(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-      return Details(widget.flashcardModel,index);
+      return Details(widget.flashcardModel, index);
     }));
   }
 
@@ -132,7 +130,7 @@ class _FlashcardState extends State<Flashcard> {
   int quiz;
   List<String> badges;
   // Map<String, Object> data;
-  int curLevel=0;
+  int curLevel = 0;
 
   _FlashcardState(this.index);
 
@@ -189,7 +187,7 @@ class _FlashcardState extends State<Flashcard> {
         dhardstring[id] = "dhard$id";
       }
     }
-    loadCounter1(diff,id);
+    loadCounter1(diff, id);
   }
 
   int getLevel(int d, int an, bool isdaily) {
@@ -212,6 +210,7 @@ class _FlashcardState extends State<Flashcard> {
         return (an).toInt();
       }
     }
+    return -1; // added to remove warnings
   }
 
   loadCounter1(diff, id) async {
@@ -220,38 +219,38 @@ class _FlashcardState extends State<Flashcard> {
       if (!daily) {
         if (diff == 1) {
           ndeasy[id] = pre.getInt('easy$id') ?? 0;
-          data[index]["currentLevel"]=ndeasy[id];
+          data[index]["currentLevel"] = ndeasy[id];
           curLevel = ndeasy[id];
         } else if (diff == 2) {
           ndmedium[id] = pre.getInt('medium$id') ?? 0;
-          data[index]["currentLevel"]=ndmedium[id];
+          data[index]["currentLevel"] = ndmedium[id];
           curLevel = ndmedium[id];
         } else if (diff == 3) {
           ndhard[id] = pre.getInt('hard$id') ?? 0;
-          data[index]["currentLevel"]=ndhard[id];
+          data[index]["currentLevel"] = ndhard[id];
           curLevel = ndhard[id];
         }
       }
       // } else if (daily && quiz == 1) {
-        else if (daily) {
+      else if (daily) {
         if (diff == 1) {
           deasy[id] = pre.getInt('deasy$id') ?? 0;
-          data[index]["currentLevel"]=deasy[id];
+          data[index]["currentLevel"] = deasy[id];
           curLevel = deasy[id];
         } else if (diff == 2) {
           dmedium[id] = pre.getInt('dmedium$id') ?? 0;
-          data[index]["currentLevel"]=dmedium[id];
+          data[index]["currentLevel"] = dmedium[id];
           curLevel = dmedium[id];
         } else if (diff == 3) {
           dhard[id] = pre.getInt('dhard$id') ?? 0;
-          data[index]["currentLevel"]=dhard[id];
+          data[index]["currentLevel"] = dhard[id];
           curLevel = dhard[id];
         }
       }
     });
     // build(context);
-  //   HomeScreen h=new HomeScreen();
-  //       h.run();
+    //   HomeScreen h=new HomeScreen();
+    //       h.run();
   }
 
   @override
@@ -268,9 +267,10 @@ class _FlashcardState extends State<Flashcard> {
       child: InkWell(
         onDoubleTap: () => showDetailsScreen(context),
         child: ExpansionTileCard(
-          trailing: SvgPicture.asset(                                   // need to change this later
+          trailing: SvgPicture.asset(
+            // need to change this later
             widget.flashcardModel.badge["path"]
-            [widget.flashcardModel.currentLevel - 1],
+                [widget.flashcardModel.currentLevel - 1],
           ),
 
           /*
@@ -310,7 +310,9 @@ class _FlashcardState extends State<Flashcard> {
                 ),
               ),
             ),
-            Text('${getLevel(diff, curLevel, daily)},$diff,$id,$daily,$curLevel,$index'),
+            Text(
+              '${getLevel(diff, curLevel, daily)},$diff,$id,$daily,$curLevel,$index',
+            ),
           ],
         ),
       ),

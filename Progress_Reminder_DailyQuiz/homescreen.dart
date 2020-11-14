@@ -268,8 +268,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 }*/
 
-
-
 import 'dart:math';
 
 // import 'package:Layout/dailyQuiz.dart';
@@ -280,47 +278,104 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dailyQuiz.dart';
 import 'data.dart';
 import 'environmentalDays_model.dart';
-import 'flashcard_model.dart';
-// import 'quiz.dart';
-import 'question.dart';
-
 import 'flashcard.dart';
+import 'flashcard_model.dart';
+
 import 'flashcardsScreen.dart';
 
 class HomeScreen extends StatefulWidget {
-
-  int i,rint;
-  HomeScreen();
-
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  void takeDailyQuiz(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) {
-      return DailyQuiz(0);
-    }));
-  }
-
-  int i;
-  _HomeScreenState();
-
-  int r,rint,change;
+  int randomIndex;
 
   @override
   void initState() {
     super.initState();
-    // this.rind=randomInd();
-    // if(i==0 && change!=null)
-    r=randomInd();
-    // else{
-    //   r=this.rint;
-    //   change=1;
-    // }
+    _generateRandomNumber();
+  }
+
+  _setLastOpenedTime() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString("lastOpenedTime", DateTime.now().toIso8601String());
+  }
+
+  _getLastOpenedTime() async {
+    final prefs = await SharedPreferences.getInstance();
+    final lastOpenedTimeString =
+        prefs.getString("lastOpenedTime") ?? DateTime(2000).toIso8601String();
+    return DateTime.parse(lastOpenedTimeString);
+  }
+
+  _generateRandomNumber() async {
+    final prefs = await SharedPreferences.getInstance();
+    DateTime lastOpenedTime = await _getLastOpenedTime();
+    print("$lastOpenedTime 2");
+    print("$randomIndex");
+    if (lastOpenedTime
+        .isBefore(DateTime.now().subtract(const Duration(days: 1)))) {
+      print('a');
+      int randomIndex = Random().nextInt(10);
+      String lastCardShownDateString =
+          prefs.getString("lastShown" + randomIndex.toString()) ?? "";
+      DateTime lastCardShownDate;
+      if (lastCardShownDateString == "") {
+        print('1');
+        prefs.setString("lastShown" + randomIndex.toString(),
+            DateTime.now().toIso8601String());
+        lastCardShownDate = DateTime.parse(
+            prefs.getString("lastShown" + randomIndex.toString()));
+      } else {
+        print('2');
+        lastCardShownDate = DateTime.parse(lastCardShownDateString);
+      }
+      while (!lastCardShownDate.isBefore(DateTime.now()
+          .subtract(Duration(days: flashcardModels[randomIndex].frequency)))) {
+        randomIndex = Random().nextInt(flashcardModels.length);
+        lastCardShownDate = DateTime.parse(
+            prefs.getString("lastShown" + randomIndex.toString()) ??
+                DateTime(2000).toIso8601String());
+        print('b');
+      }
+      print('c');
+      int temp = prefs.getInt("randomIndex") ?? 0;
+      await prefs.setInt("randomIndex", randomIndex);
+      temp = randomIndex;
+      if (temp != null) {
+        setState(() {
+          this.randomIndex = temp;
+        });
+      }
+      print("random index generated successfully!");
+    } else {
+      int temp = prefs.getInt("randomIndex") ?? 0;
+      print(temp);
+      if (temp != null) {
+        setState(() {
+          this.randomIndex = temp;
+        });
+      }
+    }
+    await _setLastOpenedTime();
+    print("${prefs.getString("lastOpenedTime")} 1");
+  }
+
+  void takeDailyQuiz(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) {
+      return DailyQuiz(randomIndex);
+    }));
+  }
+
+  void showFlashcards(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (_) {
+      return FlashcardsScreen(randomIndex);
+    }));
   }
 
   Widget flashcardOfTheDay() {
@@ -332,25 +387,7 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       }
     }
-    flashcardModels[r].lastShown = DateTime.now();
-    // return Flashcard(flashcardModels[r],r);
-    return Question(data[r]["question"], data[r]["options"], data[r], 0, flashcardModels[r], r);
-  }
-
-  void showFlashcards(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) {
-      return FlashcardsScreen(r);
-    }));
-  }
-
-  int randomInd(){
-    int randomIndex = Random().nextInt(flashcardModels.length);
-    while (!flashcardModels[randomIndex].lastShown.isBefore(DateTime.now()
-        .subtract(Duration(days: flashcardModels[randomIndex].frequency)))) {
-      randomIndex = Random().nextInt(flashcardModels.length);
-    }
-    return randomIndex;
-    // return 43;
+    return Flashcard(flashcardModels[randomIndex], randomIndex);
   }
 
   @override
@@ -380,7 +417,6 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () => showFlashcards(context),
-              // child: i==0 ? flashcardOfTheDay():Flashcard(flashcardModels[r],r),
               child: flashcardOfTheDay(),
             ),
             Container(
@@ -551,5 +587,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
 }

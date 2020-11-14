@@ -24,12 +24,12 @@ class EnvironmentalDayCard extends StatelessWidget {
         children: [
           ...(environmentalDayData["description"] as List)
               .map((line) => Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              line,
-              style: TextStyle(color: Colors.white),
-            ),
-          ))
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      line,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ))
               .toList(),
           ...(environmentalDayData["links"] as List).map((link) {
             return FlatButton(
