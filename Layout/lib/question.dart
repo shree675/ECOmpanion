@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// ignore: must_be_immutable
 class Question extends StatefulWidget {
   final String question;
   final List<String> options;
@@ -337,6 +338,7 @@ class _QuestionState extends State<Question> {
     }
   }
 
+  // ignore: missing_return
   int getLevel(int d, int an, bool isdaily) {
     if (an <= 0) {
       return 0;
