@@ -610,7 +610,7 @@ class _HomeScreenState extends State<HomeScreen> {
         dans = DateTime.parse(getdans);
         DateTime lastOpenedTime = await _getLastOpenedTime();
         print('last opened: $lastOpenedTime');
-        if (!lastOpenedTime.isBefore(dans.subtract(const Duration(days: 1))) && !lastOpenedTime.isAfter(dq)) {
+        if (!lastOpenedTime.isBefore(dans.subtract(const Duration(days: 1))))) {
           setState(() {
             show=1;
           });
