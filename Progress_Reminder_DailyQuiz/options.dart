@@ -59,7 +59,7 @@ class _OptionState extends State<Option> {
       }
 
     loadCounter(diff, id);
-      resetCounter();                                                             // remove this later
+      // resetCounter();                                                             // remove this later
   }
 
   int curLevel;
