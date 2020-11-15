@@ -12,8 +12,7 @@ class Question extends StatefulWidget {
   final FlashcardModel flashcardModel;
   int quiz;
   int index;
-  Question(this.question, this.options, this.data, this.quiz,
-      this.flashcardModel, this.index);
+  Question(this.question, this.options, this.data, this.quiz, this.flashcardModel, this.index);
 
   int curIndex = 0;
 
@@ -239,19 +238,6 @@ class _QuestionState extends State<Question> {
         if (diff == 1) {
           ndeasy[i] = (pre.getInt('easy$i') ?? 0) + points;
           validate();
-
-          // Navigator.of(context).push(
-          //     new MaterialPageRoute(
-          //         builder: (BuildContext context){
-          //           return new HomeScreen();
-          //         }
-          //     )
-          // );
-
-          // Flashcard f = new Flashcard(flashcardModel,index);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=ndeasy[i];
-
           pre.setInt('easy$i', ndeasy[i]);
           curLevel = ndeasy[id];
           if (points == 1 &&
@@ -268,19 +254,6 @@ class _QuestionState extends State<Question> {
         } else if (diff == 2) {
           ndmedium[i] = (pre.getInt('medium$i') ?? 0) + points;
           validate();
-
-          // Navigator.of(context).push(
-          //     new MaterialPageRoute(
-          //         builder: (BuildContext context){
-          //           return new HomeScreen();
-          //         }
-          //     )
-          // );
-
-          // Flashcard f = new Flashcard(flashcardModel,index);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=ndeasy[i];
-
           pre.setInt('medium$i', ndmedium[i]);
           curLevel = ndmedium[id];
           if (points == 1 &&
@@ -298,19 +271,6 @@ class _QuestionState extends State<Question> {
           ndhard[i] = (pre.getInt('hard$i') ?? 0) + points;
           // this.data["currentLevel"]=ndhard[i];
           validate();
-
-          // Navigator.of(context).push(
-          //     new MaterialPageRoute(
-          //         builder: (BuildContext context){
-          //           return new HomeScreen();
-          //         }
-          //     )
-          // );
-
-          // Flashcard f = new Flashcard(flashcardModel,index);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=ndeasy[i];
-
           pre.setInt('hard$i', ndhard[i]);
           curLevel = ndhard[id];
           if (points == 1 && ndhard[i] <= 17) {
@@ -326,11 +286,6 @@ class _QuestionState extends State<Question> {
         if (diff == 1) {
           deasy[i] = (pre.getInt('deasy$i') ?? 0) + points;
           validate();
-
-          // Flashcard f = new Flashcard(flashcardModel,index);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=ndeasy[i];
-
           pre.setInt('deasy$i', deasy[i]);
           curLevel = deasy[id];
           if (points == 1 &&
@@ -344,11 +299,6 @@ class _QuestionState extends State<Question> {
         } else if (diff == 2) {
           dmedium[i] = (pre.getInt('dmedium$i') ?? 0) + points;
           validate();
-
-          // Flashcard f = new Flashcard(flashcardModel,index);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=ndeasy[i];
-
           pre.setInt('dmedium$i', dmedium[i]);
           curLevel = dmedium[id];
           if (points == 1 &&
@@ -362,11 +312,6 @@ class _QuestionState extends State<Question> {
         } else if (diff == 3) {
           dhard[i] = (pre.getInt('dhard$i') ?? 0) + points;
           validate();
-
-          // Flashcard f = new Flashcard(flashcardModel,index);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=ndeasy[i];
-
           pre.setInt('dhard$i', dhard[i]);
           curLevel = dhard[id];
           if (points == 1 &&
@@ -458,7 +403,7 @@ class _QuestionState extends State<Question> {
               height: 10,
             ),
             ...widget.options.map(
-              (e) => Container(
+                  (e) => Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: FlatButton(
                   shape: RoundedRectangleBorder(
@@ -468,16 +413,14 @@ class _QuestionState extends State<Question> {
                   ),
                   color: const Color(0xff1B3671),
                   onPressed: () async {
-                    int a = 0;
+                    // level=true;                                                   // caution caution caution caution caution caution
                     if (numOfOptions == 2) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                        a = 1;
                       } else if (e == (data["options"] as List)[1] &&
                           level &&
                           !daily) {
                         await updateCounter(id, -1);
-                        a = 1;
                       } else if (e == (data["options"] as List)[1] &&
                           level &&
                           daily) {
@@ -486,12 +429,10 @@ class _QuestionState extends State<Question> {
                     } else if (numOfOptions == 3) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                        a = 1;
                       } else if (e == (data["options"] as List)[1] &&
                           level &&
                           !daily) {
                         await updateCounter(id, -1);
-                        a = 1;
                       } else if (e == (data["options"] as List)[2] &&
                           level &&
                           daily) {
@@ -507,10 +448,112 @@ class _QuestionState extends State<Question> {
                                 height: 400.0,
                                 color: Color(0xffe5e5e5),
                                 child: Padding(
-                                  padding: EdgeInsets.all(10.0),
+                                    padding: EdgeInsets.all(10.0),
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                        children: [
+                                          SizedBox(
+                                            height: 20.0,
+                                          ),
+                                          Center(
+                                            child: SvgPicture.asset(
+                                              '${badges[getLevel(diff, curLevel, daily)]}',
+                                              height: 140,
+                                              width: 140,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 20.0,
+                                          ),
+                                          Center(
+                                            child: Text(
+                                              'Unfortunately,',
+                                              style: TextStyle(
+                                                fontSize: 22.0,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 10.0,
+                                          ),
+                                          Center(
+                                            child: Text(
+                                              'you’re levelling down',
+                                              style: TextStyle(
+                                                fontSize: 20.0,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 10.0,
+                                          ),
+                                          Center(
+                                            child: Text(
+                                              '$badgeName!',
+                                              style: TextStyle(
+                                                fontSize: 22.0,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 10.0,
+                                          ),
+                                          Center(
+                                            child: Text(
+                                              'LEVEL ${getLevel(diff, curLevel, daily)}',
+                                              style: TextStyle(
+                                                fontSize: 20.0,
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 10.0,
+                                          ),
+                                          Center(
+                                            child: Text(
+                                              'Seems like you have lost your consistency... but do not get demotivated! There’s a saying, “Old habits die hard”. It’s alright, you can always start afresh, and remember, CONSISTENCY is the key!',
+                                              softWrap: true,
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontSize: 18.0,
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 10.0,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
+                          });
+                    }
+
+
+                    else if (this.levelChange == 1) {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                              height: 400.0,
+                              color: Color(0xffe5e5e5),
+                              child: Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: SingleChildScrollView(
                                   child: Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.stretch,
+                                    CrossAxisAlignment.stretch,
                                     children: [
                                       SizedBox(
                                         height: 20.0,
@@ -527,7 +570,7 @@ class _QuestionState extends State<Question> {
                                       ),
                                       Center(
                                         child: Text(
-                                          'Unfortunately,',
+                                          'CONGRATULATIONS!',
                                           style: TextStyle(
                                             fontSize: 22.0,
                                             color: Colors.black,
@@ -540,21 +583,9 @@ class _QuestionState extends State<Question> {
                                       ),
                                       Center(
                                         child: Text(
-                                          'you’re levelling down',
+                                          'You earned',
                                           style: TextStyle(
                                             fontSize: 20.0,
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 10.0,
-                                      ),
-                                      Center(
-                                        child: Text(
-                                          'Seems like you have lost your consistency...but do not get demotivated! There’s a saying, “Old habits die hard” . It’s alright, you can always start afresh, and remember, CONSISTENCY is the key!',
-                                          style: TextStyle(
-                                            fontSize: 18.0,
                                             color: Colors.black,
                                           ),
                                         ),
@@ -589,85 +620,6 @@ class _QuestionState extends State<Question> {
                                       ),
                                     ],
                                   ),
-                                ));
-                          });
-                    } else if (this.levelChange == 1) {
-                      showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              height: 400.0,
-                              color: Color(0xffe5e5e5),
-                              child: Padding(
-                                padding: EdgeInsets.all(10.0),
-                                child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
-                                  children: [
-                                    SizedBox(
-                                      height: 20.0,
-                                    ),
-                                    Center(
-                                      child: SvgPicture.asset(
-                                        '${badges[getLevel(diff, curLevel, daily)]}',
-                                        height: 140,
-                                        width: 140,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 20.0,
-                                    ),
-                                    Center(
-                                      child: Text(
-                                        'CONGRATULATIONS!',
-                                        style: TextStyle(
-                                          fontSize: 22.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                    Center(
-                                      child: Text(
-                                        'You earned',
-                                        style: TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                    Center(
-                                      child: Text(
-                                        '$badgeName!',
-                                        style: TextStyle(
-                                          fontSize: 22.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                    Center(
-                                      child: Text(
-                                        'LEVEL ${getLevel(diff, curLevel, daily)}',
-                                        style: TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                  ],
                                 ),
                               ),
                             );
