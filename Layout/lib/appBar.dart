@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 AppBar appBar = AppBar(
   leading: IconButton(
-    onPressed: () => {},
     icon: Icon(
       Icons.arrow_back_ios,
     ),
+    onPressed: () => {},
     // onPressed: () => Navigator.of(context).pop(),
     // problem here is I am not able to figure out how to pass the context to this appBar so that we can use the same appbar for the entire app
   ),
@@ -18,7 +18,8 @@ AppBar appBar = AppBar(
   actions: [
     IconButton(
       icon: Icon(
-        Icons.account_circle_outlined,
+        // Icons.account_circle_outlined,
+        Icons.account_circle,
       ),
       onPressed: () {},
     ),

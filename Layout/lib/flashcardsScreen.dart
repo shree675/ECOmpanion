@@ -1,8 +1,11 @@
-import 'package:Layout/flashcard_model.dart';
 import 'package:flutter/material.dart';
+import 'flashcard_model.dart';
 import 'flashcard.dart';
 
 class FlashcardsScreen extends StatelessWidget {
+  final int index;
+  FlashcardsScreen(this.index);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +28,7 @@ class FlashcardsScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(
-              Icons.account_circle_outlined,
+              Icons.account_circle,
             ),
             onPressed: () {},
           ),
@@ -33,7 +36,7 @@ class FlashcardsScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: flashcardModels.map((e) => Flashcard(e)).toList(),
+          children: flashcardModels.map((e) => Flashcard(e, index)).toList(),
         ),
       ),
     );
