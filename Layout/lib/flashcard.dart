@@ -267,11 +267,16 @@ class _FlashcardState extends State<Flashcard> {
       child: InkWell(
         onDoubleTap: () => showDetailsScreen(context),
         child: ExpansionTileCard(
-          trailing: SvgPicture.asset(
-            // need to change this later
-            widget.flashcardModel.badge["path"]
-                [widget.flashcardModel.currentLevel - 1],
-          ),
+          trailing: widget.flashcardModel.hasLevel
+              ? SvgPicture.asset(
+                  // need to change this later
+                  widget.flashcardModel.badge["path"]
+                      [widget.flashcardModel.currentLevel - 1],
+                )
+              : Container(
+                  height: 0,
+                  width: 0,
+                ),
 
           /*
           to change the size of the badge upon expansion
