@@ -45,7 +45,12 @@ class _DailyQuizState extends State<DailyQuiz> {
 
   answer2() async {
     SharedPreferences pre = await SharedPreferences.getInstance();
-    pre.setString('takeq', DateTime.now().toIso8601String());
+    setState(() {
+      int dif;
+      dif=DateTime.now().difference(DateTime.parse(pre.getString('takeq') ?? DateTime(2000).toIso8601String())).inSeconds;
+      pre.setInt('diff',dif);
+      pre.setString('takeq', DateTime.now().toIso8601String());
+    });
   }
 
   _DailyQuizState(this.curIndex);
@@ -125,9 +130,8 @@ class _DailyQuizState extends State<DailyQuiz> {
       body: curIndex < (data.length-1)
           ? Column(
         children: [
-          Question2(data[curIndex]["question"]),
-          ...(data[curIndex]["options"] as List)
-              .map((e) => Option(answer, e, curIndex)),
+          Question2(data[curIndex]["question"],curIndex),
+          ...(data[curIndex]["options"] as List).map((e) => Option(answer, e, curIndex)),
         ],
       )
       //     : Center(
