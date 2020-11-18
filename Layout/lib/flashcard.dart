@@ -276,7 +276,7 @@ class _FlashcardState extends State<Flashcard> {
                   child: widget.flashcardModel.badge!=null ? SvgPicture.asset(
                     // need to change this later
                     widget.flashcardModel.badge["path"]
-                        [getl(widget.flashcardModel.difficulty["scale"], widget.flashcardModel.id-1, daily)],
+                        [getl(widget.flashcardModel.difficulty["scale"], widget.flashcardModel.id-1, widget.flashcardModel.isDaily)],
                   )
             :SizedBox(height: 0,width: 0,),
                 )
