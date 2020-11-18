@@ -479,7 +479,7 @@ class _DetailsState extends State<Details> {
                           height: 100,
                           width: 100,
                           child: widget.flashcardModel.badge!=null ? SvgPicture.asset(
-                            widget.flashcardModel.badge["path"][getl(widget.flashcardModel.difficulty["scale"], widget.flashcardModel.id-1, daily)],
+                            widget.flashcardModel.badge["path"][getl(widget.flashcardModel.difficulty["scale"], widget.flashcardModel.id-1, widget.flashcardModel.isDaily)],
                             )
                               :SizedBox(height: 0,width: 0,),
                                   ),
