@@ -268,10 +268,14 @@ class _FlashcardState extends State<Flashcard> {
         onDoubleTap: () => showDetailsScreen(context),
         child: ExpansionTileCard(
           trailing: widget.flashcardModel.hasLevel
-              ? SvgPicture.asset(
-                  // need to change this later
-                  widget.flashcardModel.badge["path"]
-                      [widget.flashcardModel.currentLevel - 1],
+              ? SizedBox(
+                  height: 80,
+                  width: 80,
+                  child: SvgPicture.asset(
+                    // need to change this later
+                    widget.flashcardModel.badge["path"]
+                        [widget.flashcardModel.currentLevel - 1],
+                  ),
                 )
               : Container(
                   height: 0,
