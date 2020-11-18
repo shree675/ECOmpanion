@@ -7,16 +7,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 class Option extends StatefulWidget {
   final Function answer;
   final String option;
-  final int index;
-  final Color color;
-  Option(this.answer, this.option, this.index, this.color);
+  int index;
+  Option(this.answer, this.option, this.index);
 
   @override
-  _OptionState createState() =>
-      _OptionState(this.answer, this.option, this.index);
+  _OptionState createState() => _OptionState(this.answer, this.option, this.index);
 }
 
 class _OptionState extends State<Option> {
+
   final Function answer;
   final String option;
   int index;
@@ -29,8 +28,8 @@ class _OptionState extends State<Option> {
   List<int> dhard = new List(3);
   List<String> dhardstring = new List(3);
 
-  int id, diff;
-  bool daily = true;
+  int id,diff;
+  bool daily=true;
   int numOfOptions;
   bool level;
   String badgeName;
@@ -38,28 +37,30 @@ class _OptionState extends State<Option> {
 
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
-    id = data[index]["id"];
-    id -= 1;
-    diff = (data[index]["difficulty"] as Map)["scale"];
+    id=data[widget.index]["id"];
+    id-=1;
+    // index+=1;
+    diff=(data[widget.index]["difficulty"] as Map)["scale"];
     level = true;
-    badges = ((data[index]["badge"] as Map)["path"] as List);
-    badgeName = (data[index]["badge"] as Map)["name"];
+    badges = ((data[widget.index]["badge"] as Map)["path"] as List);
+    badgeName = (data[widget.index]["badge"] as Map)["name"];
     badgeName = badgeName.toUpperCase();
-    numOfOptions = (data[index]["options"] as List).length;
-    if (diff == 1) {
-      deasy[id] = 0;
-      deasystring[id] = "deasy$id";
-    } else if (diff == 2) {
-      dmedium[id] = 0;
-      dmediumstring[id] = "dmedium$id";
-    } else if (diff == 3) {
-      dhard[id] = 0;
-      dhardstring[id] = "dhard$id";
-    }
+    numOfOptions = (data[widget.index]["options"] as List).length;
+      if (diff == 1) {
+        deasy[id] = 0;
+        deasystring[id] = "deasy$id";
+      } else if (diff == 2) {
+        dmedium[id] = 0;
+        dmediumstring[id] = "dmedium$id";
+      } else if (diff == 3) {
+        dhard[id] = 0;
+        dhardstring[id] = "dhard$id";
+      }
 
     loadCounter(diff, id);
-    // resetCounter();                                                             // remove this later
+      // resetCounter();                                                             // remove this later
   }
 
   int curLevel;
@@ -67,101 +68,103 @@ class _OptionState extends State<Option> {
   loadCounter(diff, id) async {
     SharedPreferences pre = await SharedPreferences.getInstance();
     setState(() {
-      if (diff == 1) {
-        deasy[id] = pre.getInt('deasy$id') ?? 0;
-        data[index]["currentLevel"] = deasy[id];
-        curLevel = deasy[id];
-      } else if (diff == 2) {
-        dmedium[id] = pre.getInt('dmedium$id') ?? 0;
-        data[index]["currentLevel"] = dmedium[id];
-        curLevel = dmedium[id];
-      } else if (diff == 3) {
-        dhard[id] = pre.getInt('dhard$id') ?? 0;
-        data[index]["currentLevel"] = dhard[id];
-        curLevel = dhard[id];
+      for(int i=0;i<2;i++){
+        deasy[i]=pre.getInt('deasy$i') ?? 0;
+      }
+      for(int i=0;i<6;i++){
+        dmedium[i]=pre.getInt('dmedium$i') ?? 0;
+      }
+      for(int i=0;i<3;i++){
+        dhard[i]=pre.getInt('dhard$i') ?? 0;
       }
     });
   }
 
-  validate() async {
+  validate(int id,int diff) async {
     SharedPreferences pre = await SharedPreferences.getInstance();
-    if (diff == 1) {
-      if (deasy[id] < 0) {
-        deasy[id] = (pre.getInt('deasy$id') ?? 0);
-        deasy[id] = 0;
-        pre.setInt('deasy$id', deasy[id]);
-      } else if (deasy[id] > 377) {
-        deasy[id] = (pre.getInt('deasy$id') ?? 0);
-        deasy[id] = 377;
-        pre.setInt('deasy$id', deasy[id]);
-      }
-    } else if (diff == 2) {
-      if (dmedium[id] < 0) {
-        dmedium[id] = (pre.getInt('dmedium$id') ?? 0);
-        dmedium[id] = 0;
-        pre.setInt('dmedium$id', dmedium[id]);
-      } else if (dmedium[id] > 257) {
-        dmedium[id] = (pre.getInt('dmedium$id') ?? 0);
-        dmedium[id] = 257;
-        pre.setInt('dmedium$id', dmedium[id]);
-      }
-    } else if (diff == 3) {
-      if (dhard[id] < 0) {
-        dhard[id] = (pre.getInt('dhard$id') ?? 0);
-        dhard[id] = 0;
-        pre.setInt('dhard$id', dhard[id]);
-      } else if (dhard[id] > 137) {
-        dhard[id] = (pre.getInt('dhard$id') ?? 0);
-        dhard[id] = 137;
-        pre.setInt('dhard$id', dhard[id]);
-      }
-    }
-  }
-
-  int levelChange = 0;
-
-  updateCounter(int i, int points) async {
-    SharedPreferences pre = await SharedPreferences.getInstance();
-    setState(() {
       if (diff == 1) {
-        deasy[i] = (pre.getInt('deasy$i') ?? 0) + points;
-        validate();
-        pre.setInt('deasy$i', deasy[i]);
-        curLevel = deasy[id];
-        if (points == 1 &&
-            getLevel(1, deasy[i], daily) > (getLevel(1, deasy[i] - 1, daily)) &&
-            deasy[i] <= 377) {
-          levelChange = 1;
-        } else {
-          levelChange = 0;
+        if (deasy[id] < 0) {
+          deasy[id] = (pre.getInt('deasy$id') ?? 0);
+          deasy[id] = 0;
+          pre.setInt('deasy$id', deasy[id]);
+        } else if (deasy[id] > 377) {
+          deasy[id] = (pre.getInt('deasy$id') ?? 0);
+          deasy[id] = 377;
+          pre.setInt('deasy$id', deasy[id]);
         }
       } else if (diff == 2) {
-        dmedium[i] = (pre.getInt('dmedium$i') ?? 0) + points;
-        validate();
-        pre.setInt('dmedium$i', dmedium[i]);
-        curLevel = dmedium[id];
-        if (points == 1 &&
-            getLevel(2, dmedium[i], daily) >
-                (getLevel(2, dmedium[i] - 1, daily)) &&
-            dmedium[i] <= 257) {
-          levelChange = 1;
-        } else {
-          levelChange = 0;
+        if (dmedium[id] < 0) {
+          dmedium[id] = (pre.getInt('dmedium$id') ?? 0);
+          dmedium[id] = 0;
+          pre.setInt('dmedium$id', dmedium[id]);
+        } else if (dmedium[id] > 257) {
+          dmedium[id] = (pre.getInt('dmedium$id') ?? 0);
+          dmedium[id] = 257;
+          pre.setInt('dmedium$id', dmedium[id]);
         }
       } else if (diff == 3) {
-        dhard[i] = (pre.getInt('dhard$i') ?? 0) + points;
-        validate();
-        pre.setInt('dhard$i', dhard[i]);
-        curLevel = dhard[id];
-        if (points == 1 &&
-            getLevel(3, dhard[i], daily) > (getLevel(3, dhard[i] - 1, daily)) &&
-            dhard[i] <= 137) {
-          levelChange = 1;
-        } else {
-          levelChange = 0;
+        if (dhard[id] < 0) {
+          dhard[id] = (pre.getInt('dhard$id') ?? 0);
+          dhard[id] = 0;
+          pre.setInt('dhard$id', dhard[id]);
+        } else if (dhard[id] > 137) {
+          dhard[id] = (pre.getInt('dhard$id') ?? 0);
+          dhard[id] = 137;
+          pre.setInt('dhard$id', dhard[id]);
         }
       }
-      validate();
+
+  }
+
+  int levelChange=0;
+
+  updateCounter(int i,int diff, int points) async {
+    i-=1;
+    SharedPreferences pre = await SharedPreferences.getInstance();
+    setState(() {
+          if (diff == 1) {
+          deasy[i] = (pre.getInt('deasy$i') ?? 0) + points;
+          validate(i,diff);
+          pre.setInt('deasy$i', deasy[i]);
+          curLevel = deasy[i];
+          if (points == 1 &&
+              getLevel(1, deasy[i], daily) >
+                  (getLevel(1, deasy[i] - 1, daily)) &&
+              deasy[i] <= 377) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
+          }
+        }
+          else if (diff == 2) {
+          dmedium[i] = (pre.getInt('dmedium$i') ?? 0) + points;
+          validate(i,diff);
+          pre.setInt('dmedium$i', dmedium[i]);
+          curLevel = dmedium[i];
+          if (points == 1 &&
+              getLevel(2, dmedium[i], daily) >
+                  (getLevel(2, dmedium[i] - 1, daily)) &&
+              dmedium[i] <= 257) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
+          }
+        }
+          else if (diff == 3) {
+          dhard[i] = (pre.getInt('dhard$i') ?? 0) + points;
+          validate(i,diff);
+          pre.setInt('dhard$i', dhard[i]);
+          curLevel = dhard[i];
+          if (points == 1 &&
+              getLevel(3, dhard[i], daily) >
+                  (getLevel(3, dhard[i] - 1, daily)) &&
+              dhard[i] <= 137) {
+            levelChange = 1;
+          } else {
+            levelChange = 0;
+          }
+        }
+        validate(i,diff);
     });
   }
 
@@ -198,110 +201,119 @@ class _OptionState extends State<Option> {
         return (an).toInt();
       }
     }
-    return 0;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      child: RaisedButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: widget.color,
-        onPressed: () async {
-          if (this.option == (data[index]["options"] as List)[0] && level) {
-            await updateCounter(id, 1);
-          }
+    print(widget.index);
+    badges = ((data[widget.index]["badge"] as Map)["path"] as List);
+    badgeName = (data[widget.index]["badge"] as Map)["name"];
+    badgeName = badgeName.toUpperCase();
+    int i=data[widget.index]["id"];
+    i-=1;
+    if (diff == 1) {
+      curLevel = deasy[i];
+    }
+    else if (diff == 2) {
+      curLevel = dmedium[i];
+    }
+    else if (diff == 3) {
+      curLevel = dhard[i];
+    }
 
-          if (this.levelChange == 1) {
-            showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return Container(
-                    height: 400.0,
-                    color: Color(0xffe5e5e5),
-                    child: Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          SizedBox(
-                            height: 20.0,
+    return RaisedButton(
+      onPressed: () async {
+        int cur;
+        if(widget.option==(data[widget.index]["options"] as List)[0] && level){
+          await updateCounter(data[widget.index]["id"],(data[widget.index]["difficulty"] as Map)["scale"] ,1);
+        }
+
+        if (this.levelChange == 1) {
+          showModalBottomSheet(
+              context: context,
+              builder: (BuildContext context) {
+                return Container(
+                  height: 400.0,
+                  color: Color(0xffe5e5e5),
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment:
+                      CrossAxisAlignment.stretch,
+                      children: [
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Center(
+                          child: SvgPicture.asset(
+                            '${badges[getLevel((data[widget.index]["difficulty"] as Map)["scale"], curLevel, daily)]}',
+                            height: 140,
+                            width: 140,
                           ),
-                          Center(
-                            child: SvgPicture.asset(
-                              '${badges[getLevel(diff, curLevel, daily)]}',
-                              height: 140,
-                              width: 140,
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Center(
+                          child: Text(
+                            'CONGRATULATIONS!',
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(
-                            height: 20.0,
-                          ),
-                          Center(
-                            child: Text(
-                              'CONGRATULATIONS!',
-                              style: TextStyle(
-                                fontSize: 22.0,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Center(
+                          child: Text(
+                            'You earned',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.black,
                             ),
                           ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Center(
-                            child: Text(
-                              'You earned',
-                              style: TextStyle(
-                                fontSize: 20.0,
-                                color: Colors.black,
-                              ),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Center(
+                          child: Text(
+                            '$badgeName!',
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Center(
-                            child: Text(
-                              '$badgeName!',
-                              style: TextStyle(
-                                fontSize: 22.0,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Center(
+                          child: Text(
+                            'LEVEL ${getLevel((data[widget.index]["difficulty"] as Map)["scale"], curLevel, daily)}',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.black,
                             ),
                           ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Center(
-                            child: Text(
-                              'LEVEL ${getLevel(diff, curLevel, daily)}',
-                              style: TextStyle(
-                                fontSize: 20.0,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                      ],
                     ),
-                  );
-                });
-          }
-          answer();
+                  ),
+                );
+              });
+        }
+        await answer();
         },
-        child: Center(
-          child: Text(
-            widget.option + '$curLevel',
-            style: TextStyle(color: const Color(0xffFFFFFF)),
-          ),
-        ),
+      child: Center(
+        child: Text(widget.option+' $curLevel ${widget.index}'),
       ),
     );
   }
