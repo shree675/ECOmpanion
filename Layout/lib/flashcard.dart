@@ -72,32 +72,103 @@ class _FlashcardState extends State<Flashcard> {
     diff = (data[index]["difficulty"] as Map)["scale"];
     daily = data[index]["isDaily"];
     level = data[index]["hasLevel"];
-    badges = ((data[index]["badge"] as Map)["path"] as List);
-    if (!daily) {
-      if (diff == 1) {
-        ndeasy[id] = 0;
-        easystring[id] = "easy$id";
-      } else if (diff == 2) {
-        ndmedium[id] = 0;
-        mediumstring[id] = "medium$id";
-      } else if (diff == 3) {
-        ndhard[id] = 0;
-        hardstring[id] = "hard$id";
-      }
-    } else if (daily && quiz == 1) {
-      // else if (daily) {
-      if (diff == 1) {
-        deasy[id] = 0;
-        deasystring[id] = "deasy$id";
-      } else if (diff == 2) {
-        dmedium[id] = 0;
-        dmediumstring[id] = "dmedium$id";
-      } else if (diff == 3) {
-        dhard[id] = 0;
-        dhardstring[id] = "dhard$id";
-      }
+    if((data[index]["badge"] as Map)!=null) {
+      badges = ((data[index]["badge"] as Map)["path"] as List);
+    }
+    else{
+      badges=[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null];
+    }
+    // SharedPreferences pre=await SharedPreferences.getInstance();
+    // setState(() {
+    //   for(int i=0;i<9;i++){
+    //     ndeasy[i]=pre.getInt('easy$i') ?? 0;
+    //   }
+    //   for(int i=0;i<19;i++){
+    //     ndmedium[i]=pre.getInt('medium$i') ?? 0;
+    //   }
+    //   for(int i=0;i<12;i++){
+    //     ndhard[i]=pre.getInt('hard$i') ?? 0;
+    //   }
+    //   for(int i=0;i<2;i++){
+    //     deasy[i]=pre.getInt('deasy$i') ?? 0;
+    //   }
+    //   for(int i=0;i<6;i++){
+    //     dmedium[i]=pre.getInt('dmedium$i') ?? 0;
+    //   }
+    //   for(int i=0;i<3;i++){
+    //     dhard[i]=pre.getInt('dhard$i') ?? 0;
+    //   }
+    // });
+    for(int i=0;i<9;i++){
+      ndeasy[i]=0;
+    }
+    for(int i=0;i<19;i++){
+      ndmedium[i]=0;
+    }
+    for(int i=0;i<12;i++){
+      ndhard[i]=0;
+    }
+    for(int i=0;i<2;i++){
+      deasy[i]=0;
+    }
+    for(int i=0;i<6;i++){
+      dmedium[i]=0;
+    }
+    for(int i=0;i<3;i++){
+      dhard[i]=0;
     }
     loadCounter1(diff, id);
+    loadCounter2();
+  }
+
+  // int getLevel(int d, int an, bool isdaily) {
+  //   if (an <= 0) {
+  //     return 0;
+  //   } else if (isdaily) {
+  //     if (d == 1) {
+  //       return ((7 + sqrt(24 * an - 23)) / 6).floor().toInt();
+  //     } else if (d == 2) {
+  //       return (1 + sqrt(an - 1)).floor().toInt();
+  //     } else {
+  //       return ((1 + sqrt(8 * an - 7)) / 2).floor().toInt();
+  //     }
+  //   } else {
+  //     if (d == 1) {
+  //       return an ~/ 3;
+  //     } else if (d == 2) {
+  //       return an ~/ 2;
+  //     } else if (d == 3) {
+  //       return (an).toInt();
+  //     }
+  //   }
+  //   return -1; // added to remove warnings
+  // }
+
+  int getl(int diff,int id, bool daily) {
+    int an;
+    if(!daily){
+      if(diff==1){
+        an= ndeasy[id];
+      }
+      else if(diff==2){
+        an= ndmedium[id];
+      }
+      else if(diff==3){
+        an= ndhard[id];
+      }
+    }
+    else{
+      if(diff==1){
+        an= deasy[id];
+      }
+      else if(diff==2){
+        an= dmedium[id];
+      }
+      else if(diff==3){
+        an= dhard[id];
+      }
+    }
+    return getLevel(diff, an, daily);
   }
 
   int getLevel(int d, int an, bool isdaily) {
@@ -158,9 +229,30 @@ class _FlashcardState extends State<Flashcard> {
         }
       }
     });
-    // build(context);
-    //   HomeScreen h=new HomeScreen();
-    //       h.run();
+  }
+
+  loadCounter2() async {
+    SharedPreferences pre = await SharedPreferences.getInstance();
+    setState(() {
+      for(int i=0;i<9;i++){
+        ndeasy[i]=pre.getInt('easy$i') ?? 0;
+      }
+      for(int i=0;i<19;i++){
+        ndmedium[i]=pre.getInt('medium$i') ?? 0;
+      }
+      for(int i=0;i<12;i++){
+        ndhard[i]=pre.getInt('hard$i') ?? 0;
+      }
+      for(int i=0;i<2;i++){
+        deasy[i]=pre.getInt('deasy$i') ?? 0;
+      }
+      for(int i=0;i<6;i++){
+        dmedium[i]=pre.getInt('dmedium$i') ?? 0;
+      }
+      for(int i=0;i<3;i++){
+        dhard[i]=pre.getInt('dhard$i') ?? 0;
+      }
+    });
   }
 
   @override
@@ -181,11 +273,12 @@ class _FlashcardState extends State<Flashcard> {
               ? SizedBox(
                   height: 80,
                   width: 80,
-                  child: SvgPicture.asset(
+                  child: widget.flashcardModel.badge!=null ? SvgPicture.asset(
                     // need to change this later
                     widget.flashcardModel.badge["path"]
-                        [widget.flashcardModel.currentLevel - 1],
-                  ),
+                        [getl(widget.flashcardModel.difficulty["scale"], widget.flashcardModel.id-1, daily)],
+                  )
+            :SizedBox(height: 0,width: 0,),
                 )
               : Container(
                   height: 0,
