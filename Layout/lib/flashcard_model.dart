@@ -1,4 +1,3 @@
-// import 'package:Layout/data.dart';
 import 'package:flutter/material.dart';
 import 'data.dart';
 
@@ -21,6 +20,7 @@ class FlashcardModel {
   int frequency;
   DateTime lastShown = DateTime(2000);
   DateTime timeAnswered = DateTime(2000);
+  bool hasLinks;
 
   FlashcardModel({
     this.title,
@@ -39,26 +39,28 @@ class FlashcardModel {
     this.category,
     this.difficulty,
     this.frequency,
+    this.hasLinks,
   });
 }
 
 List<FlashcardModel> flashcardModels = data
     .map((e) => FlashcardModel(
-  badge: e["badge"],
-  category: e["category"],
-  color: Color(e["color"]),
-  difficulty: e["difficulty"],
-  currentLevel: e["currentLevel"],
-  hasLevel: e["hasLevel"],
-  hasReminder: e["hasReminder"],
-  id: e["id"],
-  isDaily: e["isDaily"],
-  longDescription: e["longDescription"],
-  options: e["options"],
-  question: e["question"],
-  shortDescription: e["shortDescription"],
-  title: e["title"],
-  visualization: e["visualization"],
-  frequency: e["frequency"],
-))
+          badge: e["badge"],
+          category: e["category"],
+          color: Color(e["color"]),
+          difficulty: e["difficulty"],
+          currentLevel: e["currentLevel"],
+          hasLevel: e["hasLevel"],
+          hasReminder: e["hasReminder"],
+          id: e["id"],
+          isDaily: e["isDaily"],
+          longDescription: e["longDescription"],
+          options: e["options"],
+          question: e["question"],
+          shortDescription: e["shortDescription"],
+          title: e["title"],
+          visualization: e["visualizations"],
+          frequency: e["frequency"],
+          hasLinks: e["hasLinks"],
+        ))
     .toList();

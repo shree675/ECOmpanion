@@ -5,6 +5,7 @@ import 'badgeDetails.dart';
 import 'data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'homescreen.dart';
 
 class Details extends StatefulWidget {
   final FlashcardModel flashcardModel;
@@ -228,7 +229,9 @@ class _DetailsState extends State<Details> {
             Icons.arrow_back_ios,
           ),
           onPressed: () {
-            Navigator.of(context).pop();
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (_) => HomeScreen(),
+            ));
           },
         ),
         title: Text("ECO"),
@@ -282,30 +285,6 @@ class _DetailsState extends State<Details> {
                     ),
                   ),
                 ),
-                flashcardModel.isDaily
-                    ? IconButton(
-                        icon: Icon(Icons.notifications),
-                        onPressed: () async {
-                          setState(() async {
-                            // if (iconColor == Colors.pink) {
-                            //   // iconColor = Colors.yellow;
-                            //   await updateCounter();
-                            //   widget.flashcardModel.hasReminder = true;
-                            // } else {
-                            //   // iconColor = Colors.pink;
-                            //   await updateCounter();
-                            //   widget.flashcardModel.hasLevel = false;
-                            // }
-
-                            await updateCounter();
-                          });
-                        },
-                        color: iconColor,
-                      )
-                    : Container(
-                        height: 0,
-                        width: 0,
-                      ),
                 Expanded(
                   child: SizedBox(
                     width: 5,
@@ -317,7 +296,9 @@ class _DetailsState extends State<Details> {
                     child: Container(
                       child: GestureDetector(
                         onTap: () => showBadgeDetails(context),
-                        child: FittedBox(
+                        child: SizedBox(
+                          height: 100,
+                          width: 100,
                           child: SvgPicture.asset(
                             (widget.flashcardModel.badge)["path"]
                                 [widget.flashcardModel.currentLevel - 1],
@@ -360,25 +341,29 @@ class _DetailsState extends State<Details> {
                 ),
               );
             }).toList(),
-            ...(flashcardModel.visualization["links"] as List).map(
-              (link) => Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                child: RaisedButton(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  color: flashcardModel.color,
-                  onPressed: () => _launchURL(link["link"]),
-                  child: Padding(
-                    padding: const EdgeInsets.all(5),
-                    child: Text(
-                      link["text"],
-                      style: TextStyle(color: const Color(0xffFFFFFF)),
+            if (flashcardModel.hasLinks)
+              ...(flashcardModel.visualization["links"] as List)
+                  .map(
+                    (link) => Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        color: flashcardModel.color,
+                        onPressed: () => _launchURL(link["link"]),
+                        child: Padding(
+                          padding: const EdgeInsets.all(5),
+                          child: Text(
+                            link["text"],
+                            style: TextStyle(color: const Color(0xffFFFFFF)),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
-            ),
+                  )
+                  .toList(),
             Text(
               '$r',
               style: TextStyle(

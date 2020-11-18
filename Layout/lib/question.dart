@@ -716,6 +716,8 @@
 //   }
 // }
 
+
+
 import 'dart:math';
 // import 'package:Layout/flashcard_model.dart';
 import 'flashcard_model.dart';
@@ -728,12 +730,11 @@ import 'details.dart';
 class Question extends StatefulWidget {
   final String question;
   final List<String> options;
-  final Map<String, Object> data;
+  Map<String, Object> data;
   final FlashcardModel flashcardModel;
   int quiz;
   int index;
-  Question(this.question, this.options, this.data, this.quiz,
-      this.flashcardModel, this.index);
+  Question(this.question, this.options, this.data, this.quiz, this.flashcardModel, this.index);
 
   int curIndex = 0;
 
@@ -1125,7 +1126,7 @@ class _QuestionState extends State<Question> {
               height: 10,
             ),
             ...widget.options.map(
-              (e) => Container(
+                  (e) => Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: FlatButton(
                   shape: RoundedRectangleBorder(
@@ -1135,8 +1136,7 @@ class _QuestionState extends State<Question> {
                   ),
                   color: const Color(0xff1B3671),
                   onPressed: () async {
-                    level =
-                        true; // caution caution caution caution caution caution
+                    level=true;                                                   // caution caution caution caution caution caution
                     if (numOfOptions == 2) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
@@ -1163,18 +1163,14 @@ class _QuestionState extends State<Question> {
                       }
                     }
 
-                    SharedPreferences pre =
-                        await SharedPreferences.getInstance();
+                    SharedPreferences pre = await SharedPreferences.getInstance();
                     // String ans=pre.getString('time_answered') ?? null;
-                    pre.setString(
-                        'time_answered', DateTime.now().toIso8601String());
+                    pre.setString('time_answered', DateTime.now().toIso8601String());
 
-                    if (levelChange != 0) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeScreen(),
-                          ));
+                    if(levelChange!=0) {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ));
                       // Navigator.pop(this.context);
                     }
 
@@ -1190,7 +1186,7 @@ class _QuestionState extends State<Question> {
                                 child: SingleChildScrollView(
                                   child: Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.stretch,
+                                    CrossAxisAlignment.stretch,
                                     children: [
                                       SizedBox(
                                         height: 20.0,
@@ -1276,7 +1272,10 @@ class _QuestionState extends State<Question> {
                               ),
                             );
                           });
-                    } else if (this.levelChange == 1) {
+                    }
+
+
+                    else if (this.levelChange == 1) {
                       showModalBottomSheet(
                           context: context,
                           builder: (BuildContext context) {
@@ -1288,7 +1287,7 @@ class _QuestionState extends State<Question> {
                                 child: SingleChildScrollView(
                                   child: Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.stretch,
+                                    CrossAxisAlignment.stretch,
                                     children: [
                                       SizedBox(
                                         height: 20.0,
@@ -1361,15 +1360,14 @@ class _QuestionState extends State<Question> {
                           });
                     }
 
-                    if (levelChange == 0) {
+                    if(levelChange==0) {
                       Navigator.pop(context);
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                Details(this.flashcardModel, index),
-                          ));
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) =>
+                            Details(this.flashcardModel, index),
+                      ));
                     }
+
                   },
                   child: Text(
                     e,

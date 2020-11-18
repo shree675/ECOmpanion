@@ -5,6 +5,7 @@ List<Map<String, Object>> data = [
     "frequency": 60,
     "hasLevel": false,
     "isDaily": false,
+    "hasLinks": true,
     "shortDescription":
         "LEDs are very efficient! They use less power and save both your electricity and your money!",
     "visualization": {
@@ -84,6 +85,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xffFFD966,
     "difficulty": {
       "scale": 2,
@@ -138,6 +140,7 @@ List<Map<String, Object>> data = [
             "You’re making life easier for your eyes and for the planet! Way to go!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -201,6 +204,7 @@ List<Map<String, Object>> data = [
             "YOU are ridding the world of the bad guys such as GHG emissions that are trying to cause D-Day for the planet!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -235,6 +239,7 @@ List<Map<String, Object>> data = [
     "longDescription": [
       "No, we don't mean to say cook while giving an exam or anything 😂. Using a pressure cooker has a lot of advantages which are less commonly known.\n\nModern cookers can save around 70%! That's saying, if you spend 1000 watts to cook something, it can be done in 300!\nCooking times are significantly faster, reducing your wait time for those hungry appetites! Typically around 30% faster.\nStudies have also shown that pressure cooking retains the natural flavour of the food!\nNot to mention, it's helping you reduce your carbon footprint.",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -298,6 +303,7 @@ List<Map<String, Object>> data = [
             "YOU are saving upto 2000 gallons of water and 1095 bathtubs volume worth of CO2 emissions per year by running the washing maching only when its fully loaded!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -361,6 +367,7 @@ List<Map<String, Object>> data = [
             "Thank you for controlling the temperature of your fridge. It contributes to keeping the earth at the right temperature!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -406,6 +413,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xffFFD966,
     "difficulty": {
       "scale": 3,
@@ -461,6 +469,7 @@ List<Map<String, Object>> data = [
             "What you are doing has the potential to change this whole world! Keep going at it and hope we see the changed world one day, filled with the likes of you!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -543,6 +552,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff8E7CC3,
     "difficulty": {
       "scale": 2,
@@ -568,6 +578,7 @@ List<Map<String, Object>> data = [
     "longDescription": [
       "An average Indian has a water footprint of 980 m3 which is lesser than the global average. But adding up the whole country’s population, India contributes to around 12% of global footprint ! This can be reduced only if we, at an individual level start conserving and sustaining water ! Keep a check on your water footprint regularly and follow proper steps to reduce it !",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -645,6 +656,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff8E7CC3,
     "difficulty": {
       "scale": 2,
@@ -675,6 +687,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff8E7CC3,
     "difficulty": {
       "scale": 2,
@@ -708,6 +721,7 @@ List<Map<String, Object>> data = [
       "While this indirect water is \"invisible\", we often use far more of it than we realise. An average person directly consumes between 100-150 litres of water day - as drinking water, for washing clothes, bathing and watering plants."
           "But each person also indirectly consumes anywhere between 1,500 and 10,000 litres per day, depending on where they live and their consumption habits."
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -772,6 +786,7 @@ List<Map<String, Object>> data = [
             "Continue practising eco-cooking methods in your daily life and keep saving gallons and gallons of water!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -838,6 +853,7 @@ List<Map<String, Object>> data = [
             "Continue to be mindful while watering your plants! Your efforts are keeping your plants healthy and this world wealthy.",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -906,6 +922,7 @@ List<Map<String, Object>> data = [
             "You are doing a great job by checking for leaks every now and then! By repairing the constant drips, you are saving more 150 bathtubs of water a year!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -970,6 +987,7 @@ List<Map<String, Object>> data = [
             "Keep using water more judiciously, the way you are! By conserving water, you are helping out our mother earth in a great way !",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1036,6 +1054,7 @@ List<Map<String, Object>> data = [
             "You’re saving upto 10 litres of clean water every day while brushing! Glass is the class and keep going class with a glass!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1100,6 +1119,7 @@ List<Map<String, Object>> data = [
             "You are doing a great service to the earth, the millions of tiny pretty innocent fishies and yourself, by reducing the quantity of microfibres you’re releasing into the drains! Keep going! ",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1174,6 +1194,7 @@ List<Map<String, Object>> data = [
             "Thank you for doing your part in minimizing the colossal amount of energy used to maintain cloud spaces and the internet, thats nearly 205 TerraWatts per year!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1211,6 +1232,7 @@ List<Map<String, Object>> data = [
       "It’s so easy to either get overwhelmed by the millions of problems the world faces today, or to get detached from reality and hide in our little bubbles. What we need is a constant reminder that the world is need of everything that we can do to help. But this reminder must come with a spoonful of “Hope-syrup”. \nRealistic and radical hope, backed by facts and Science.",
       "Nelson Mandela said ‘It always seems impossible, until it is done’. As a global citizen, find out whatever you can about the Global Goals and pitch it wherever you can. Along with the lifestyle changes that you are inculcating in companionship with this app, remember that everything you do is in alignment with these Global Goals and there are million of yours brothers and sisters fighting for the same. Download the apps that work for you, made in partnership with UN SDG where you can directly contribute to the causes by just having the app. They will keep your informed about all the progress that is being made towards the 17 Global Goals. Remember, your awareness is your responsibility.",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1278,6 +1300,7 @@ List<Map<String, Object>> data = [
             "You’re doing the unimaginably hard task by hanging on to that phone even though there’s a fancier one out there. Thank you for saving the planet and ummm...hang in there!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1352,6 +1375,7 @@ List<Map<String, Object>> data = [
             "Your hardcore sustainable survival habits such as buying in bulk saves on packaging and gives the planet higher chances of survival!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1399,6 +1423,7 @@ List<Map<String, Object>> data = [
       "That’s because both the jeans and the shirt are made from a highly water-intensive plant: cotton. In Uzbekistan, for example, cotton farming used up so much water from the Aral Sea that it dried up after about 50 years. Once one of the world’s four largest lakes, the Aral Sea is now little more than desert and a few small ponds. What can you do?\nJeans and cotton shirts are a wardrobe staple for many. Make sure you remember that the environment pays a price for them.",
       "Contemplate carefully before you invest in something as normal as a pair of jeans.\nMake sure you wear and care for it responsibly so that it lasts long.\nConsider buying wardrobe staples such as jeans, second hand.\nDo not just dump them into the waste when you no longer need them. Try to find thrift shops or nearby stores that reuse them for material. Consult the Waste Guru Tool provided in this app for solutions to help with disposing off clothes."
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1464,6 +1489,7 @@ List<Map<String, Object>> data = [
             "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1529,6 +1555,7 @@ List<Map<String, Object>> data = [
             "Using all the wisdom possible to buy socks and other things carefully online, minimizing returns, makes you almost as cool as Dumbledore! Keep it up!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1602,6 +1629,7 @@ List<Map<String, Object>> data = [
             "Retail therapy is an addiction that destroys the planet, slowly and invisibly, but steadily. And you’re stopping it with your consciousness! One day at a time. So proud of you!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1678,6 +1706,7 @@ List<Map<String, Object>> data = [
             "Reducing the surprisingly hidden carbon footprint in your wardrobe makes a significant difference to climate change efforts. Keep it going QWEEN!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1751,6 +1780,7 @@ List<Map<String, Object>> data = [
             " Responsible consumption steers industries towards responsible and ethical production that moves the world closer to the goal of decent working conditions and economic growth, something that’s still far from reality for millions of people.",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1805,6 +1835,7 @@ List<Map<String, Object>> data = [
       "What's more?! With the rise of social media trends like #RentingIsTrending, the whole scene is changing to make rental fashion more of a norm. Technology and social media make it easier than ever before and you can fuel the march towards a more sustainable planet with every choice you make, changing the world, one wedding at a time!",
       "Check out the links in this section to enter the wonderworld of clothes on rent!",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1858,6 +1889,7 @@ List<Map<String, Object>> data = [
       "Eco-friendly furniture does not mean using dilapidated furnishing or not catering to your taste just to protect the environment. It means using raw materials in such a way that minimal impact is borne by the natural resources, hence making sure these reserves would suffice the next generations comfortably. Wicker furniture, sofas made from bamboo, recycled metals, old wooden decorative pieces, etc. are included in eco-friendly furniture.",
       "Furniture is said to be ethical when it follows proper supply chain and work modules. Buying ethical and eco-friendly furniture helps solve many humanitarian and ecological problems. Keeping in mind all standards and certifications while buying furniture will go a long way in helping people live more sustainably.",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1900,6 +1932,7 @@ List<Map<String, Object>> data = [
       "80% of the pens sold in India are cheap, use and throw pens that cost less than 10 rupees.",
       "\n\t1.Consider buying pens with a long lasting refill.\n\t2.Try NOT to misplace your stationery.\n\t3.Fountain pens could be used wherever possible.\n\t4.Maybe, instead of throwing away your pen/refill try storing them and returning them to the stationery - as companies can refill and reuse them.\n\t5.The most eco-friendly alternative to plastic pens is to use pencils. Pencils are biodegradable, and nowadays, pencils are even made of recycled materials.\n\t6.Try buying recycled paper.\n\t7.Try eco-friendly printer ink (Check for the eco-label)."
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1969,6 +2002,7 @@ List<Map<String, Object>> data = [
             "We all know that its the thought that counts, but sparing a though for our home while showing your loved ones you care, earns you GOD-level respect from your fellow earth residents! Thank you!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2015,6 +2049,7 @@ List<Map<String, Object>> data = [
       "The packaging that envelops perfumes, serums and moisturisers contributes to the loss of 18 million acres of forest each year. If this level of consumption continues, by 2050 there will be 12 billion tonnes of plastic in landfills, the equivalent to 35,000 Empire State Buildings. The UN has declared our current situation a ‘planetary crisis’ and no industry is exempt from scrutiny, including beauty.",
       "What can you do?\nFancy packaging is unnecessary and often only a marketing ploy to make us view a product as more luxurious and elite. Did you know that lipstick cases are weighed down so that they feel expensive but become un-recyclable? As consumers, it is our duty to seek out brands and packaging that doesn’t follow this trend. We must also become steadfast recyclers and re-users of packaging.\nAnother way that we can mitigate the environmental impact of the cosmetics we use is to buy from smaller suppliers.  The benefit of buying 100% natural products from a smaller company means that the ingredients are more likely sourced sustainably which means shorter supply chains and a smaller carbon footprint.",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2052,6 +2087,7 @@ List<Map<String, Object>> data = [
       "Try to shift over to brands that support ethically and locally sourced products as much as possible.\nDon’t opt for express delivery if you can help it. Emissions due to faster shipping such as through aviation are astronomically larger than local transportation. Try to survey and choose local products to reduce emissions due to shipping.",
       "Most importantly, consider buying upcycled second hand fashion. It is an upcoming trend in today's generation, with notable presence on social media. There is an incredible amount of variety. You can also sell the clothes you don’t often use to these organisations. You will find many locally based in your city, a simple search away in your social media.",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2092,6 +2128,7 @@ List<Map<String, Object>> data = [
       "Disposable sanitary hygiene products are classified as medical waste and hence are not required to be tracked and end up in landfills without any other measures to manage the waste. Sanitary products often consist of nearly 90% plastic and other harmful chemicals that take 500 to 800 years to degrade. Their harmful components remain in the ground forever.",
       "If you use disposable sanitary products, you might be responsible for 74,200 kgs of CO2 equivalents of emissions throughout your lifetime. This also means upto 300 pounds of  landfill that does not decompose for centuries. If possible consider more sustainable options than traditional disposable sanitary hygiene products. Explore the options in the links provided.",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2132,6 +2169,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff6FA8DC,
     "difficulty": {
       "scale": 2,
@@ -2190,6 +2228,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff6FA8DC,
     "difficulty": {
       "scale": 2,
@@ -2220,6 +2259,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff6FA8DC,
     "difficulty": {
       "scale": 2,
@@ -2272,6 +2312,7 @@ List<Map<String, Object>> data = [
             "Thank you for trading a few minutes of your precious time everyday so that our planet can have a few more years to live!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2337,6 +2378,7 @@ List<Map<String, Object>> data = [
             "You could be saving the world upto 2.6 tonnes of GHG emissions per year! That’s as much weight as a typical rhinoceros and almost as big as a hot-air balloon!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2371,6 +2413,7 @@ List<Map<String, Object>> data = [
       "A typical passenger vehicle emits about 4.6 metric tons of carbon dioxide per year. This number can vary based on a vehicle's fuel, fuel economy, and the number of miles driven per year.\nNow a days usage of vehicles are gradually increasing.  Harmful emission are also increased which affects the ozone layer.",
       "How trees help us:\n\tRoadside trees reduce dust particle. In crowded, dusty roads, the dust particles never get settled.\n\tTrees supply oxygen. During Photosynthesis or food preparation, they send out oxygen.\n\tTrees reduce greenhouse effect.\n\tTrees reduce noise pollution.\n\tTrees give off oxygen that we need to breathe"
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2411,6 +2454,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff6FA8DC,
     "difficulty": {
       "scale": 3,
@@ -2474,6 +2518,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xffE06666,
     "difficulty": {
       "scale": 2,
@@ -2531,6 +2576,7 @@ List<Map<String, Object>> data = [
             "Congratulations! The food you cook is healthy and you are consuming upto 99% of its nutrition! Stay healthy and keep saving this world!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2568,6 +2614,7 @@ List<Map<String, Object>> data = [
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xffE06666,
     "difficulty": {
       "scale": 2,
@@ -2594,6 +2641,7 @@ List<Map<String, Object>> data = [
       "The food grown in organic farms are not exposed to any toxic chemicals or fertilizers. The livestock also does not receive regular dosage of antibiotics and growth hormones, or synthetic nutrients, and therefore, they do not expose us to harmful chemicals and drugs or residue from the insecticides. There are many long-term health issues associated with these chemicals.",
       "Because of limited use of modern machinery and chemicals, three are fewer emissions of harmful gases, chemicals, contamination and release of greenhouse gases through organic farming. It also helps to strengthen the ecological balance and reduces pollution in air water and soil. There is also less loss of nutrients because most of the nutrients are recycled and also less energy is wasted. Therefore, the environmental benefits of organic farming cannot be ignored.",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2660,6 +2708,7 @@ List<Map<String, Object>> data = [
             "YOU are saving your body and the earth a catastrophic amount of trouble! Food packaging consists of 42% of global plastic production and YOU are fixing that!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2726,6 +2775,7 @@ List<Map<String, Object>> data = [
             "Defeating the Waste Monster of nearly 1.3 billion tonnes per year is one of the hardest things to do and you deserve a cape for being the HERO that you are!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2762,6 +2812,7 @@ List<Map<String, Object>> data = [
       "Eat mindfully\nPractice cooking just enough for the meal and nothing extra. This reduces the need to consume food which requires microwave heating and conserves energy. “Cook the right amount of food to avoid waste,” says Chef Sajesh Nair from Adaa. “Refrain from using cling wraps and silver foils to avoid waste accumulation.” While we’re stuck at home, binge eating is something that a lot of us can fall prey to. But practicing self control and focusing on what you are eating allows you to reflect on where your food has come from and how it is nourishing your body. “If you tune in to your hunger signals you may learn that you don’t need as much food as you thought, and resize your meals accordingly,” says Makwana from Toast & Tonic. Staying mindful about the source of your raw material is always important too. Himalayan water is untouched and unprocessed water from the Himalayas, enriched with natural minerals that makes it perfect for your health and for long term benefits to your body. \",\"Another key to zero waste cooking is keeping ingredients from going bad — if you aren’t able to cook them in time, focus on preservation.For example…freezing ingredients stops the ripening process in its tracks. You can freeze fruits and vegetables to use at a future time; to store prepared foods for later; or use the freezing process to “cook” them for now the dehydrator PROPERLY PICKLE .You can’t pour piping hot pickling liquid over everything, but if handled the right way Cooking fruit or vegetables down into jam can be another good way to preserve items that are at their peak, before they head into the trash zone",
       "While reducing food waste can be challenging, food waste is a huge problem and there are things you can do. One great initiative exists in Maastricht, where edible food waste is distributed in the community by volunteers free of charge. Of course it would be even better to avoid food waste before it even occurs. At events, the most effective way of directly preventing food waste is to prepare food onsite. The problem is that this often includes high staff costs and expensive mobile kitchens. This can be mitigated through volunteers who are willing to prepare the food free of charge.",
     ],
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
