@@ -33,7 +33,7 @@ class _DailyQuizState extends State<DailyQuiz> {
     }
     setState(() {
       curIndex += 1;
-      if (curIndex >= 50) {
+      if(curIndex>=50){
         answer();
         // return;
       }
@@ -102,11 +102,9 @@ class _DailyQuizState extends State<DailyQuiz> {
           ),
           onPressed: () {
             Navigator.of(context).pop();
-          //   Navigator.pushReplacement(
-          //       context,
-          //       MaterialPageRoute(
-          //         builder: (context) => HomeScreen(),
-          //       ));
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) => HomeScreen(),
+            ));
           },
         ),
         title: Text("ECO"),
@@ -124,34 +122,27 @@ class _DailyQuizState extends State<DailyQuiz> {
           ),
         ],
       ),
-      body: curIndex < (data.length - 1)
-          ? Center(
-              child: Column(
-                children: [
-                  Question2(data[curIndex]["question"],
-                      Color(data[curIndex]["color"])),
-                  ...(data[curIndex]["options"] as List).map((e) => Option(
-                      answer, e, curIndex, Color(data[curIndex]["color"]))),
-                ],
-              ),
-            )
-          //     : Center(
-          //   child: RaisedButton(
-          //     onPressed: () {
-          //       Navigator.pop(context);
-          //       Navigator.push(
-          //           context,
-          //           MaterialPageRoute(
-          //             builder: (context) => HomeScreen(),
-          //           ));
-          //     },
-          //     child: Text("Reset"),
-          //   ),
-          // ),
-          : SizedBox(
-              height: 0,
-              width: 0,
-            ),
+      body: curIndex < (data.length-1)
+          ? Column(
+        children: [
+          Question2(data[curIndex]["question"],curIndex),
+          ...(data[curIndex]["options"] as List).map((e) => Option(answer, e, curIndex)),
+        ],
+      )
+      //     : Center(
+      //   child: RaisedButton(
+      //     onPressed: () {
+      //       Navigator.pop(context);
+      //       Navigator.push(
+      //           context,
+      //           MaterialPageRoute(
+      //             builder: (context) => HomeScreen(),
+      //           ));
+      //     },
+      //     child: Text("Reset"),
+      //   ),
+      // ),
+      : SizedBox(height: 0, width: 0,),
     );
   }
 }
