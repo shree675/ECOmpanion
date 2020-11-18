@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:temp/achievements_screen.dart';
+import 'package:temp/breathe_in.dart';
+import 'package:temp/ecommunity_info.dart';
+import 'package:temp/smart_plug.dart';
 import 'dailyQuiz.dart';
 import 'data.dart';
 import 'environmentalDays_model.dart';
@@ -22,6 +26,17 @@ class _HomeScreenState extends State<HomeScreen> {
   DateTime dq;
   int show;
   int qshow;
+  List badgeScreenIndices;
+
+  List computeBadges() {
+    List badges = [];
+    for (var flashcard in data) {
+      if (flashcard["hasLevel"]) {
+        badges.add(data.indexOf(flashcard));
+      }
+    }
+    return badges;
+  }
 
   @override
   void initState() {
@@ -30,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // resetAnswer();
     validateAnswer();
     // resetAnswer();
+    this.badgeScreenIndices = computeBadges();
   }
 
   void resetAnswer() async {
@@ -356,57 +372,69 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.29,
-                        width: MediaQuery.of(context).size.height * 0.29,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              10,
+                      InkWell(
+                        onTap: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (_) {
+                          return AchievementsScreen(badgeScreenIndices);
+                        })),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.29,
+                          width: MediaQuery.of(context).size.height * 0.29,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                10,
+                              ),
                             ),
-                          ),
-                          color: const Color(0xffEA8134),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              SvgPicture.asset(
-                                "assets/Group 28.svg",
-                              ),
-                              Text(
-                                "WASTE GURU",
-                                style: TextStyle(
-                                  color: const Color(0xffFFFFFF),
-                                  fontSize: 22,
+                            color: const Color(0xffC0DF7E),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/Achievements.svg",
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  "ACHIEVEMENTS",
+                                  style: TextStyle(
+                                    color: const Color(0xffFFFFFF),
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.29,
-                        width: MediaQuery.of(context).size.height * 0.29,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              10,
+                      InkWell(
+                        onTap: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (_) {
+                          return HomeScreen();
+                        })),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.29,
+                          width: MediaQuery.of(context).size.height * 0.29,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                10,
+                              ),
                             ),
-                          ),
-                          color: const Color(0xffFF7262),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              SvgPicture.asset(
-                                "assets/Group 29.svg",
-                              ),
-                              Text(
-                                "SMART PLUG",
-                                style: TextStyle(
-                                  color: const Color(0xffFFFFFF),
-                                  fontSize: 22,
+                            color: const Color(0xff0ACF83),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/Synopsis.svg",
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  "SYNOPSIS",
+                                  style: TextStyle(
+                                    color: const Color(0xffFFFFFF),
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -418,57 +446,143 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.29,
-                        width: MediaQuery.of(context).size.height * 0.29,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              10,
+                      InkWell(
+                        onTap: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (_) {
+                          return HomeScreen(); // waste guru homescreen goes here
+                        })),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.29,
+                          width: MediaQuery.of(context).size.height * 0.29,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                10,
+                              ),
                             ),
-                          ),
-                          color: const Color(0xffFF4F6A),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              SvgPicture.asset(
-                                "assets/Group 30.svg",
-                              ),
-                              Text(
-                                "BREATHE IN",
-                                style: TextStyle(
-                                  color: const Color(0xffFFFFFF),
-                                  fontSize: 22,
+                            color: const Color(0xffEA8134),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/Group 28.svg",
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  "WASTE GURU",
+                                  style: TextStyle(
+                                    color: const Color(0xffFFFFFF),
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.29,
-                        width: MediaQuery.of(context).size.height * 0.29,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              10,
+                      InkWell(
+                        onTap: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (_) {
+                          return SmartPlug();
+                        })),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.29,
+                          width: MediaQuery.of(context).size.height * 0.29,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                10,
+                              ),
+                            ),
+                            color: const Color(0xffFF7262),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/Group 29.svg",
+                                ),
+                                Text(
+                                  "SMART PLUG",
+                                  style: TextStyle(
+                                    color: const Color(0xffFFFFFF),
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          color: const Color(0xffFDB714),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              SvgPicture.asset(
-                                "assets/Group 31.svg",
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InkWell(
+                        onTap: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (_) {
+                          return BreatheIn();
+                        })),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.29,
+                          width: MediaQuery.of(context).size.height * 0.29,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                10,
                               ),
-                              Text(
-                                "ECOmmunity",
-                                style: TextStyle(
-                                  color: const Color(0xffFFFFFF),
-                                  fontSize: 22,
+                            ),
+                            color: const Color(0xffFF4F6A),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/Group 30.svg",
                                 ),
+                                Text(
+                                  "BREATHE IN",
+                                  style: TextStyle(
+                                    color: const Color(0xffFFFFFF),
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () => Navigator.push(context,
+                            MaterialPageRoute(builder: (_) {
+                          return Ecommunity();
+                        })),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.29,
+                          width: MediaQuery.of(context).size.height * 0.29,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                10,
                               ),
-                            ],
+                            ),
+                            color: const Color(0xffFDB714),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SvgPicture.asset(
+                                  "assets/Group 31.svg",
+                                ),
+                                Text(
+                                  "ECOmmunity",
+                                  style: TextStyle(
+                                    color: const Color(0xffFFFFFF),
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

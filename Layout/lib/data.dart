@@ -3226,8 +3226,8 @@ List<Map<String, Object>> environmentalDays = [
   {
     "title": "International Day of Climate Action",
     "date": {
-      "day": 19,
-      "month": 11,
+      "day": 24,
+      "month": 10,
     },
     "description": [
       "Despite being appreciative of all Mother Earth has done for us,  the havoc we've wreaked on her atmosphere and natural lands for years now is still continuing.",

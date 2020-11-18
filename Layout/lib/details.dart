@@ -9,8 +9,8 @@ import 'homescreen.dart';
 
 class Details extends StatefulWidget {
   final FlashcardModel flashcardModel;
+  final int index;
   Details(this.flashcardModel, this.index);
-  int index;
 
   @override
   _DetailsState createState() => _DetailsState(this.flashcardModel, this.index);
