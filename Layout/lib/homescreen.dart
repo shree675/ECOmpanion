@@ -281,7 +281,7 @@ class _HomeScreenState extends State<HomeScreen> {
       return Flashcard(flashcardModels[randomIndex], randomIndex);
     }
     int r = randomIndex;
-    r=20;                                                                 // caution caution caution caution caution caution caution
+    // r=20;                                                                 // caution caution caution caution caution caution caution
     return Question(data[r]["question"], data[r]["options"], data[r], 0,
         flashcardModels[r], r);
   }
