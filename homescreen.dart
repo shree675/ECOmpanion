@@ -1,10 +1,4 @@
 import 'dart:math';
-
-// import 'package:Layout/dailyQuiz.dart';
-// import 'package:Layout/data.dart';
-// import 'package:Layout/environmentalDays_model.dart';
-// import 'package:Layout/flashcard_model.dart';
-// import 'package:Layout/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -44,76 +38,107 @@ class _HomeScreenState extends State<HomeScreen> {
     prefs.setString('takeq', null);
   }
 
-  void validateAnswer() async {
-    final prefs = await SharedPreferences.getInstance();
-      String getdans = prefs.getString('time_answered') ?? null;
-      String getquiz = prefs.getString('takeq') ?? null;
-      // if (getdans == null) {
-      //   setState(() {
-      //     show=0;
-      //   });
-      //   show = 0;
-      // }
-      // else {
-      //   dans = DateTime.parse(getdans);
-      //   // DateTime lastOpenedTime = await _getLastOpenedTime();
-      //   // randomIndex=_generateRandomNumber();
-      //   print('ranodmidex: ${this.randomIndex}');
-      //   String lastCardShownDateString = prefs.getString("lastShown" + randomIndex.toString()) ?? null;
-      //   // print('last opened: $lastOpenedTime');
-      //   DateTime lastOpenedTime = DateTime.parse(lastCardShownDateString);
-      //   if (!lastOpenedTime.isBefore(dans.subtract(const Duration(days: 1))) && !lastOpenedTime.isAfter(dans)) {
-      //     setState(() {
-      //       show=1;
-      //     });
-      //     show = 1;
-      //   }
-      //   else {
-      //     prefs.setString('time_answered', null);
-      //     setState(() {
-      //       show=0;
-      //     });
-      //     show = 0;
-      //   }
-      // }
-      // print('Show: $show');
-      // print('$getdans');
-      // // print('${dans.subtract(const Duration(days: 1))}');
+  // void validateAnswer() async {
+  //   final prefs = await SharedPreferences.getInstance();
+  //   String getdans = prefs.getString('time_answered') ?? null;
+  //   String getquiz = prefs.getString('takeq') ?? null;
+  //   // if (getdans == null) {
+  //   //   setState(() {
+  //   //     show=0;
+  //   //   });
+  //   //   show = 0;
+  //   // }
+  //   // else {
+  //   //   dans = DateTime.parse(getdans);
+  //   //   // DateTime lastOpenedTime = await _getLastOpenedTime();
+  //   //   // randomIndex=_generateRandomNumber();
+  //   //   print('ranodmidex: ${this.randomIndex}');
+  //   //   String lastCardShownDateString = prefs.getString("lastShown" + randomIndex.toString()) ?? null;
+  //   //   // print('last opened: $lastOpenedTime');
+  //   //   DateTime lastOpenedTime = DateTime.parse(lastCardShownDateString);
+  //   //   if (!lastOpenedTime.isBefore(dans.subtract(const Duration(days: 1))) && !lastOpenedTime.isAfter(dans)) {
+  //   //     setState(() {
+  //   //       show=1;
+  //   //     });
+  //   //     show = 1;
+  //   //   }
+  //   //   else {
+  //   //     prefs.setString('time_answered', null);
+  //   //     setState(() {
+  //   //       show=0;
+  //   //     });
+  //   //     show = 0;
+  //   //   }
+  //   // }
+  //   // print('Show: $show');
+  //   // print('$getdans');
+  //   // // print('${dans.subtract(const Duration(days: 1))}');
+  //
+  //   if (getquiz == null) {
+  //     setState(() {
+  //       qshow = 0;
+  //     });
+  //     qshow = 0;
+  //   }
+  //   else {
+  //     dq = DateTime.parse(getquiz);
+  //     // DateTime lastOpenedTime = await _getLastOpenedTime();
+  //     int r = prefs.getInt('randomIndex') ?? 0;
+  //     print('randomIndex: $r');
+  //     // DateTime lastCardTime = DateTime.parse(prefs.getString("lastShown$r"));
+  //     DateTime lastCardTime = DateTime.parse(null);
+  //     print('last card: $lastCardTime');
+  //     if (!lastCardTime.isBefore(dq.subtract(const Duration(days: 1))) &&
+  //         !lastCardTime.isAfter(dq)) {
+  //       setState(() {
+  //         qshow = 1;
+  //       });
+  //       qshow = 1;
+  //     }
+  //     else {
+  //       prefs.setString('takeq', null);
+  //       setState(() {
+  //         qshow = 0;
+  //       });
+  //       qshow = 0;
+  //     }
+  //   }
+  //   print('getquiz: $getquiz');
+  //   print('qshow: $qshow');
+  //   int r = prefs.getInt('randomIndex') ?? 0;
+  //   print('randomIndex: $r');
+  //   DateTime lastCardTime = DateTime.parse(prefs.getString("lastShown$r"));
+  //   print('last card: $lastCardTime');
+  // }
 
-    if (getquiz == null) {
-      setState(() {
-        qshow=0;
-      });
-      qshow = 0;
-    }
-    else {
-      dq = DateTime.parse(getquiz);
-      // DateTime lastOpenedTime = await _getLastOpenedTime();
-      int r=prefs.getInt('randomIndex') ?? 0;
-      print('randomIndex: $r');
-      // DateTime lastCardTime = DateTime.parse(prefs.getString("lastShown$r"));
-      DateTime lastCardTime = DateTime.parse(null);
-      print('last card: $lastCardTime');
-      if (!lastCardTime.isBefore(dq.subtract(const Duration(days: 1))) && !lastCardTime.isAfter(dq)) {
-        setState(() {
-          qshow=1;
-        });
-        qshow = 1;
+  validateAnswer() async {
+    SharedPreferences pre = await SharedPreferences.getInstance();
+    setState(() {
+      String lastTaken = pre.getString('takeq') ?? "";
+      if(lastTaken==""){
+        pre.setString('takeq', DateTime.now().toIso8601String());
       }
-      else {
-        prefs.setString('takeq', null);
-        setState(() {
+      else{
+        int d=pre.getInt('diff') ?? -1;
+        if(d==-1){
           qshow=0;
-        });
-        qshow = 0;
+        }
+        else{
+          int dif;
+          dif=DateTime.now().difference(DateTime.parse(pre.getString('takeq') ?? DateTime(2000).toIso8601String())).inSeconds;
+          pre.setInt('diff',dif);
+          print('d: $dif');
+          if(dif>=30){
+            qshow=0;
+          }
+          else{
+            qshow=1;
+          }
+        }
       }
-    }
-    print('getquiz: $getquiz');
-    print('qshow: $qshow');
-    int r=prefs.getInt('randomIndex') ?? 0;
-    print('randomIndex: $r');
-    DateTime lastCardTime = DateTime.parse(prefs.getString("lastShown$r"));
-    print('last card: $lastCardTime');
+      print('date time: $lastTaken');
+      // qshow=0;
+    });
   }
 
   _setLastOpenedTime() async {
@@ -123,8 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _getLastOpenedTime() async {
     final prefs = await SharedPreferences.getInstance();
-    final lastOpenedTimeString =
-        prefs.getString("lastOpenedTime") ?? DateTime(2000).toIso8601String();
+    final lastOpenedTimeString = prefs.getString("lastOpenedTime") ?? DateTime(2000).toIso8601String();
     return DateTime.parse(lastOpenedTimeString);
   }
 
@@ -182,26 +206,20 @@ class _HomeScreenState extends State<HomeScreen> {
     DateTime lastOpenedTime = await _getLastOpenedTime();
     print("$lastOpenedTime 2");
     print("$randomIndex");
-    if (lastOpenedTime
-        .isBefore(DateTime.now().subtract(const Duration(days: 1)))) {
+    if (lastOpenedTime.isBefore(DateTime.now().subtract(const Duration(days: 1)))) {
       int randomIndex = Random().nextInt(10);
-      String lastCardShownDateString =
-          prefs.getString("lastShown" + randomIndex.toString()) ?? "";
+      String lastCardShownDateString = prefs.getString("lastShown" + randomIndex.toString()) ?? "";
       DateTime lastCardShownDate;
       if (lastCardShownDateString == "") {
-        prefs.setString("lastShown" + randomIndex.toString(),
-            DateTime.now().toIso8601String());
-        lastCardShownDate = DateTime.parse(
-            prefs.getString("lastShown" + randomIndex.toString()));
-      } else {
+        prefs.setString("lastShown" + randomIndex.toString(), DateTime.now().toIso8601String());
+        lastCardShownDate = DateTime.parse(prefs.getString("lastShown" + randomIndex.toString()));
+      }
+      else {
         lastCardShownDate = DateTime.parse(lastCardShownDateString);
       }
-      while (!lastCardShownDate.isBefore(DateTime.now()
-          .subtract(Duration(days: flashcardModels[randomIndex].frequency)))) {
+      while (!lastCardShownDate.isBefore(DateTime.now().subtract(Duration(days: flashcardModels[randomIndex].frequency)))) {
         randomIndex = Random().nextInt(flashcardModels.length);
-        lastCardShownDate = DateTime.parse(
-            prefs.getString("lastShown" + randomIndex.toString()) ??
-                DateTime(2000).toIso8601String());
+        lastCardShownDate = DateTime.parse(prefs.getString("lastShown" + randomIndex.toString()) ?? DateTime(2000).toIso8601String());
       }
       int temp = prefs.getInt("randomIndex") ?? 0;
       await prefs.setInt("randomIndex", randomIndex);
@@ -212,7 +230,8 @@ class _HomeScreenState extends State<HomeScreen> {
         });
       }
       print("random index generated successfully!");
-    } else {
+    }
+    else {
       int temp = prefs.getInt("randomIndex") ?? 0;
       print(temp);
       if (temp != null) {
@@ -226,12 +245,11 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void takeDailyQuiz(BuildContext context) {
-    if(qshow==0) {
+    if (qshow == 0) {
       Navigator.push(context, MaterialPageRoute(builder: (_) {
         return DailyQuiz(0);
       }));
-    }
-    else{
+    } else {
       showModalBottomSheet(
           context: context,
           builder: (BuildContext context) {
@@ -242,8 +260,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.all(10.0),
                 child: SingleChildScrollView(
                   child: Column(
-                    crossAxisAlignment:
-                    CrossAxisAlignment.stretch,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       SizedBox(
                         height: 20.0,
@@ -286,11 +303,13 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       }
     }
-    if(show==1) {
+    if (show == 1) {
       return Flashcard(flashcardModels[randomIndex], randomIndex);
     }
-    int r=randomIndex;
-    return Question(data[r]["question"], data[r]["options"], data[r], 0, flashcardModels[r], r);
+    int r = randomIndex;
+    // r=20;                                                                 // caution caution caution caution caution caution caution
+    return Question(data[r]["question"], data[r]["options"], data[r], 0,
+        flashcardModels[r], r);
   }
 
   @override
