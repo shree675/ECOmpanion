@@ -138,6 +138,28 @@ class _HomeScreenState extends State<HomeScreen> {
       }
       print('date time: $lastTaken');
       // qshow=0;
+
+      String lastQuestion = pre.getString('time_answered') ?? "";
+      if(lastQuestion==""){
+        pre.setString('time_answered', DateTime.now().toIso8601String());
+      }
+      else{
+        int d=pre.getInt('difference') ?? -1;
+        if(d==-1){
+          show=0;
+        }
+        else{
+          int dif;
+          dif=DateTime.now().difference(DateTime.parse(pre.getString('time_answered') ?? DateTime(2000).toIso8601String())).inSeconds;
+          pre.setInt('difference',dif);
+          if(dif>=30){
+            show=0;
+          }
+          else{
+            show=1;
+          }
+        }
+      }
     });
   }
 
