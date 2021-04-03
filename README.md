@@ -1,3 +1,9 @@
+<p>
+  <img src="https://img.shields.io/badge/app--size-89.29%20MB-orange">&emsp;
+  <img src="https://img.shields.io/badge/dart-99.9%25-blue">&emsp;
+  <img src="https://img.shields.io/badge/rating-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86-brightgreen">&emsp;
+  <img src="https://img.shields.io/badge/platform-android-lightgrey">
+</p>
 # ECOmpanion
 <img src="Assets_readme/AppLogo.svg" width="245">
 
