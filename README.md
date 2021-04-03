@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/badge/rating-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86-brightgreen">&emsp;
   <img src="https://img.shields.io/badge/platform-android-lightgrey">
 </p>
+
 # ECOmpanion
 <img src="Assets_readme/AppLogo.svg" width="245">
 
