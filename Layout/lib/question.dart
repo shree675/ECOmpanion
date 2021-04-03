@@ -4,7 +4,8 @@ import 'flashcard_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flashcard.dart';
+import 'homescreen.dart';
+import 'details.dart';
 
 class Question extends StatefulWidget {
   final String question;
@@ -12,12 +13,14 @@ class Question extends StatefulWidget {
   Map<String, Object> data;
   final FlashcardModel flashcardModel;
   int quiz;
-  Question(
-      this.question, this.options, this.data, this.quiz, this.flashcardModel);
+  int index;
+  Question(this.question, this.options, this.data, this.quiz, this.flashcardModel, this.index);
+
+  int curIndex = 0;
 
   @override
-  _QuestionState createState() => _QuestionState(
-      this.question, this.options, this.data, this.quiz, this.flashcardModel);
+  _QuestionState createState() => _QuestionState(this.question, this.options,
+      this.data, this.quiz, this.flashcardModel, this.index);
 }
 
 class _QuestionState extends State<Question> {
@@ -30,11 +33,12 @@ class _QuestionState extends State<Question> {
   int diff;
   bool daily, level;
   int quiz;
+  int index;
 
-  _QuestionState(
-      this.question, this.options, this.data, this.quiz, this.flashcardModel);
-  List<int> ndeasy = new List(8);
-  List<String> easystring = new List(8);
+  _QuestionState(this.question, this.options, this.data, this.quiz,
+      this.flashcardModel, this.index);
+  List<int> ndeasy = new List(9);
+  List<String> easystring = new List(9);
   List<int> ndmedium = new List(19);
   List<String> mediumstring = new List(19);
   List<int> ndhard = new List(12);
@@ -52,6 +56,7 @@ class _QuestionState extends State<Question> {
   String badgeName;
   int curLevel = 0;
   int numOfOptions;
+  DateTime dans;
 
   @override
   initState() {
@@ -61,9 +66,15 @@ class _QuestionState extends State<Question> {
     diff = (this.data["difficulty"] as Map)["scale"];
     daily = this.data["isDaily"];
     level = this.data["hasLevel"];
-    badges = ((this.data["badge"] as Map)["path"] as List);
-    badgeName = (this.data["badge"] as Map)["name"];
-    badgeName = badgeName.toUpperCase();
+    if((this.data["badge"] as Map)!=null) {
+      badges = ((this.data["badge"] as Map)["path"] as List);
+      badgeName = (this.data["badge"] as Map)["name"];
+      badgeName = badgeName.toUpperCase();
+    }
+    else{
+      badges=[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null];
+      badgeName="no badge";
+    }
     numOfOptions = (this.data["options"] as List).length;
 
     if (!daily) {
@@ -77,8 +88,9 @@ class _QuestionState extends State<Question> {
         ndhard[id] = 0;
         hardstring[id] = "hard$id";
       }
-    } else if (daily && quiz == 1) {
-      // else if (daily) {
+    }
+    // } else if (daily && quiz == 1) {
+    else if (daily) {
       if (diff == 1) {
         deasy[id] = 0;
         deasystring[id] = "deasy$id";
@@ -91,7 +103,33 @@ class _QuestionState extends State<Question> {
       }
     }
     loadCounter(diff, id);
+    loadCounter2(diff, id);
     // resetCounter();
+  }
+
+  bool rem;
+
+  loadCounter2(diff, id) async {
+    SharedPreferences pre = await SharedPreferences.getInstance();
+    setState(() {
+      if (!daily) {
+        if (diff == 1) {
+          this.rem = pre.getBool('easyrem$id') ?? false;
+        } else if (diff == 2) {
+          this.rem = pre.getBool('mediumrem$id') ?? false;
+        } else if (diff == 3) {
+          this.rem = pre.getBool('hardrem$id') ?? false;
+        }
+      } else {
+        if (diff == 1) {
+          this.rem = pre.getBool('deasyrem$id') ?? false;
+        } else if (diff == 2) {
+          this.rem = pre.getBool('dmediumrem$id') ?? false;
+        } else if (diff == 3) {
+          this.rem = pre.getBool('dhardrem$id') ?? false;
+        }
+      }
+    });
   }
 
   loadCounter(diff, id) async {
@@ -100,30 +138,30 @@ class _QuestionState extends State<Question> {
       if (!daily) {
         if (diff == 1) {
           ndeasy[id] = pre.getInt('easy$id') ?? 0;
-          this.data["currentLevel"]=ndeasy[id];
+          this.data["currentLevel"] = ndeasy[id];
           curLevel = ndeasy[id];
         } else if (diff == 2) {
           ndmedium[id] = pre.getInt('medium$id') ?? 0;
-          this.data["currentLevel"]=ndmedium[id];
+          this.data["currentLevel"] = ndmedium[id];
           curLevel = ndmedium[id];
         } else if (diff == 3) {
           ndhard[id] = pre.getInt('hard$id') ?? 0;
-          this.data["currentLevel"]=ndhard[id];
+          this.data["currentLevel"] = ndhard[id];
           curLevel = ndhard[id];
         }
       } else if (daily && quiz == 1) {
         // else if (daily) {
         if (diff == 1) {
           deasy[id] = pre.getInt('deasy$id') ?? 0;
-          this.data["currentLevel"]=deasy[id];
+          this.data["currentLevel"] = deasy[id];
           curLevel = deasy[id];
         } else if (diff == 2) {
           dmedium[id] = pre.getInt('dmedium$id') ?? 0;
-          this.data["currentLevel"]=dmedium[id];
+          this.data["currentLevel"] = dmedium[id];
           curLevel = dmedium[id];
         } else if (diff == 3) {
           dhard[id] = pre.getInt('dhard$id') ?? 0;
-          this.data["currentLevel"]=dhard[id];
+          this.data["currentLevel"] = dhard[id];
           curLevel = dhard[id];
         }
       }
@@ -209,9 +247,6 @@ class _QuestionState extends State<Question> {
         if (diff == 1) {
           ndeasy[i] = (pre.getInt('easy$i') ?? 0) + points;
           validate();
-          // Flashcard f = new Flashcard(flashcardModel);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=ndeasy[i];
           pre.setInt('easy$i', ndeasy[i]);
           curLevel = ndeasy[id];
           if (points == 1 &&
@@ -228,9 +263,6 @@ class _QuestionState extends State<Question> {
         } else if (diff == 2) {
           ndmedium[i] = (pre.getInt('medium$i') ?? 0) + points;
           validate();
-          // Flashcard f = new Flashcard(flashcardModel);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=ndmedium[i];
           pre.setInt('medium$i', ndmedium[i]);
           curLevel = ndmedium[id];
           if (points == 1 &&
@@ -248,8 +280,6 @@ class _QuestionState extends State<Question> {
           ndhard[i] = (pre.getInt('hard$i') ?? 0) + points;
           // this.data["currentLevel"]=ndhard[i];
           validate();
-          // Flashcard f = new Flashcard(flashcardModel);
-          // f.loadCounter(diff,id);
           pre.setInt('hard$i', ndhard[i]);
           curLevel = ndhard[id];
           if (points == 1 && ndhard[i] <= 17) {
@@ -265,9 +295,6 @@ class _QuestionState extends State<Question> {
         if (diff == 1) {
           deasy[i] = (pre.getInt('deasy$i') ?? 0) + points;
           validate();
-          // Flashcard f = new Flashcard(flashcardModel);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=deasy[i];
           pre.setInt('deasy$i', deasy[i]);
           curLevel = deasy[id];
           if (points == 1 &&
@@ -281,9 +308,6 @@ class _QuestionState extends State<Question> {
         } else if (diff == 2) {
           dmedium[i] = (pre.getInt('dmedium$i') ?? 0) + points;
           validate();
-          // Flashcard f = new Flashcard(flashcardModel);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=dmedium[i];
           pre.setInt('dmedium$i', dmedium[i]);
           curLevel = dmedium[id];
           if (points == 1 &&
@@ -297,9 +321,6 @@ class _QuestionState extends State<Question> {
         } else if (diff == 3) {
           dhard[i] = (pre.getInt('dhard$i') ?? 0) + points;
           validate();
-          // Flashcard f = new Flashcard(flashcardModel);
-          // f.loadCounter(diff,id);
-          // this.data["currentLevel"]=dhard[i];
           pre.setInt('dhard$i', dhard[i]);
           curLevel = dhard[id];
           if (points == 1 &&
@@ -318,7 +339,7 @@ class _QuestionState extends State<Question> {
 
   resetCounter() async {
     SharedPreferences pre = await SharedPreferences.getInstance();
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 9; i++) {
       pre.setInt('easy$i', 0);
     }
     for (int i = 0; i < 19; i++) {
@@ -401,22 +422,19 @@ class _QuestionState extends State<Question> {
                   ),
                   color: const Color(0xff1B3671),
                   onPressed: () async {
+                    // level=true;                                                   // caution caution caution caution caution caution
                     if (numOfOptions == 2) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                      } else if (e == (data["options"] as List)[1] &&
-                          level &&
-                          !daily) {
+                      } else if (e == (data["options"] as List)[1] && level && !daily) {
                         await updateCounter(id, -1);
-                      } else if (e == (data["options"] as List)[1] &&
-                          level &&
-                          daily) {
+                      } else if (e == (data["options"] as List)[1] && level && daily) {
                         this.levelChange = 0;
                       }
                     } else if (numOfOptions == 3) {
                       if (e == (data["options"] as List)[0] && level) {
                         await updateCounter(id, 1);
-                      } else if (e == (data["options"] as List)[2] &&
+                      } else if (e == (data["options"] as List)[1] &&
                           level &&
                           !daily) {
                         await updateCounter(id, -1);
@@ -425,17 +443,29 @@ class _QuestionState extends State<Question> {
                           daily) {
                         this.levelChange = 0;
                       }
-                    } else if (numOfOptions == 4) {}
+                    }
 
-                    if (this.levelChange == -1) {
+                    SharedPreferences pre = await SharedPreferences.getInstance();
+                    // String ans=pre.getString('time_answered') ?? null;
+                    pre.setString('time_answered', DateTime.now().toIso8601String());
+
+                    if(levelChange!=0) {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ));
+                      // Navigator.pop(this.context);
+                    }
+
+                    if (this.levelChange == -1 && badgeName!="no badge") {
                       showModalBottomSheet(
                           context: context,
                           builder: (BuildContext context) {
                             return Container(
-                                height: 400.0,
-                                color: Color(0xffe5e5e5),
-                                child: Padding(
-                                  padding: EdgeInsets.all(10.0),
+                              height: 400.0,
+                              color: Color(0xffe5e5e5),
+                              child: Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: SingleChildScrollView(
                                   child: Column(
                                     crossAxisAlignment:
                                     CrossAxisAlignment.stretch,
@@ -455,7 +485,7 @@ class _QuestionState extends State<Question> {
                                       ),
                                       Center(
                                         child: Text(
-                                          'OOPS!',
+                                          'Unfortunately,',
                                           style: TextStyle(
                                             fontSize: 22.0,
                                             color: Colors.black,
@@ -468,7 +498,108 @@ class _QuestionState extends State<Question> {
                                       ),
                                       Center(
                                         child: Text(
-                                          'You are back to',
+                                          'you’re levelling down',
+                                          style: TextStyle(
+                                            fontSize: 20.0,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          '$badgeName!',
+                                          style: TextStyle(
+                                            fontSize: 22.0,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          'LEVEL ${getLevel(diff, curLevel, daily)}',
+                                          style: TextStyle(
+                                            fontSize: 20.0,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          'Seems like you have lost your consistency... but do not get demotivated! There’s a saying, “Old habits die hard”. It’s alright, you can always start afresh, and remember, CONSISTENCY is the key!',
+                                          softWrap: true,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 18.0,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          });
+                    }
+
+
+                    else if (this.levelChange == 1 && badgeName!="no badge") {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                              height: 400.0,
+                              color: Color(0xffe5e5e5),
+                              child: Padding(
+                                padding: EdgeInsets.all(10.0),
+                                child: SingleChildScrollView(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.stretch,
+                                    children: [
+                                      SizedBox(
+                                        height: 20.0,
+                                      ),
+                                      Center(
+                                        child: SvgPicture.asset(
+                                          '${badges[getLevel(diff, curLevel, daily)]}',
+                                          height: 140,
+                                          width: 140,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20.0,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          'CONGRATULATIONS!',
+                                          style: TextStyle(
+                                            fontSize: 22.0,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 10.0,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          'You earned',
                                           style: TextStyle(
                                             fontSize: 20.0,
                                             color: Colors.black,
@@ -505,90 +636,20 @@ class _QuestionState extends State<Question> {
                                       ),
                                     ],
                                   ),
-                                ));
-                          });
-                    } else if (this.levelChange == 1) {
-                      showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              height: 400.0,
-                              color: Color(0xffe5e5e5),
-                              child: Padding(
-                                padding: EdgeInsets.all(10.0),
-                                child: Column(
-                                  crossAxisAlignment:
-                                  CrossAxisAlignment.stretch,
-                                  children: [
-                                    SizedBox(
-                                      height: 20.0,
-                                    ),
-                                    Center(
-                                      child: SvgPicture.asset(
-                                        '${badges[getLevel(diff, curLevel, daily)]}',
-                                        height: 140,
-                                        width: 140,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 20.0,
-                                    ),
-                                    Center(
-                                      child: Text(
-                                        'CONGRATULATIONS!',
-                                        style: TextStyle(
-                                          fontSize: 22.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                    Center(
-                                      child: Text(
-                                        'You earned',
-                                        style: TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                    Center(
-                                      child: Text(
-                                        '$badgeName!',
-                                        style: TextStyle(
-                                          fontSize: 22.0,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                    Center(
-                                      child: Text(
-                                        'LEVEL ${getLevel(diff, curLevel, daily)}',
-                                        style: TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10.0,
-                                    ),
-                                  ],
                                 ),
                               ),
                             );
                           });
                     }
+
+                    if(levelChange==0) {
+                      Navigator.pop(context);
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) =>
+                            Details(this.flashcardModel, index),
+                      ));
+                    }
+
                   },
                   child: Text(
                     e,
@@ -597,6 +658,8 @@ class _QuestionState extends State<Question> {
                 ),
               ),
             ),
+            Text(
+                '${getLevel(diff, curLevel, daily)},$diff,$id,$daily,$index,$rem,$level'),
           ],
         ),
       ),

@@ -1,5 +1,5 @@
-import 'package:Layout/data.dart';
 import 'package:flutter/material.dart';
+import 'data.dart';
 
 class FlashcardModel {
   String title;
@@ -20,6 +20,7 @@ class FlashcardModel {
   int frequency;
   DateTime lastShown = DateTime(2000);
   DateTime timeAnswered = DateTime(2000);
+  bool hasLinks;
 
   FlashcardModel({
     this.title,
@@ -38,6 +39,7 @@ class FlashcardModel {
     this.category,
     this.difficulty,
     this.frequency,
+    this.hasLinks,
   });
 }
 
@@ -57,7 +59,8 @@ List<FlashcardModel> flashcardModels = data
           question: e["question"],
           shortDescription: e["shortDescription"],
           title: e["title"],
-          visualization: e["visualization"],
+          visualization: e["visualizations"],
           frequency: e["frequency"],
+          hasLinks: e["hasLinks"],
         ))
     .toList();

@@ -1,25 +1,13 @@
 List<Map<String, Object>> data = [
   {
     "title": "Because LED is worth it!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 1,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
+    "hasLinks": true,
     "shortDescription":
         "LEDs are very efficient! They use less power and save both your electricity and your money!",
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
     "visualization": {
       "links": [
         {
@@ -47,16 +35,10 @@ List<Map<String, Object>> data = [
       "No, I haven't",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "Phantom POWER!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 1,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
@@ -73,19 +55,37 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/PHANTOM 0.svg",
+        "assets/Badges/PHANTOM 1.svg",
+        "assets/Badges/PHANTOM 2.svg",
+        "assets/Badges/PHANTOM 3.svg",
+        "assets/Badges/PHANTOM 4.svg",
+        "assets/Badges/PHANTOM 5.svg",
+        "assets/Badges/PHANTOM 6.svg",
+        "assets/Badges/PHANTOM 7.svg",
+        "assets/Badges/PHANTOM 8.svg",
+        "assets/Badges/PHANTOM 9.svg",
+        "assets/Badges/PHANTOM 10.svg",
+        "assets/Badges/PHANTOM 11.svg",
+        "assets/Badges/PHANTOM 12.svg",
+        "assets/Badges/PHANTOM 13.svg",
+        "assets/Badges/PHANTOM 14.svg",
+        "assets/Badges/PHANTOM 15.svg",
+        "assets/Badges/PHANTOM 16.svg",
+        "assets/Badges/PHANTOM 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "PHANTOM",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Fighting the PHANTOM!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Fighting the invisible enemy is no easy task! Keep fighting and you could be saving upto 6000 rupees per year and reducing electricity wasted by upto 10%.",
       },
     },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xffFFD966,
     "difficulty": {
       "scale": 2,
@@ -99,16 +99,10 @@ List<Map<String, Object>> data = [
       "No, just switching off should be enough right?",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "Reduce your brightness",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 1,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
@@ -120,15 +114,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/BLINDING LIGHTS 0.svg",
+        "assets/Badges/BLINDING LIGHTS 1.svg",
+        "assets/Badges/BLINDING LIGHTS 2.svg",
+        "assets/Badges/BLINDING LIGHTS 3.svg",
+        "assets/Badges/BLINDING LIGHTS 4.svg",
+        "assets/Badges/BLINDING LIGHTS 5.svg",
+        "assets/Badges/BLINDING LIGHTS 6.svg",
+        "assets/Badges/BLINDING LIGHTS 7.svg",
+        "assets/Badges/BLINDING LIGHTS 8.svg",
+        "assets/Badges/BLINDING LIGHTS 9.svg",
+        "assets/Badges/BLINDING LIGHTS 10.svg",
+        "assets/Badges/BLINDING LIGHTS 11.svg",
+        "assets/Badges/BLINDING LIGHTS 12.svg",
+        "assets/Badges/BLINDING LIGHTS 13.svg",
+        "assets/Badges/BLINDING LIGHTS 14.svg",
+        "assets/Badges/BLINDING LIGHTS 15.svg",
+        "assets/Badges/BLINDING LIGHTS 16.svg",
+        "assets/Badges/BLINDING LIGHTS 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "BLINDING LIGHTS",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "YASSS! Turn down that BLINDING brightness!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "You’re making life easier for your eyes and for the planet! Way to go!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -151,16 +163,10 @@ List<Map<String, Object>> data = [
       "No, I do it only when it is dark in the room",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "Induction is the new cool!",
-    "timeAnswered": DateTime(2000),
     "id": 2,
-    "lastShown": DateTime(2000),
     "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
@@ -172,15 +178,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/INDUCTIONMAN 0.svg",
+        "assets/Badges/INDUCTIONMAN 1.svg",
+        "assets/Badges/INDUCTIONMAN 2.svg",
+        "assets/Badges/INDUCTIONMAN 3.svg",
+        "assets/Badges/INDUCTIONMAN 4.svg",
+        "assets/Badges/INDUCTIONMAN 5.svg",
+        "assets/Badges/INDUCTIONMAN 6.svg",
+        "assets/Badges/INDUCTIONMAN 7.svg",
+        "assets/Badges/INDUCTIONMAN 8.svg",
+        "assets/Badges/INDUCTIONMAN 9.svg",
+        "assets/Badges/INDUCTIONMAN 10.svg",
+        "assets/Badges/INDUCTIONMAN 11.svg",
+        "assets/Badges/INDUCTIONMAN 12.svg",
+        "assets/Badges/INDUCTIONMAN 13.svg",
+        "assets/Badges/INDUCTIONMAN 14.svg",
+        "assets/Badges/INDUCTIONMAN 15.svg",
+        "assets/Badges/INDUCTIONMAN 16.svg",
+        "assets/Badges/INDUCTIONMAN 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "INDUCTIONMAN",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Look! INDUCTIONMAN!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "YOU are ridding the world of the bad guys such as GHG emissions that are trying to cause D-Day for the planet!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -203,35 +227,19 @@ List<Map<String, Object>> data = [
       "Nah, can’t really cook without fire, sorry",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "Cook under pressure",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 3,
     "frequency": 14,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "Pressure cooking reduces cooking times and saves a ton of energy.",
     "longDescription": [
       "No, we don't mean to say cook while giving an exam or anything 😂. Using a pressure cooker has a lot of advantages which are less commonly known.\n\nModern cookers can save around 70%! That's saying, if you spend 1000 watts to cook something, it can be done in 300!\nCooking times are significantly faster, reducing your wait time for those hungry appetites! Typically around 30% faster.\nStudies have also shown that pressure cooking retains the natural flavour of the food!\nNot to mention, it's helping you reduce your carbon footprint.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -254,16 +262,10 @@ List<Map<String, Object>> data = [
       "Nope, I'm too lazy for it",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "Load it up!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 1,
     "frequency": 7,
     "hasLevel": true,
     "isDaily": false,
@@ -275,15 +277,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/FULLY-LOADED 0.svg",
+        "assets/Badges/FULLY-LOADED 1.svg",
+        "assets/Badges/FULLY-LOADED 2.svg",
+        "assets/Badges/FULLY-LOADED 3.svg",
+        "assets/Badges/FULLY-LOADED 4.svg",
+        "assets/Badges/FULLY-LOADED 5.svg",
+        "assets/Badges/FULLY-LOADED 6.svg",
+        "assets/Badges/FULLY-LOADED 7.svg",
+        "assets/Badges/FULLY-LOADED 8.svg",
+        "assets/Badges/FULLY-LOADED 9.svg",
+        "assets/Badges/FULLY-LOADED 10.svg",
+        "assets/Badges/FULLY-LOADED 11.svg",
+        "assets/Badges/FULLY-LOADED 12.svg",
+        "assets/Badges/FULLY-LOADED 13.svg",
+        "assets/Badges/FULLY-LOADED 14.svg",
+        "assets/Badges/FULLY-LOADED 15.svg",
+        "assets/Badges/FULLY-LOADED 16.svg",
+        "assets/Badges/FULLY-LOADED 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "FULLY-LOADED",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "FULLY-LOADED with awesomeness!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "YOU are saving upto 2000 gallons of water and 1095 bathtubs volume worth of CO2 emissions per year by running the washing maching only when its fully loaded!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -306,16 +326,10 @@ List<Map<String, Object>> data = [
       "No, I run the machine whenever I can",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "Refrigerate right!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 1,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
@@ -327,15 +341,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 0.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 1.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 2.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 3.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 4.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 5.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 6.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 7.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 8.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 9.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 10.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 11.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 12.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 13.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 14.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 15.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 16.svg",
+        "assets/Badges/Mr.RefridgeRIGHT 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "Mr.RefridgeRIGHT",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Dear Mr. RefrigeRIGHT,",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Thank you for controlling the temperature of your fridge. It contributes to keeping the earth at the right temperature!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -363,18 +395,12 @@ List<Map<String, Object>> data = [
       "No, I have no idea how to do that. Do I even need to do that?",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "BLDC fans! Um, what?",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 4,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "If you’re looking for a new fan, look no further than BLDC fans. These are very efficient and definitely make up for the initial capital in the long run!",
@@ -383,21 +409,11 @@ List<Map<String, Object>> data = [
       "Lower Electricity Consumption (65% savings)\nLonger backup on Inverters (even on Solar)\nImproved reliability\nNoise reduction\nLonger lifetime\n",
       "With BLDC fans you can save approximately 1500 rupees per year. 1500 rupees is usually the price differential when buying a BLDC fan that is, BLDC fans starts with the pricing of around ₹3,000 while ordinary fans are rough prices around ₹1,500. In short, if you run your fans for more than 15 hours daily and per unit electricity cost exceeds ₹6, you can expect to recover the complete cost of the fan in less than 2 years in the form of energy savings which BLDC fans give.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xffFFD966,
     "difficulty": {
       "scale": 3,
@@ -410,16 +426,10 @@ List<Map<String, Object>> data = [
       "No, I have no idea how to do that. Do I even need to do that?",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "Make your own products",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 5,
     "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
@@ -433,15 +443,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/THE ALCHEMIST 0.svg",
+        "assets/Badges/THE ALCHEMIST 1.svg",
+        "assets/Badges/THE ALCHEMIST 2.svg",
+        "assets/Badges/THE ALCHEMIST 3.svg",
+        "assets/Badges/THE ALCHEMIST 4.svg",
+        "assets/Badges/THE ALCHEMIST 5.svg",
+        "assets/Badges/THE ALCHEMIST 6.svg",
+        "assets/Badges/THE ALCHEMIST 7.svg",
+        "assets/Badges/THE ALCHEMIST 8.svg",
+        "assets/Badges/THE ALCHEMIST 9.svg",
+        "assets/Badges/THE ALCHEMIST 10.svg",
+        "assets/Badges/THE ALCHEMIST 11.svg",
+        "assets/Badges/THE ALCHEMIST 12.svg",
+        "assets/Badges/THE ALCHEMIST 13.svg",
+        "assets/Badges/THE ALCHEMIST 14.svg",
+        "assets/Badges/THE ALCHEMIST 15.svg",
+        "assets/Badges/THE ALCHEMIST 16.svg",
+        "assets/Badges/THE ALCHEMIST 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "THE ALCHEMIST",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "You are THE ALCHEMIST!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "What you are doing has the potential to change this whole world! Keep going at it and hope we see the changed world one day, filled with the likes of you!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -479,16 +507,10 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "electricity",
-      "id": 1,
-    },
   },
   {
     "title": "Flush !",
-    "timeAnswered": DateTime(2000),
     "id": 2,
-    "lastShown": DateTime(2000),
     "frequency": 14,
     "hasLevel": true,
     "isDaily": true,
@@ -500,23 +522,41 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/FLUSH-CONTROL 0.svg",
+        "assets/Badges/FLUSH-CONTROL 1.svg",
+        "assets/Badges/FLUSH-CONTROL 2.svg",
+        "assets/Badges/FLUSH-CONTROL 3.svg",
+        "assets/Badges/FLUSH-CONTROL 4.svg",
+        "assets/Badges/FLUSH-CONTROL 5.svg",
+        "assets/Badges/FLUSH-CONTROL 6.svg",
+        "assets/Badges/FLUSH-CONTROL 7.svg",
+        "assets/Badges/FLUSH-CONTROL 8.svg",
+        "assets/Badges/FLUSH-CONTROL 9.svg",
+        "assets/Badges/FLUSH-CONTROL 10.svg",
+        "assets/Badges/FLUSH-CONTROL 11.svg",
+        "assets/Badges/FLUSH-CONTROL 12.svg",
+        "assets/Badges/FLUSH-CONTROL 13.svg",
+        "assets/Badges/FLUSH-CONTROL 14.svg",
+        "assets/Badges/FLUSH-CONTROL 15.svg",
+        "assets/Badges/FLUSH-CONTROL 16.svg",
+        "assets/Badges/FLUSH-CONTROL 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "FLUSH-CONTROL",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "You just got...FLUSH CONTROL!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "A human body filled with water? Yes! You’re saving that much water in every 16 flushes! Keep going and keep saving the planet!",
       },
     },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff8E7CC3,
     "difficulty": {
-      "scale": 3,
-      "text": "HARD",
+      "scale": 2,
+      "text": "MEDIUM",
     },
     "currentLevel": 1,
     "question":
@@ -526,35 +566,19 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "WaterFootprint!",
-    "timeAnswered": DateTime(2000),
     "id": 2,
-    "lastShown": DateTime(2000),
     "frequency": 30,
-    "hasLevel": true,
-    "isDaily": true,
+    "hasLevel": false,
+    "isDaily": false,
     "shortDescription":
         "The water footprint of an individual, community or business is defined as the total volume of fresh water used to produce the goods and services consumed by the individual or community or produced by the business.",
     "longDescription": [
       "An average Indian has a water footprint of 980 m3 which is lesser than the global average. But adding up the whole country’s population, India contributes to around 12% of global footprint ! This can be reduced only if we, at an individual level start conserving and sustaining water ! Keep a check on your water footprint regularly and follow proper steps to reduce it !",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -576,8 +600,8 @@ List<Map<String, Object>> data = [
     },
     "color": 0xff8E7CC3,
     "difficulty": {
-      "scale": 3,
-      "text": "HARD",
+      "scale": 2,
+      "text": "MEDIUM",
     },
     "currentLevel": 1,
     "question":
@@ -587,16 +611,10 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Laundry !",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 3,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
@@ -608,19 +626,37 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/DOCTOR LAUNDRY 0.svg",
+        "assets/Badges/DOCTOR LAUNDRY 1.svg",
+        "assets/Badges/DOCTOR LAUNDRY 2.svg",
+        "assets/Badges/DOCTOR LAUNDRY 3.svg",
+        "assets/Badges/DOCTOR LAUNDRY 4.svg",
+        "assets/Badges/DOCTOR LAUNDRY 5.svg",
+        "assets/Badges/DOCTOR LAUNDRY 6.svg",
+        "assets/Badges/DOCTOR LAUNDRY 7.svg",
+        "assets/Badges/DOCTOR LAUNDRY 8.svg",
+        "assets/Badges/DOCTOR LAUNDRY 9.svg",
+        "assets/Badges/DOCTOR LAUNDRY 10.svg",
+        "assets/Badges/DOCTOR LAUNDRY 11.svg",
+        "assets/Badges/DOCTOR LAUNDRY 12.svg",
+        "assets/Badges/DOCTOR LAUNDRY 13.svg",
+        "assets/Badges/DOCTOR LAUNDRY 14.svg",
+        "assets/Badges/DOCTOR LAUNDRY 15.svg",
+        "assets/Badges/DOCTOR LAUNDRY 16.svg",
+        "assets/Badges/DOCTOR LAUNDRY 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "DOCTOR LAUNDRY",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "You, are DOCTOR LAUNDRY!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            " If you are using a front-load instead of a top-load, and reusing the grey water from your washing, you are saving upto 4000 gallons of water per year! You’re saving lives Doctor!",
       },
     },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff8E7CC3,
     "difficulty": {
       "scale": 2,
@@ -633,18 +669,12 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Dishes !",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 3,
     "frequency": 14,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "On an average, each household spends about 15-30 minutes doing their dishes, but careless use of water, even for such short periods of time, wastes gallons and gallons of water. Here are some practical suggestions using which you can model your dish washing !",
@@ -653,21 +683,11 @@ List<Map<String, Object>> data = [
       "Use a dishwasher only if the load is full.When you do wash dishes by hand, try using a little water to get your sponge soapy and wet, then turning off the faucet until you’re ready to rinse a bunch of dishes at once. Better yet, plug the sink or get a tub to wash dishes in so you don’t need to let the water run.",
       "Hand washing one load of dishes can use 20 gallons of water, whereas water- and energy-efficient dishwashers use as little as 4.5 gallons. Over time, that’s a big difference! Which makes dishwater a better option.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff8E7CC3,
     "difficulty": {
       "scale": 2,
@@ -680,19 +700,13 @@ List<Map<String, Object>> data = [
       "Dishwasher",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Virtual water !",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 6,
     "frequency": 30,
-    "hasLevel": true,
-    "isDaily": true,
+    "hasLevel": false,
+    "isDaily": false,
     "shortDescription":
         "Everyone knows about the water that we use for our daily chores etc. All that water is visible to us and is direct ! What's virtual water?",
     "longDescription": [
@@ -707,17 +721,7 @@ List<Map<String, Object>> data = [
       "While this indirect water is \"invisible\", we often use far more of it than we realise. An average person directly consumes between 100-150 litres of water day - as drinking water, for washing clothes, bathing and watering plants."
           "But each person also indirectly consumes anywhere between 1,500 and 10,000 litres per day, depending on where they live and their consumption habits."
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -731,8 +735,8 @@ List<Map<String, Object>> data = [
     },
     "color": 0xff8E7CC3,
     "difficulty": {
-      "scale": 2,
-      "text": "MEDIUM",
+      "scale": 3,
+      "text": "HARD",
     },
     "currentLevel": 1,
     "question": "Have you ever come across the term “virtual water” ?",
@@ -741,16 +745,10 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Cooking !",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 4,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
@@ -762,15 +760,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/H2O-CHEF 0.svg",
+        "assets/Badges/H2O-CHEF 1.svg",
+        "assets/Badges/H2O-CHEF 2.svg",
+        "assets/Badges/H2O-CHEF 3.svg",
+        "assets/Badges/H2O-CHEF 4.svg",
+        "assets/Badges/H2O-CHEF 5.svg",
+        "assets/Badges/H2O-CHEF 6.svg",
+        "assets/Badges/H2O-CHEF 7.svg",
+        "assets/Badges/H2O-CHEF 8.svg",
+        "assets/Badges/H2O-CHEF 9.svg",
+        "assets/Badges/H2O-CHEF 10.svg",
+        "assets/Badges/H2O-CHEF 11.svg",
+        "assets/Badges/H2O-CHEF 12.svg",
+        "assets/Badges/H2O-CHEF 13.svg",
+        "assets/Badges/H2O-CHEF 14.svg",
+        "assets/Badges/H2O-CHEF 15.svg",
+        "assets/Badges/H2O-CHEF 16.svg",
+        "assets/Badges/H2O-CHEF 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "H2O-CHEF",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "You are an H2O-CHEF!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Continue practising eco-cooking methods in your daily life and keep saving gallons and gallons of water!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -795,16 +811,10 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Gardening !",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 4,
     "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
@@ -817,15 +827,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/GROOT 0.svg",
+        "assets/Badges/GROOT 1.svg",
+        "assets/Badges/GROOT 2.svg",
+        "assets/Badges/GROOT 3.svg",
+        "assets/Badges/GROOT 4.svg",
+        "assets/Badges/GROOT 5.svg",
+        "assets/Badges/GROOT 6.svg",
+        "assets/Badges/GROOT 7.svg",
+        "assets/Badges/GROOT 8.svg",
+        "assets/Badges/GROOT 9.svg",
+        "assets/Badges/GROOT 10.svg",
+        "assets/Badges/GROOT 11.svg",
+        "assets/Badges/GROOT 12.svg",
+        "assets/Badges/GROOT 13.svg",
+        "assets/Badges/GROOT 14.svg",
+        "assets/Badges/GROOT 15.svg",
+        "assets/Badges/GROOT 16.svg",
+        "assets/Badges/GROOT 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "GROOT",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "You are ...GROOT!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Continue to be mindful while watering your plants! Your efforts are keeping your plants healthy and this world wealthy.",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -850,16 +878,10 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Leaks !",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 5,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
@@ -874,15 +896,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/UNDER CONTROL 0.svg",
+        "assets/Badges/UNDER CONTROL 1.svg",
+        "assets/Badges/UNDER CONTROL 2.svg",
+        "assets/Badges/UNDER CONTROL 3.svg",
+        "assets/Badges/UNDER CONTROL 4.svg",
+        "assets/Badges/UNDER CONTROL 5.svg",
+        "assets/Badges/UNDER CONTROL 6.svg",
+        "assets/Badges/UNDER CONTROL 7.svg",
+        "assets/Badges/UNDER CONTROL 8.svg",
+        "assets/Badges/UNDER CONTROL 9.svg",
+        "assets/Badges/UNDER CONTROL 10.svg",
+        "assets/Badges/UNDER CONTROL 11.svg",
+        "assets/Badges/UNDER CONTROL 12.svg",
+        "assets/Badges/UNDER CONTROL 13.svg",
+        "assets/Badges/UNDER CONTROL 14.svg",
+        "assets/Badges/UNDER CONTROL 15.svg",
+        "assets/Badges/UNDER CONTROL 16.svg",
+        "assets/Badges/UNDER CONTROL 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "UNDER CONTROL",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "You have the leaks....UNDER CONTROL! ",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "You are doing a great job by checking for leaks every now and then! By repairing the constant drips, you are saving more 150 bathtubs of water a year!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -905,16 +945,10 @@ List<Map<String, Object>> data = [
       "I Don't know",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Bath !",
-    "timeAnswered": DateTime(2000),
     "id": 2,
-    "lastShown": DateTime(2000),
     "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
@@ -927,15 +961,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/CAPTAIN BUCKET 0.svg",
+        "assets/Badges/CAPTAIN BUCKET 1.svg",
+        "assets/Badges/CAPTAIN BUCKET 2.svg",
+        "assets/Badges/CAPTAIN BUCKET 3.svg",
+        "assets/Badges/CAPTAIN BUCKET 4.svg",
+        "assets/Badges/CAPTAIN BUCKET 5.svg",
+        "assets/Badges/CAPTAIN BUCKET 6.svg",
+        "assets/Badges/CAPTAIN BUCKET 7.svg",
+        "assets/Badges/CAPTAIN BUCKET 8.svg",
+        "assets/Badges/CAPTAIN BUCKET 9.svg",
+        "assets/Badges/CAPTAIN BUCKET 10.svg",
+        "assets/Badges/CAPTAIN BUCKET 11.svg",
+        "assets/Badges/CAPTAIN BUCKET 12.svg",
+        "assets/Badges/CAPTAIN BUCKET 13.svg",
+        "assets/Badges/CAPTAIN BUCKET 14.svg",
+        "assets/Badges/CAPTAIN BUCKET 15.svg",
+        "assets/Badges/CAPTAIN BUCKET 16.svg",
+        "assets/Badges/CAPTAIN BUCKET 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "CAPTAIN BUCKET",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Sir CAPTAIN BUCKET,",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Keep using water more judiciously, the way you are! By conserving water, you are helping out our mother earth in a great way !",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -958,16 +1010,10 @@ List<Map<String, Object>> data = [
       "Shower",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Brushing !",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 5,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
@@ -982,15 +1028,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/GLASS. CLASS. 0.svg",
+        "assets/Badges/GLASS. CLASS. 1.svg",
+        "assets/Badges/GLASS. CLASS. 2.svg",
+        "assets/Badges/GLASS. CLASS. 3.svg",
+        "assets/Badges/GLASS. CLASS. 4.svg",
+        "assets/Badges/GLASS. CLASS. 5.svg",
+        "assets/Badges/GLASS. CLASS. 6.svg",
+        "assets/Badges/GLASS. CLASS. 7.svg",
+        "assets/Badges/GLASS. CLASS. 8.svg",
+        "assets/Badges/GLASS. CLASS. 9.svg",
+        "assets/Badges/GLASS. CLASS. 10.svg",
+        "assets/Badges/GLASS. CLASS. 11.svg",
+        "assets/Badges/GLASS. CLASS. 12.svg",
+        "assets/Badges/GLASS. CLASS. 13.svg",
+        "assets/Badges/GLASS. CLASS. 14.svg",
+        "assets/Badges/GLASS. CLASS. 15.svg",
+        "assets/Badges/GLASS. CLASS. 16.svg",
+        "assets/Badges/GLASS. CLASS. 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "GLASS. CLASS.",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Hey there, Glass. Class.",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "You’re saving upto 10 litres of clean water every day while brushing! Glass is the class and keep going class with a glass!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1002,8 +1066,8 @@ List<Map<String, Object>> data = [
     },
     "color": 0xff8E7CC3,
     "difficulty": {
-      "scale": 1,
-      "text": "EASY",
+      "scale": 2,
+      "text": "MEDIUM",
     },
     "currentLevel": 1,
     "question": "Do you use a glass of water while brushing ?",
@@ -1012,16 +1076,10 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Watch what you Wash!",
-    "timeAnswered": DateTime(2000),
     "id": 2,
-    "lastShown": DateTime(2000),
     "frequency": 7,
     "hasLevel": true,
     "isDaily": false,
@@ -1034,15 +1092,34 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/WASH WATCHER 0.svg",
+        "assets/Badges/WASH WATCHER 1.svg",
+        "assets/Badges/WASH WATCHER 2.svg",
+        "assets/Badges/WASH WATCHER 3.svg",
+        "assets/Badges/WASH WATCHER 4.svg",
+        "assets/Badges/WASH WATCHER 5.svg",
+        "assets/Badges/WASH WATCHER 6.svg",
+        "assets/Badges/WASH WATCHER 7.svg",
+        "assets/Badges/WASH WATCHER 8.svg",
+        "assets/Badges/WASH WATCHER 9.svg",
+        "assets/Badges/WASH WATCHER 10.svg",
+        "assets/Badges/WASH WATCHER 11.svg",
+        "assets/Badges/WASH WATCHER 12.svg",
+        "assets/Badges/WASH WATCHER 13.svg",
+        "assets/Badges/WASH WATCHER 13.svg",
+        "assets/Badges/WASH WATCHER 14.svg",
+        "assets/Badges/WASH WATCHER 15.svg",
+        "assets/Badges/WASH WATCHER 16.svg",
+        "assets/Badges/WASH WATCHER 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "WASH WATCHER",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Hey there, WASH WATCHER!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "You are doing a great service to the earth, the millions of tiny pretty innocent fishies and yourself, by reducing the quantity of microfibres you’re releasing into the drains! Keep going! ",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1075,17 +1152,11 @@ List<Map<String, Object>> data = [
       "Yes of course! How can you wear them more than once! Gross!",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Clean up your Cloud!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
-    "frequency": 30,
+    "id": 3,
+    "frequency": 14,
     "hasLevel": true,
     "isDaily": false,
     "shortDescription":
@@ -1097,15 +1168,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/ZAP 0.svg",
+        "assets/Badges/ZAP 1.svg",
+        "assets/Badges/ZAP 2.svg",
+        "assets/Badges/ZAP 3.svg",
+        "assets/Badges/ZAP 4.svg",
+        "assets/Badges/ZAP 5.svg",
+        "assets/Badges/ZAP 6.svg",
+        "assets/Badges/ZAP 7.svg",
+        "assets/Badges/ZAP 8.svg",
+        "assets/Badges/ZAP 9.svg",
+        "assets/Badges/ZAP 10.svg",
+        "assets/Badges/ZAP 11.svg",
+        "assets/Badges/ZAP 12.svg",
+        "assets/Badges/ZAP 13.svg",
+        "assets/Badges/ZAP 14.svg",
+        "assets/Badges/ZAP 15.svg",
+        "assets/Badges/ZAP 16.svg",
+        "assets/Badges/ZAP 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "ZAP",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "CLEAN UP CLEAN UP, Everybody Everywhere!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Thank you for doing your part in minimizing the colossal amount of energy used to maintain cloud spaces and the internet, thats nearly 205 TerraWatts per year!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1130,18 +1219,12 @@ List<Map<String, Object>> data = [
       "Yes, I delete some things that I don’t need",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Global Goals!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 4,
     "frequency": 30,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "The Sustainable Development Goals are the blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including poverty, inequality, climate change, environmental degradation, peace and justice. Learn more and take action.",
@@ -1149,17 +1232,7 @@ List<Map<String, Object>> data = [
       "It’s so easy to either get overwhelmed by the millions of problems the world faces today, or to get detached from reality and hide in our little bubbles. What we need is a constant reminder that the world is need of everything that we can do to help. But this reminder must come with a spoonful of “Hope-syrup”. \nRealistic and radical hope, backed by facts and Science.",
       "Nelson Mandela said ‘It always seems impossible, until it is done’. As a global citizen, find out whatever you can about the Global Goals and pitch it wherever you can. Along with the lifestyle changes that you are inculcating in companionship with this app, remember that everything you do is in alignment with these Global Goals and there are million of yours brothers and sisters fighting for the same. Download the apps that work for you, made in partnership with UN SDG where you can directly contribute to the causes by just having the app. They will keep your informed about all the progress that is being made towards the 17 Global Goals. Remember, your awareness is your responsibility.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1184,16 +1257,10 @@ List<Map<String, Object>> data = [
       "Umm...I might have heard about it",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "miscellaneous",
-      "id": 1,
-    },
   },
   {
     "title": "Electronic devices",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 5,
     "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
@@ -1207,15 +1274,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/NEO 0.svg",
+        "assets/Badges/NEO 1.svg",
+        "assets/Badges/NEO 2.svg",
+        "assets/Badges/NEO 3.svg",
+        "assets/Badges/NEO 4.svg",
+        "assets/Badges/NEO 5.svg",
+        "assets/Badges/NEO 6.svg",
+        "assets/Badges/NEO 7.svg",
+        "assets/Badges/NEO 8.svg",
+        "assets/Badges/NEO 9.svg",
+        "assets/Badges/NEO 10.svg",
+        "assets/Badges/NEO 11.svg",
+        "assets/Badges/NEO 12.svg",
+        "assets/Badges/NEO 13.svg",
+        "assets/Badges/NEO 14.svg",
+        "assets/Badges/NEO 15.svg",
+        "assets/Badges/NEO 16.svg",
+        "assets/Badges/NEO 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "NEO",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Hey NEO,",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "You’re doing the unimaginably hard task by hanging on to that phone even though there’s a fancier one out there. Thank you for saving the planet and ummm...hang in there!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1248,16 +1333,10 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Buy in bulk!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 6,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
@@ -1270,15 +1349,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/BULKASAUR 0.svg",
+        "assets/Badges/BULKASAUR 1.svg",
+        "assets/Badges/BULKASAUR 2.svg",
+        "assets/Badges/BULKASAUR 3.svg",
+        "assets/Badges/BULKASAUR 4.svg",
+        "assets/Badges/BULKASAUR 5.svg",
+        "assets/Badges/BULKASAUR 6.svg",
+        "assets/Badges/BULKASAUR 7.svg",
+        "assets/Badges/BULKASAUR 8.svg",
+        "assets/Badges/BULKASAUR 9.svg",
+        "assets/Badges/BULKASAUR 10.svg",
+        "assets/Badges/BULKASAUR 11.svg",
+        "assets/Badges/BULKASAUR 12.svg",
+        "assets/Badges/BULKASAUR 13.svg",
+        "assets/Badges/BULKASAUR 14.svg",
+        "assets/Badges/BULKASAUR 15.svg",
+        "assets/Badges/BULKASAUR 16.svg",
+        "assets/Badges/BULKASAUR 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "BULKASAUR",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "YOU earned BULKASAUR!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Your hardcore sustainable survival habits such as buying in bulk saves on packaging and gives the planet higher chances of survival!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1312,18 +1409,12 @@ List<Map<String, Object>> data = [
       "Sometimes",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "A Pair of Jeans",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 6,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "It takes 3,781 liters of water to make a pair of jeans, from the production of the cotton to the delivery of the final product to the store. That’s more than enough for one person to drink eight cups per day for 10 years!!! That equates to the emission of around 33.4 kilograms of carbon equivalent!",
@@ -1332,17 +1423,7 @@ List<Map<String, Object>> data = [
       "That’s because both the jeans and the shirt are made from a highly water-intensive plant: cotton. In Uzbekistan, for example, cotton farming used up so much water from the Aral Sea that it dried up after about 50 years. Once one of the world’s four largest lakes, the Aral Sea is now little more than desert and a few small ponds. What can you do?\nJeans and cotton shirts are a wardrobe staple for many. Make sure you remember that the environment pays a price for them.",
       "Contemplate carefully before you invest in something as normal as a pair of jeans.\nMake sure you wear and care for it responsibly so that it lasts long.\nConsider buying wardrobe staples such as jeans, second hand.\nDo not just dump them into the waste when you no longer need them. Try to find thrift shops or nearby stores that reuse them for material. Consult the Waste Guru Tool provided in this app for solutions to help with disposing off clothes."
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1366,16 +1447,10 @@ List<Map<String, Object>> data = [
       "Yes",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Fast Fashion!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 7,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
@@ -1388,15 +1463,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/SHOWSTOPPER 0.svg",
+        "assets/Badges/SHOWSTOPPER 1.svg",
+        "assets/Badges/SHOWSTOPPER 2.svg",
+        "assets/Badges/SHOWSTOPPER 3.svg",
+        "assets/Badges/SHOWSTOPPER 4.svg",
+        "assets/Badges/SHOWSTOPPER 5.svg",
+        "assets/Badges/SHOWSTOPPER 6.svg",
+        "assets/Badges/SHOWSTOPPER 7.svg",
+        "assets/Badges/SHOWSTOPPER 8.svg",
+        "assets/Badges/SHOWSTOPPER 9.svg",
+        "assets/Badges/SHOWSTOPPER 10.svg",
+        "assets/Badges/SHOWSTOPPER 11.svg",
+        "assets/Badges/SHOWSTOPPER 12.svg",
+        "assets/Badges/SHOWSTOPPER 13.svg",
+        "assets/Badges/SHOWSTOPPER 14.svg",
+        "assets/Badges/SHOWSTOPPER 15.svg",
+        "assets/Badges/SHOWSTOPPER 16.svg",
+        "assets/Badges/SHOWSTOPPER 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "SHOWSTOPPER",
       "details": {
         "title": "YOU, ARE A SHOWSTOPPER!",
         "subtitle":
             "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1420,16 +1513,10 @@ List<Map<String, Object>> data = [
       "Yes, sometimes",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Buy correct online",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 7,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
@@ -1442,15 +1529,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/DUMBLEDORE 0.svg",
+        "assets/Badges/DUMBLEDORE 1.svg",
+        "assets/Badges/DUMBLEDORE 2.svg",
+        "assets/Badges/DUMBLEDORE 3.svg",
+        "assets/Badges/DUMBLEDORE 4.svg",
+        "assets/Badges/DUMBLEDORE 5.svg",
+        "assets/Badges/DUMBLEDORE 6.svg",
+        "assets/Badges/DUMBLEDORE 7.svg",
+        "assets/Badges/DUMBLEDORE 8.svg",
+        "assets/Badges/DUMBLEDORE 9.svg",
+        "assets/Badges/DUMBLEDORE 10.svg",
+        "assets/Badges/DUMBLEDORE 11.svg",
+        "assets/Badges/DUMBLEDORE 12.svg",
+        "assets/Badges/DUMBLEDORE 13.svg",
+        "assets/Badges/DUMBLEDORE 14.svg",
+        "assets/Badges/DUMBLEDORE 15.svg",
+        "assets/Badges/DUMBLEDORE 16.svg",
+        "assets/Badges/DUMBLEDORE 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "DUMBLEDORE",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "DUMBLEDORE once said, “One can never have enough socks”.",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Using all the wisdom possible to buy socks and other things carefully online, minimizing returns, makes you almost as cool as Dumbledore! Keep it up!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1472,8 +1577,8 @@ List<Map<String, Object>> data = [
     },
     "color": 0xffE69138,
     "difficulty": {
-      "scale": 2,
-      "text": "MEDIUM",
+      "scale": 1,
+      "text": "EASY",
     },
     "currentLevel": 1,
     "question": "How often do you return or replace what you bought online?",
@@ -1483,16 +1588,10 @@ List<Map<String, Object>> data = [
       "Rarely, sometimes the size or quality isn’t right",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Retail therapy",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 8,
     "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
@@ -1504,15 +1603,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/CHIP 0.svg",
+        "assets/Badges/CHIP 1.svg",
+        "assets/Badges/CHIP 2.svg",
+        "assets/Badges/CHIP 3.svg",
+        "assets/Badges/CHIP 4.svg",
+        "assets/Badges/CHIP 5.svg",
+        "assets/Badges/CHIP 6.svg",
+        "assets/Badges/CHIP 7.svg",
+        "assets/Badges/CHIP 8.svg",
+        "assets/Badges/CHIP 9.svg",
+        "assets/Badges/CHIP 10.svg",
+        "assets/Badges/CHIP 11.svg",
+        "assets/Badges/CHIP 12.svg",
+        "assets/Badges/CHIP 13.svg",
+        "assets/Badges/CHIP 14.svg",
+        "assets/Badges/CHIP 15.svg",
+        "assets/Badges/CHIP 16.svg",
+        "assets/Badges/CHIP 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "CHIP",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Another sobriety CHIP! ",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Retail therapy is an addiction that destroys the planet, slowly and invisibly, but steadily. And you’re stopping it with your consciousness! One day at a time. So proud of you!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1546,16 +1663,10 @@ List<Map<String, Object>> data = [
       "More than once in 2 months",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Filter your wardrobe",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 7,
     "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
@@ -1569,15 +1680,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/QWEEN 0.svg",
+        "assets/Badges/QWEEN 1.svg",
+        "assets/Badges/QWEEN 2.svg",
+        "assets/Badges/QWEEN 3.svg",
+        "assets/Badges/QWEEN 4.svg",
+        "assets/Badges/QWEEN 5.svg",
+        "assets/Badges/QWEEN 6.svg",
+        "assets/Badges/QWEEN 7.svg",
+        "assets/Badges/QWEEN 8.svg",
+        "assets/Badges/QWEEN 9.svg",
+        "assets/Badges/QWEEN 10.svg",
+        "assets/Badges/QWEEN 11.svg",
+        "assets/Badges/QWEEN 12.svg",
+        "assets/Badges/QWEEN 13.svg",
+        "assets/Badges/QWEEN 14.svg",
+        "assets/Badges/QWEEN 15.svg",
+        "assets/Badges/QWEEN 16.svg",
+        "assets/Badges/QWEEN 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "QWEEN",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Only QWEEN worthy pieces!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Reducing the surprisingly hidden carbon footprint in your wardrobe makes a significant difference to climate change efforts. Keep it going QWEEN!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1611,16 +1740,10 @@ List<Map<String, Object>> data = [
       "No, not yet",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Ethically sourced clothing",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 8,
     "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
@@ -1631,15 +1754,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/ETHIC-MUCH 0.svg",
+        "assets/Badges/ETHIC-MUCH 1.svg",
+        "assets/Badges/ETHIC-MUCH 2.svg",
+        "assets/Badges/ETHIC-MUCH 3.svg",
+        "assets/Badges/ETHIC-MUCH 4.svg",
+        "assets/Badges/ETHIC-MUCH 5.svg",
+        "assets/Badges/ETHIC-MUCH 6.svg",
+        "assets/Badges/ETHIC-MUCH 7.svg",
+        "assets/Badges/ETHIC-MUCH 8.svg",
+        "assets/Badges/ETHIC-MUCH 9.svg",
+        "assets/Badges/ETHIC-MUCH 10.svg",
+        "assets/Badges/ETHIC-MUCH 11.svg",
+        "assets/Badges/ETHIC-MUCH 12.svg",
+        "assets/Badges/ETHIC-MUCH 13.svg",
+        "assets/Badges/ETHIC-MUCH 14.svg",
+        "assets/Badges/ETHIC-MUCH 15.svg",
+        "assets/Badges/ETHIC-MUCH 16.svg",
+        "assets/Badges/ETHIC-MUCH 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "ETHIC-MUCH",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "ETHIC-MUCH?!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            " Responsible consumption steers industries towards responsible and ethical production that moves the world closer to the goal of decent working conditions and economic growth, something that’s still far from reality for millions of people.",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1680,18 +1821,12 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Consider Renting Fashion",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 9,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "Consider renting fashion for special occasions instead of buying.\nThe fashion industry is ridiculously unsustainable - and every purchase that you make without consciously evaluating the sustainability of it, results in perpetuating the crisis further. ",
@@ -1700,17 +1835,7 @@ List<Map<String, Object>> data = [
       "What's more?! With the rise of social media trends like #RentingIsTrending, the whole scene is changing to make rental fashion more of a norm. Technology and social media make it easier than ever before and you can fuel the march towards a more sustainable planet with every choice you make, changing the world, one wedding at a time!",
       "Check out the links in this section to enter the wonderworld of clothes on rent!",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1740,8 +1865,8 @@ List<Map<String, Object>> data = [
     },
     "color": 0xffE69138,
     "difficulty": {
-      "scale": 3,
-      "text": "HARD",
+      "scale": 2,
+      "text": "MEDIUM",
     },
     "currentLevel": 1,
     "question":
@@ -1751,18 +1876,12 @@ List<Map<String, Object>> data = [
       "Yes, what DO I WEAR!??!",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Sustainable furniture",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 10,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "The point of adopting a sustainable, eco-friendly lifestyle is to acquire items that are good for the environment in the long run, meaning that they are durable, which helps us cut down on our wastefulness, and when they will be disposed off, they will cause little to no harm to the environment because of their biodegradable and organic properties.",
@@ -1770,17 +1889,7 @@ List<Map<String, Object>> data = [
       "Eco-friendly furniture does not mean using dilapidated furnishing or not catering to your taste just to protect the environment. It means using raw materials in such a way that minimal impact is borne by the natural resources, hence making sure these reserves would suffice the next generations comfortably. Wicker furniture, sofas made from bamboo, recycled metals, old wooden decorative pieces, etc. are included in eco-friendly furniture.",
       "Furniture is said to be ethical when it follows proper supply chain and work modules. Buying ethical and eco-friendly furniture helps solve many humanitarian and ecological problems. Keeping in mind all standards and certifications while buying furniture will go a long way in helping people live more sustainably.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1809,18 +1918,12 @@ List<Map<String, Object>> data = [
       "Nope",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Sustainable Stationery",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 11,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "It is estimated that about 2-3 million plastic pens are thrown away each year! They are used everywhere and often misplaced or discarded without being used completely.",
@@ -1829,17 +1932,7 @@ List<Map<String, Object>> data = [
       "80% of the pens sold in India are cheap, use and throw pens that cost less than 10 rupees.",
       "\n\t1.Consider buying pens with a long lasting refill.\n\t2.Try NOT to misplace your stationery.\n\t3.Fountain pens could be used wherever possible.\n\t4.Maybe, instead of throwing away your pen/refill try storing them and returning them to the stationery - as companies can refill and reuse them.\n\t5.The most eco-friendly alternative to plastic pens is to use pencils. Pencils are biodegradable, and nowadays, pencils are even made of recycled materials.\n\t6.Try buying recycled paper.\n\t7.Try eco-friendly printer ink (Check for the eco-label)."
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1868,16 +1961,10 @@ List<Map<String, Object>> data = [
       "Yes, I use whatever is easily available and cheap",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Sustainable Gift Choices!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 9,
     "frequency": 60,
     "hasLevel": true,
     "isDaily": false,
@@ -1889,15 +1976,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/GIFT GOD 0.svg",
+        "assets/Badges/GIFT GOD 1.svg",
+        "assets/Badges/GIFT GOD 2.svg",
+        "assets/Badges/GIFT GOD 3.svg",
+        "assets/Badges/GIFT GOD 4.svg",
+        "assets/Badges/GIFT GOD 5.svg",
+        "assets/Badges/GIFT GOD 6.svg",
+        "assets/Badges/GIFT GOD 7.svg",
+        "assets/Badges/GIFT GOD 8.svg",
+        "assets/Badges/GIFT GOD 9.svg",
+        "assets/Badges/GIFT GOD 10.svg",
+        "assets/Badges/GIFT GOD 11.svg",
+        "assets/Badges/GIFT GOD 12.svg",
+        "assets/Badges/GIFT GOD 13.svg",
+        "assets/Badges/GIFT GOD 14.svg",
+        "assets/Badges/GIFT GOD 15.svg",
+        "assets/Badges/GIFT GOD 16.svg",
+        "assets/Badges/GIFT GOD 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "GIFT GOD",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "YOU ARE THE GIFT GOD!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "We all know that its the thought that counts, but sparing a though for our home while showing your loved ones you care, earns you GOD-level respect from your fellow earth residents! Thank you!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1931,18 +2036,12 @@ List<Map<String, Object>> data = [
       "No, I don’t really have that much time or thought to spare",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Sustainable personal care",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 12,
     "frequency": 30,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "Most large beauty brands are using chemical components in their products, whether they claim to be natural or not. This is because chemicals give the products their long shelf life and allow for the various textures and feels you find in traditional cosmetics. The challenge with these chemical components is that they don’t break down and instead accumulate in our ecosystems. Traditional cosmetics and toiletries do the most damage to the environment once they are washed away down our sinks and damage the ecosystem.",
@@ -1950,17 +2049,7 @@ List<Map<String, Object>> data = [
       "The packaging that envelops perfumes, serums and moisturisers contributes to the loss of 18 million acres of forest each year. If this level of consumption continues, by 2050 there will be 12 billion tonnes of plastic in landfills, the equivalent to 35,000 Empire State Buildings. The UN has declared our current situation a ‘planetary crisis’ and no industry is exempt from scrutiny, including beauty.",
       "What can you do?\nFancy packaging is unnecessary and often only a marketing ploy to make us view a product as more luxurious and elite. Did you know that lipstick cases are weighed down so that they feel expensive but become un-recyclable? As consumers, it is our duty to seek out brands and packaging that doesn’t follow this trend. We must also become steadfast recyclers and re-users of packaging.\nAnother way that we can mitigate the environmental impact of the cosmetics we use is to buy from smaller suppliers.  The benefit of buying 100% natural products from a smaller company means that the ingredients are more likely sourced sustainably which means shorter supply chains and a smaller carbon footprint.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -1984,18 +2073,12 @@ List<Map<String, Object>> data = [
       "No, really?!",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Buying clothes online",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 13,
     "frequency": 30,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "Buying clothes online is often more kind to the environment in terms of emissions, than actually visiting stores and picking out what you like. That is, if you buy correctly and avoid returns and replacements as much as possible.",
@@ -2004,17 +2087,7 @@ List<Map<String, Object>> data = [
       "Try to shift over to brands that support ethically and locally sourced products as much as possible.\nDon’t opt for express delivery if you can help it. Emissions due to faster shipping such as through aviation are astronomically larger than local transportation. Try to survey and choose local products to reduce emissions due to shipping.",
       "Most importantly, consider buying upcycled second hand fashion. It is an upcoming trend in today's generation, with notable presence on social media. There is an incredible amount of variety. You can also sell the clothes you don’t often use to these organisations. You will find many locally based in your city, a simple search away in your social media.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2042,18 +2115,12 @@ List<Map<String, Object>> data = [
       "I walk to the nearby store",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Sustainable Sanitation",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 10,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "Every year India produces 9000 tonnes of sanitary waste, which is about 90% as heavy as the Eiffel Tower.",
@@ -2061,17 +2128,7 @@ List<Map<String, Object>> data = [
       "Disposable sanitary hygiene products are classified as medical waste and hence are not required to be tracked and end up in landfills without any other measures to manage the waste. Sanitary products often consist of nearly 90% plastic and other harmful chemicals that take 500 to 800 years to degrade. Their harmful components remain in the ground forever.",
       "If you use disposable sanitary products, you might be responsible for 74,200 kgs of CO2 equivalents of emissions throughout your lifetime. This also means upto 300 pounds of  landfill that does not decompose for centuries. If possible consider more sustainable options than traditional disposable sanitary hygiene products. Explore the options in the links provided.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2083,8 +2140,8 @@ List<Map<String, Object>> data = [
     },
     "color": 0xffE69138,
     "difficulty": {
-      "scale": 2,
-      "text": "MEDIUM",
+      "scale": 3,
+      "text": "HARD",
     },
     "currentLevel": 1,
     "question": "How do you generally buy clothes?",
@@ -2095,18 +2152,12 @@ List<Map<String, Object>> data = [
       "I order them online",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "shopping choices",
-      "id": 1,
-    },
   },
   {
     "title": "Take the bicycle!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 14,
     "frequency": 30,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "If we drive a bike for short distances it will consume more fuel and also release toxins which is bad for the environment and YOU!",
@@ -2114,21 +2165,11 @@ List<Map<String, Object>> data = [
       "1.Culturally, the humble bicycle has the potential to bring about social and structural change by strengthening social ties through slow speeds and human-scale urbanism.\n2.A bike produces, on average, 5 g of CO2 per km ridden.\n3.Motorcycles collectively emit 16 times more hydrocarbons, three times more carbon monoxide and a \"disproportionately high\" amount of other air pollutants compared to passenger cars.",
       "By choosing to use a bicycle for short distances, you’re saving money and becoming more healthy!",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff6FA8DC,
     "difficulty": {
       "scale": 2,
@@ -2142,16 +2183,10 @@ List<Map<String, Object>> data = [
       "No, I don't",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "transportation",
-      "id": 1,
-    },
   },
   {
     "title": "Take the bus",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 6,
     "frequency": 7,
     "hasLevel": true,
     "isDaily": true,
@@ -2163,19 +2198,37 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/BUSERATI 0.svg",
+        "assets/Badges/BUSERATI 1.svg",
+        "assets/Badges/BUSERATI 2.svg",
+        "assets/Badges/BUSERATI 3.svg",
+        "assets/Badges/BUSERATI 4.svg",
+        "assets/Badges/BUSERATI 5.svg",
+        "assets/Badges/BUSERATI 6.svg",
+        "assets/Badges/BUSERATI 7.svg",
+        "assets/Badges/BUSERATI 8.svg",
+        "assets/Badges/BUSERATI 9.svg",
+        "assets/Badges/BUSERATI 10.svg",
+        "assets/Badges/BUSERATI 11.svg",
+        "assets/Badges/BUSERATI 12.svg",
+        "assets/Badges/BUSERATI 13.svg",
+        "assets/Badges/BUSERATI 14.svg",
+        "assets/Badges/BUSERATI 15.svg",
+        "assets/Badges/BUSERATI 16.svg",
+        "assets/Badges/BUSERATI 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "BUSERATI",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "On moving from MASERATI to BUSERATI!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "YOU are are reducing your average GHG emissions by nearly 90percent!",
       },
     },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff6FA8DC,
     "difficulty": {
       "scale": 2,
@@ -2188,18 +2241,12 @@ List<Map<String, Object>> data = [
       "No, I don’t generally use public transportation",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "transportation",
-      "id": 1,
-    },
   },
   {
     "title": "\"Those people\"",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 15,
     "frequency": 30,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "Treat people who bike and walk, like people. Rather than seeing them as the other, remember that they have families, people they love, and things they contribute to in their lives.\nWe also have to stop centering privileged voices and experiences. Whether it’s out of necessity or a lifestyle choice, seeing and treating those who walk and bike as people is both innovative and simple to do—give it a try.”",
@@ -2208,21 +2255,11 @@ List<Map<String, Object>> data = [
       "There are many disadvantages which not a lot of people see\n\t1.Air Pollution-Motor vehicles account for 34 percent of nitrogen dioxide released into the atmosphere.\n\t2.Water Pollution- Cars pollute water sources in a variety of ways.\n\t3.Solid Waste -The environmental impact of cars does not end once a car stops being driven.\n\t4.Noise Pollution-causes significant depreciation in overall health\n",
       "Realise that these people who walk or use the bicycle are taking trouble to make the planet a better place and treat them with respect and priority. Drive carefully and give them a safe berth to travel and make the roads as safe as possible for them",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff6FA8DC,
     "difficulty": {
       "scale": 2,
@@ -2235,16 +2272,10 @@ List<Map<String, Object>> data = [
       "Certainly! I see no harm",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "transportation",
-      "id": 1,
-    },
   },
   {
     "title": "Use car sharing",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 16,
     "frequency": 14,
     "hasLevel": true,
     "isDaily": false,
@@ -2255,15 +2286,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/CARPOOLCOOL 0.svg",
+        "assets/Badges/CARPOOLCOOL 1.svg",
+        "assets/Badges/CARPOOLCOOL 2.svg",
+        "assets/Badges/CARPOOLCOOL 3.svg",
+        "assets/Badges/CARPOOLCOOL 4.svg",
+        "assets/Badges/CARPOOLCOOL 5.svg",
+        "assets/Badges/CARPOOLCOOL 6.svg",
+        "assets/Badges/CARPOOLCOOL 7.svg",
+        "assets/Badges/CARPOOLCOOL 8.svg",
+        "assets/Badges/CARPOOLCOOL 9.svg",
+        "assets/Badges/CARPOOLCOOL 10.svg",
+        "assets/Badges/CARPOOLCOOL 11.svg",
+        "assets/Badges/CARPOOLCOOL 12.svg",
+        "assets/Badges/CARPOOLCOOL 13.svg",
+        "assets/Badges/CARPOOLCOOL 14.svg",
+        "assets/Badges/CARPOOLCOOL 15.svg",
+        "assets/Badges/CARPOOLCOOL 16.svg",
+        "assets/Badges/CARPOOLCOOL 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "CARPOOLCOOL",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "Dear MR CARPOOLCOOL",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Thank you for trading a few minutes of your precious time everyday so that our planet can have a few more years to live!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2287,16 +2336,10 @@ List<Map<String, Object>> data = [
       "Didn’t travel today",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "transportation",
-      "id": 1,
-    },
   },
   {
     "title": "Walk more!",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 17,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": false,
@@ -2309,15 +2352,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/WALK-ON-BY 0.svg",
+        "assets/Badges/WALK-ON-BY 1.svg",
+        "assets/Badges/WALK-ON-BY 2.svg",
+        "assets/Badges/WALK-ON-BY 3.svg",
+        "assets/Badges/WALK-ON-BY 4.svg",
+        "assets/Badges/WALK-ON-BY 5.svg",
+        "assets/Badges/WALK-ON-BY 6.svg",
+        "assets/Badges/WALK-ON-BY 7.svg",
+        "assets/Badges/WALK-ON-BY 8.svg",
+        "assets/Badges/WALK-ON-BY 9.svg",
+        "assets/Badges/WALK-ON-BY 10.svg",
+        "assets/Badges/WALK-ON-BY 11.svg",
+        "assets/Badges/WALK-ON-BY 12.svg",
+        "assets/Badges/WALK-ON-BY 13.svg",
+        "assets/Badges/WALK-ON-BY 14.svg",
+        "assets/Badges/WALK-ON-BY 15.svg",
+        "assets/Badges/WALK-ON-BY 16.svg",
+        "assets/Badges/WALK-ON-BY 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "WALK-ON-BY",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "As you WALK-ON-BY!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "You could be saving the world upto 2.6 tonnes of GHG emissions per year! That’s as much weight as a typical rhinoceros and almost as big as a hot-air balloon!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2339,18 +2400,12 @@ List<Map<String, Object>> data = [
       "No, I prefer vehicles",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "transportation",
-      "id": 1,
-    },
   },
   {
     "title": "Volunteer to plant trees",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 11,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "A typical hardwood tree can absorb as much as 48 pounds of carbon dioxide per year. This means it will sequester approximately 1 ton of carbon dioxide by the time it reaches 40 years old.",
@@ -2358,17 +2413,7 @@ List<Map<String, Object>> data = [
       "A typical passenger vehicle emits about 4.6 metric tons of carbon dioxide per year. This number can vary based on a vehicle's fuel, fuel economy, and the number of miles driven per year.\nNow a days usage of vehicles are gradually increasing.  Harmful emission are also increased which affects the ozone layer.",
       "How trees help us:\n\tRoadside trees reduce dust particle. In crowded, dusty roads, the dust particles never get settled.\n\tTrees supply oxygen. During Photosynthesis or food preparation, they send out oxygen.\n\tTrees reduce greenhouse effect.\n\tTrees reduce noise pollution.\n\tTrees give off oxygen that we need to breathe"
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2392,18 +2437,12 @@ List<Map<String, Object>> data = [
       "No,it’s very time consuming to plant a tree",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "transportation",
-      "id": 1,
-    },
   },
   {
     "title": "Check your vehicle",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 12,
     "frequency": 60,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "Filters prevent dust, dirt and debris from being drawn into the engine through the air intake pipe, and they need to be cleaned fairly regularly to maintain the performance and efficiency of the engine,which leads to emits harmful gases",
@@ -2411,21 +2450,11 @@ List<Map<String, Object>> data = [
       "Increased fuel efficiency. *Replacing a clogged air filter can increase fuel efficiency and improve acceleration, depending on your car make and model.\nReduced emissions.\nDirty or damaged air filters reduce the air flow to the engine, changing your car's air-fuel balance.",
       "How trees help us:\n\tRoadside trees reduce dust particle. In crowded, dusty roads, the dust particles never get settled.\n\tTrees supply oxygen. During Photosynthesis or food preparation, they send out oxygen.\n\tTrees reduce greenhouse effect.\n\tTrees reduce noise pollution.\n\tTrees give off oxygen that we need to breathe"
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xff6FA8DC,
     "difficulty": {
       "scale": 3,
@@ -2439,16 +2468,10 @@ List<Map<String, Object>> data = [
       "No idea ",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "transportation",
-      "id": 1,
-    },
   },
   {
     "title": "Buy local food products",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 18,
     "frequency": 7,
     "hasLevel": true,
     "isDaily": false,
@@ -2465,23 +2488,41 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/LOCAL LORD 0.svg",
+        "assets/Badges/LOCAL LORD 1.svg",
+        "assets/Badges/LOCAL LORD 2.svg",
+        "assets/Badges/LOCAL LORD 3.svg",
+        "assets/Badges/LOCAL LORD 4.svg",
+        "assets/Badges/LOCAL LORD 5.svg",
+        "assets/Badges/LOCAL LORD 6.svg",
+        "assets/Badges/LOCAL LORD 7.svg",
+        "assets/Badges/LOCAL LORD 8.svg",
+        "assets/Badges/LOCAL LORD 9.svg",
+        "assets/Badges/LOCAL LORD 10.svg",
+        "assets/Badges/LOCAL LORD 11.svg",
+        "assets/Badges/LOCAL LORD 12.svg",
+        "assets/Badges/LOCAL LORD 13.svg",
+        "assets/Badges/LOCAL LORD 14.svg",
+        "assets/Badges/LOCAL LORD 15.svg",
+        "assets/Badges/LOCAL LORD 16.svg",
+        "assets/Badges/LOCAL LORD 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "LOCAL LORD !",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "You are LOCAL LORD !",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "You have reduced your food based carbon footprint by about 70% ! Continue following this and keep supporting your local farmers, decreasing your carbon footprint and saving this world !",
       },
     },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xffE06666,
     "difficulty": {
-      "scale": 3,
-      "text": "HARD",
+      "scale": 2,
+      "text": "MEDIUM",
     },
     "currentLevel": 1,
     "question": "Do you generally buy locally produced food?",
@@ -2490,19 +2531,13 @@ List<Map<String, Object>> data = [
       "No, I don’t know, I buy whatevers at the supermarket",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "food",
-      "id": 1,
-    },
   },
   {
     "title": "Cook slow",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 1,
     "frequency": 30,
     "hasLevel": true,
-    "isDaily": false,
+    "isDaily": true,
     "shortDescription":
         "Techniques like dum cooking, live grills and steaming preserve the natural flavours and nutritional value of the produce. Some of the meats and ingredients are marinated for 24 to 48 hours using natural tenderising methods. This allows the use of less fat in cooking the food and maintains the texture and nutrients in the food. Using traditional methods like stone grinding, earthen pot cooking and steam cooking are also more sustainable, healthy and retains the natural textures and flavours",
     "longDescription": [
@@ -2515,15 +2550,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/SLOW AND STEADY 0.svg",
+        "assets/Badges/SLOW AND STEADY 1.svg",
+        "assets/Badges/SLOW AND STEADY 2.svg",
+        "assets/Badges/SLOW AND STEADY 3.svg",
+        "assets/Badges/SLOW AND STEADY 4.svg",
+        "assets/Badges/SLOW AND STEADY 5.svg",
+        "assets/Badges/SLOW AND STEADY 6.svg",
+        "assets/Badges/SLOW AND STEADY 7.svg",
+        "assets/Badges/SLOW AND STEADY 8.svg",
+        "assets/Badges/SLOW AND STEADY 9.svg",
+        "assets/Badges/SLOW AND STEADY 10.svg",
+        "assets/Badges/SLOW AND STEADY 11.svg",
+        "assets/Badges/SLOW AND STEADY 12.svg",
+        "assets/Badges/SLOW AND STEADY 13.svg",
+        "assets/Badges/SLOW AND STEADY 14.svg",
+        "assets/Badges/SLOW AND STEADY 15.svg",
+        "assets/Badges/SLOW AND STEADY 16.svg",
+        "assets/Badges/SLOW AND STEADY 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "SHOW AND STEADY",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "As they say, SLOW AND STEADY wins the race! ",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Congratulations! The food you cook is healthy and you are consuming upto 99% of its nutrition! Stay healthy and keep saving this world!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2543,18 +2596,12 @@ List<Map<String, Object>> data = [
     "question": "Did you follow slow cooking practices while cooking today ?",
     "options": ["Yes", "No", "Didn't cook today"],
     "hasReminder": false,
-    "category": {
-      "text": "food",
-      "id": 1,
-    },
   },
   {
     "title": "Eat organic.. Be energetic",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 19,
     "frequency": 14,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "If a food product has been through many steps in manufacturing, with lots of ingredients coming from all corners of the world, the carbon footprint is higher for that product, due to traveling, manufacturing, and distribution,”                   “Choose organic ingredients which limit the use of synthetic pesticides and support more sustainable soil practices, such as the use of cover crops, composting and manures,”",
@@ -2563,25 +2610,15 @@ List<Map<String, Object>> data = [
       "The food grown in organic farms are not exposed to any toxic chemicals or fertilizers. The livestock also does not receive regular dosage of antibiotics and growth hormones, or synthetic nutrients, and therefore, they do not expose us to harmful chemicals and drugs or residue from the insecticides. There are many long-term health issues associated with these chemicals.",
       "Because of limited use of modern machinery and chemicals, three are fewer emissions of harmful gases, chemicals, contamination and release of greenhouse gases through organic farming. It also helps to strengthen the ecological balance and reduces pollution in air water and soil. There is also less loss of nutrients because most of the nutrients are recycled and also less energy is wasted. Therefore, the environmental benefits of organic farming cannot be ignored.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
     "visualizations": {
       "links": [],
       "images": [],
     },
+    "hasLinks": false,
     "color": 0xffE06666,
     "difficulty": {
-      "scale": 3,
-      "text": "HARD",
+      "scale": 2,
+      "text": "MEDIUM",
     },
     "currentLevel": 1,
     "question": "Do you choose ORGANIC Food products at the store?",
@@ -2590,18 +2627,12 @@ List<Map<String, Object>> data = [
       "No, I don’t generally check for Organic, it’s probably just a scam anyway",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "food",
-      "id": 1,
-    },
   },
   {
     "title": "Water footprint in food",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 8,
     "frequency": 30,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "Wasted food means wasted resources, including water. This is why work is being done at every level – from local to federal – to reduce food waste. Activities like taking a refrigerator inventory before you shop, meal planning, using leftovers and composting can make a huge dent in the amount of food (and water) that is wasted on a daily basis.",
@@ -2610,17 +2641,7 @@ List<Map<String, Object>> data = [
       "The food grown in organic farms are not exposed to any toxic chemicals or fertilizers. The livestock also does not receive regular dosage of antibiotics and growth hormones, or synthetic nutrients, and therefore, they do not expose us to harmful chemicals and drugs or residue from the insecticides. There are many long-term health issues associated with these chemicals.",
       "Because of limited use of modern machinery and chemicals, three are fewer emissions of harmful gases, chemicals, contamination and release of greenhouse gases through organic farming. It also helps to strengthen the ecological balance and reduces pollution in air water and soil. There is also less loss of nutrients because most of the nutrients are recycled and also less energy is wasted. Therefore, the environmental benefits of organic farming cannot be ignored.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2645,19 +2666,13 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "food",
-      "id": 1,
-    },
   },
   {
     "title": "No packed food",
-    "timeAnswered": DateTime(2000),
     "id": 2,
-    "lastShown": DateTime(2000),
     "frequency": 30,
     "hasLevel": true,
-    "isDaily": false,
+    "isDaily": true,
     "shortDescription":
         "If you answered yes, you are making more trash and ……..slow poisoning yourself along with the environment",
     "longDescription": [
@@ -2667,15 +2682,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/UN-PROCESSED 0.svg",
+        "assets/Badges/UN-PROCESSED 1.svg",
+        "assets/Badges/UN-PROCESSED 2.svg",
+        "assets/Badges/UN-PROCESSED 3.svg",
+        "assets/Badges/UN-PROCESSED 4.svg",
+        "assets/Badges/UN-PROCESSED 5.svg",
+        "assets/Badges/UN-PROCESSED 6.svg",
+        "assets/Badges/UN-PROCESSED 7.svg",
+        "assets/Badges/UN-PROCESSED 8.svg",
+        "assets/Badges/UN-PROCESSED 9.svg",
+        "assets/Badges/UN-PROCESSED 10.svg",
+        "assets/Badges/UN-PROCESSED 11.svg",
+        "assets/Badges/UN-PROCESSED 12.svg",
+        "assets/Badges/UN-PROCESSED 13.svg",
+        "assets/Badges/UN-PROCESSED 14.svg",
+        "assets/Badges/UN-PROCESSED 15.svg",
+        "assets/Badges/UN-PROCESSED 16.svg",
+        "assets/Badges/UN-PROCESSED 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "UN-PROCESSED",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "UN-PROCESSED is the goal! ",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "YOU are saving your body and the earth a catastrophic amount of trouble! Food packaging consists of 42% of global plastic production and YOU are fixing that!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2699,16 +2732,10 @@ List<Map<String, Object>> data = [
       "Yes",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "food",
-      "id": 1,
-    },
   },
   {
     "title": "ZERO WASTE COOKING",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 3,
     "frequency": 30,
     "hasLevel": true,
     "isDaily": true,
@@ -2722,15 +2749,33 @@ List<Map<String, Object>> data = [
     ],
     "badge": {
       "path": [
-        "assets/SHOWSTOPPER.svg",
+        "assets/Badges/ZERO-HERO 0.svg",
+        "assets/Badges/ZERO-HERO 1.svg",
+        "assets/Badges/ZERO-HERO 2.svg",
+        "assets/Badges/ZERO-HERO 3.svg",
+        "assets/Badges/ZERO-HERO 4.svg",
+        "assets/Badges/ZERO-HERO 5.svg",
+        "assets/Badges/ZERO-HERO 6.svg",
+        "assets/Badges/ZERO-HERO 7.svg",
+        "assets/Badges/ZERO-HERO 8.svg",
+        "assets/Badges/ZERO-HERO 9.svg",
+        "assets/Badges/ZERO-HERO 10.svg",
+        "assets/Badges/ZERO-HERO 11.svg",
+        "assets/Badges/ZERO-HERO 12.svg",
+        "assets/Badges/ZERO-HERO 13.svg",
+        "assets/Badges/ZERO-HERO 14.svg",
+        "assets/Badges/ZERO-HERO 15.svg",
+        "assets/Badges/ZERO-HERO 16.svg",
+        "assets/Badges/ZERO-HERO 17.svg",
       ],
-      "name": "Showstopper",
+      "name": "ZERO-HERO",
       "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
+        "title": "ERO-WASTE is the HERO!",
         "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
+            "Defeating the Waste Monster of nearly 1.3 billion tonnes per year is one of the hardest things to do and you deserve a cape for being the HERO that you are!",
       },
     },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2754,18 +2799,12 @@ List<Map<String, Object>> data = [
       "No",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "food",
-      "id": 1,
-    },
   },
   {
     "title": "No extra food",
-    "timeAnswered": DateTime(2000),
-    "id": 2,
-    "lastShown": DateTime(2000),
+    "id": 9,
     "frequency": 7,
-    "hasLevel": true,
+    "hasLevel": false,
     "isDaily": false,
     "shortDescription":
         "If you answered yes,…. You are wasting precious natural resources. Practice cooking just enough for the meal and nothing extra. This reduces the need to consume food which requires microwave heating and conserves energy. ",
@@ -2773,17 +2812,7 @@ List<Map<String, Object>> data = [
       "Eat mindfully\nPractice cooking just enough for the meal and nothing extra. This reduces the need to consume food which requires microwave heating and conserves energy. “Cook the right amount of food to avoid waste,” says Chef Sajesh Nair from Adaa. “Refrain from using cling wraps and silver foils to avoid waste accumulation.” While we’re stuck at home, binge eating is something that a lot of us can fall prey to. But practicing self control and focusing on what you are eating allows you to reflect on where your food has come from and how it is nourishing your body. “If you tune in to your hunger signals you may learn that you don’t need as much food as you thought, and resize your meals accordingly,” says Makwana from Toast & Tonic. Staying mindful about the source of your raw material is always important too. Himalayan water is untouched and unprocessed water from the Himalayas, enriched with natural minerals that makes it perfect for your health and for long term benefits to your body. \",\"Another key to zero waste cooking is keeping ingredients from going bad — if you aren’t able to cook them in time, focus on preservation.For example…freezing ingredients stops the ripening process in its tracks. You can freeze fruits and vegetables to use at a future time; to store prepared foods for later; or use the freezing process to “cook” them for now the dehydrator PROPERLY PICKLE .You can’t pour piping hot pickling liquid over everything, but if handled the right way Cooking fruit or vegetables down into jam can be another good way to preserve items that are at their peak, before they head into the trash zone",
       "While reducing food waste can be challenging, food waste is a huge problem and there are things you can do. One great initiative exists in Maastricht, where edible food waste is distributed in the community by volunteers free of charge. Of course it would be even better to avoid food waste before it even occurs. At events, the most effective way of directly preventing food waste is to prepare food onsite. The problem is that this often includes high staff costs and expensive mobile kitchens. This can be mitigated through volunteers who are willing to prepare the food free of charge.",
     ],
-    "badge": {
-      "path": [
-        "assets/SHOWSTOPPER.svg",
-      ],
-      "name": "Showstopper",
-      "details": {
-        "title": "YOU, ARE A SHOWSTOPPER!",
-        "subtitle":
-            "Keep going the way you are, changing disastrous fast fashion trends one showstopping and sustainable look at a time!",
-      },
-    },
+    "hasLinks": true,
     "visualizations": {
       "links": [
         {
@@ -2808,10 +2837,6 @@ List<Map<String, Object>> data = [
       "Yes, just in case I need it",
     ],
     "hasReminder": false,
-    "category": {
-      "text": "food",
-      "id": 1,
-    },
   },
 ];
 
