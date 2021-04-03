@@ -40,5 +40,30 @@ The primary features of the Waste Guru are:
 2. Waste Management: A variety of viable options are provided to handle the waste. If the waste cannot be handled properly at their house, they are taken to authentic third-party websites that can be contacted for handling the waste.
 
 ## Badges
-<p>Badges are the little rewards that the user gets on achieving/meeting the determined non-daily goals.</p>
-Some of the badges are shown:
+<p>Some flashcards have a badge of achievement associated with them. These badges create a system of positive reinforcement.</p>
+<p>
+  <img src="Assets_readme/BLINDING LIGHTS 3.png" width="50" height="50">
+  <img src="Assets_readme/BUSERATI 4.png" width="50" height="50">
+  <img src="Assets_readme/CARPOOLCOOL 12.png" width="50" height="50">
+  <img src="Assets_readme/GROOT 8.png" width="50" height="50">
+</p>
+<p>
+  <img src="Assets_readme/NEO 7.png" width="50" height="50">
+  <img src="Assets_readme/INDUCTIONMAN 10.png" width="50" height="50">
+  <img src="Assets_readme/FULLY-LOADED 1.png" width="50" height="50">
+  <img src="Assets_readme/UNDER CONTROL 7.png" width="50" height="50">
+</p>
+<p>...and many more.</p>
+
+## Conclusion
+<p>
+  The fundamental philosophy of the app is to make sustainable living at an individual level, as far as possible within the given constraints of reality and infrastructure, a norm in society, especially among the current generation. The future for this application is to have as many components as possible of sustainable living under one heading.</p>
+
+## App Version
+v1.4.0
+
+## Framework
+Built with Flutter.
+Visit [Flutter dev](https://flutter.dev/)
+
+App icon, in-app icons, svgs, badges and UI templates have been custom made on the platform [Figma](https://www.figma.com).
