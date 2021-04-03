@@ -1,4 +1,5 @@
 # ECOmpanion
+ECOmpanion – Your pocket guide to a sustainable life
 
 ## Abstract
 <p>
