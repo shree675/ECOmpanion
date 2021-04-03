@@ -1,5 +1,6 @@
 # ECOmpanion
 <img src="Assets_readme/AppLogo.svg" width="245">
+
 ***Your pocket guide to a sustainable life***
 
 ## Abstract
